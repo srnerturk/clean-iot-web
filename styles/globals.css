@@ -1,26 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Jost", sans-serif;
+  color: white;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: #9dc538;
+  border: 2px solid white;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+h1 {
+  @apply text-4xl
+  text-black
+  font-extrabold;
+}
+
+h2 {
+  @apply text-3xl
+  text-black
+  font-bold;
+}
+
+h3 {
+  @apply text-2xl
+  text-black
+  font-medium;
+}
+
+h5 {
+  @apply text-xl
+  text-black
+  font-medium;
+}
+p {
+  @apply text-sm
+  text-black
+  font-medium;
+}
+.list li {
+  @apply text-sm
+  text-black
+  bg-gray
+  mt-5
+  p-2
+  font-medium;
+}
+.list-r li {
+  list-style-type: circle;
+  @apply text-sm
+  text-white
+  mt-3
+  p-2
+  font-medium;
+}
+.container {
+  max-width: 1290px;
+}
+
+.button {
+  @apply py-3 font-bold bg-green text-black;
+}
+td {
+  @apply p-2
+  text-center;
 }

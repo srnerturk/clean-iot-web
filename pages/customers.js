@@ -215,7 +215,7 @@ export default function Customers() {
           <div className="flex flex-row items-center justify-between space-x-5">
             <p className="flex-[0.7] text-lg font-light leading-relaxed">
               We understand that every business has unique needs when it comes
-              to IoT connectivity. That's why we offer tailored plans that are
+              to IoT connectivity. Thats why we offer tailored plans that are
               designed to meet your specific requirements. Our flexible plans
               allow you to choose the data usage and speed that works best for
               your IoT devices, ensuring that you only pay for the data you

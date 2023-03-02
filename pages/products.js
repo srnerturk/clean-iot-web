@@ -157,10 +157,10 @@ export default function Products() {
             <div className="divider flex-none w-1  bg-gray justify-start items-center"></div>
             <div className="right flex-[0.5] justify-start items-center">
               <p className="text-sm max-w-[500px] font-medium text-black leading-relaxed">
-                Congratulations on receiving your new IoT SIM card! You're now
+                Congratulations on receiving your new IoT SIM card! You are now
                 one step closer to connecting your IoT devices to the internet
                 and leveraging the power of data to optimize your business
-                operations. Here's what you need to do next: Activate your SIM
+                operations. Heres what you need to do next: Activate your SIM
                 card: Before you can start using your IoT SIM card, you will
                 need to activate it. Our SIM cards come with instructions on how
                 to activate, or you can contact our customer support team for
@@ -173,7 +173,7 @@ export default function Products() {
                 SIM card. Our customer support team can assist you with this
                 process and ensure that your device is properly configured for
                 optimal performance. Test your connection: Once your IoT device
-                is configured, it's time to test your connection. Make sure that
+                is configured, its time to test your connection. Make sure that
                 your device is connected to the internet and that you can access
                 and transfer data. Monitor your data: With your IoT device
                 connected to the internet, you can now start collecting and

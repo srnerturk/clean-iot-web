@@ -73,7 +73,6 @@ export default function Customers() {
       simType: "M2M",
       dataOverage: "4 cents/MB",
     },
-
   ]);
   const animationVariant = (duration, delay) => {
     return {
@@ -91,97 +90,93 @@ export default function Customers() {
   };
   return (
     <div className="orders w-full bg-primary">
-      <section
-        className="top w-full h-auto bg-primary relative"
-      >
-        <div className="container ml-auto mr-auto">
-          <h1 className="mb-20 mt-20">Top choices by our customers </h1>
+      <section className="top w-full h-auto bg-primary relative">
+        <div className="container mx-auto">
+          <h2 className="py-10">Top choices by our customers </h2>
           <div className="grid grid-cols-4 gap-5">
-            <div className="info-box p-5 bg-gray flex space-y-5 flex-col">
+            <div className="info-box p-5 bg-gray flex space-y-5 flex-col justify-between">
               <div className="title">
-                <h2>150 mb</h2>
+                <h3 className="font-bold">150 mb</h3>
               </div>
               <div className="body">
-                <h5>
+                <p className="text-sm">
                   Best for manufacturing ·Best for tracking ·Best for small
                   fleet applications
-                </h5>
+                </p>
               </div>
               <div className="price">
-                <h2>$4.95/mo</h2>
+                <h5 className="font-extrabold">$4.95/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full">Start Now!</button>
+                <button className="button w-full text-sm">Start Now!</button>
               </div>
             </div>
 
-            <div className="info-box p-5 bg-black flex space-y-5 flex-col">
+            <div className="info-box p-5 bg-black flex space-y-5 flex-col justify-between">
               <div className="title">
-                <h2 className="text-white">250 mb</h2>
+                <h3 className="text-white font-bold">250 mb</h3>
               </div>
               <div className="body">
-                <h5 className="text-white">
+                <p className="text-white text-sm">
                   ·Best for smart city projects ·Best for IoT sensors ·Best for
                   busy fleet applications
-                </h5>
+                </p>
               </div>
               <div className="price">
-                <h2 className="text-white">$5.95/mo</h2>
+                <h5 className="text-white font-extrabold">$5.95/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full">Start Now!</button>
+                <button className="button w-full text-sm">Start Now!</button>
               </div>
             </div>
 
-            <div className="info-box p-5 bg-gray flex space-y-5 flex-col">
+            <div className="info-box p-5 bg-gray flex space-y-5 flex-col justify-between">
               <div className="title">
-                <h2>5 GB</h2>
+                <h3 className="font-bold">5 GB</h3>
               </div>
               <div className="body">
-                <h5>
+                <p className="text-sm">
                   ·Best for complex aplications ·Best for network ·Best for busy
                   fleet applications
-                </h5>
+                </p>
               </div>
               <div className="price">
-                <h2>$$56.45/mo</h2>
+                <h5 className="font-extrabold">$$56.45/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full">Start Now!</button>
+                <button className="button w-full text-sm">Start Now!</button>
               </div>
             </div>
 
-            <div className="info-box p-5 bg-black flex space-y-5 flex-col">
+            <div className="info-box p-5 bg-black flex space-y-5 flex-col justify-between">
               <div className="title">
-                <h2 className="text-white">NB-IOT</h2>
+                <h3 className="text-white font-bold">NB-IOT</h3>
               </div>
               <div className="body">
-                <h5 className="text-white">
+                <p className="text-white text-sm">
                   ·Best for smart city projects ·Best for IoT sensors ·Best for
                   busy fleet applications
-                </h5>
+                </p>
               </div>
               <div className="price">
-                <h2 className="text-white">$2.95/mo</h2>
+                <h5 className="text-white font-extrabold">$2.95/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full">Start Now!</button>
+                <button className="button w-full text-sm">Start Now!</button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        className="top w-full h-auto bg-primary relative mt-20"
-      >
+      <section className="top w-full h-auto bg-primary relative mt-20">
         <div className="container ml-auto mr-auto">
           <div className="flex flex-row items-center justify-between">
-            <h1 className="flex-1">Tailored plans for your needs </h1>
-            <h3 className="flex-1">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore.
-            </h3>
+            <h2 className="flex-1">Tailored plans for your needs </h2>
+            <p className="flex-1 text-lg font-light leading-relaxed">
+              Get the perfect IoT connectivity plan with our tailored plans,
+              customized to meet your specific needs and requirements
+            </p>
           </div>
           <table className="w-full mt-20">
             <thead>
@@ -215,41 +210,39 @@ export default function Customers() {
         </div>
       </section>
 
-      <section
-        className="top w-full h-auto bg-primary relative mt-20"
-      >
+      <section className="top w-full h-auto bg-primary relative mt-20">
         <div className="container ml-auto mr-auto">
-          <div className="flex flex-row items-center justify-between">
-            <h5 className="flex-[0.7]">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enim ad scipit lobortis nisl ut aliquip ex
-              ea commodo consequat equat.
-            </h5>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              variants={animationVariant(0.5, 0.5)}
-              className="box p-10 w-full h-[400px] bg-black flex flex-col justify-between flex-[0.3]"
-            >
+          <div className="flex flex-row items-center justify-between space-x-5">
+            <p className="flex-[0.7] text-lg font-light leading-relaxed">
+              We understand that every business has unique needs when it comes
+              to IoT connectivity. That's why we offer tailored plans that are
+              designed to meet your specific requirements. Our flexible plans
+              allow you to choose the data usage and speed that works best for
+              your IoT devices, ensuring that you only pay for the data you
+              need. Whether you require low-data usage or high-speed data
+              transfer, we have a plan that can meet your needs. Contact us
+              today to learn more about our tailored plans and how they can
+              benefit your business.
+            </p>
+            <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between flex-[0.3]">
               <div className="top flex w-full justify-start">
-                <div className="square w-[60px] h-[60px] bg-primary"></div>
+                <div className="square w-[40px] h-[40px] bg-primary"></div>
               </div>
               <div className="title">
-                <h3 className="text-white">
-                  We Develope Special IOT Solutions for you
-                </h3>
-              </div>
-              <div className="body">
                 <h5 className="text-white">
-                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
-                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
+                  We Develope Special IOT Solutions for you
                 </h5>
               </div>
-              <div className="footer flex justify-end">
-                <button className="button px-5">Contact Now</button>
+              <div className="body">
+                <p className="text-white">
+                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
+                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
+                </p>
               </div>
-            </motion.div>
+              <div className="footer flex justify-end mt-5">
+                <button className="button px-5 text-sm">Contact Now</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

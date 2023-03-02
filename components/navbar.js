@@ -8,7 +8,7 @@ export default function Navbar() {
     { id: 0, text: "Home", href: "/" },
     { id: 1, text: "Products", href: "/products" },
     { id: 2, text: "Order", href: "/order" },
-    { id: 3, text: "Projects", href: "/" },
+    { id: 3, text: "Projects", href: "/use" },
     { id: 4, text: "Customers", href: "/customers" },
   ];
   return (
@@ -24,41 +24,48 @@ export default function Navbar() {
           rel="stylesheet"
         />
       </Head>
-      <div className="w-full head bg-primary">
-        <div className="head-content container ml-auto mr-auto h-[180px] items-center flex">
-          <div className="logo w-[80px]">
-            <Image src="/logo.png" alt="Vercel Logo" width={80} height={180} />
+      <div className="container mx-auto shadow-lg">
+        <div className="w-full head bg-primary p-5">
+          <div className="head-content container ml-auto mr-auto h-[90px] items-center flex">
+            <div className="logo w-[60px]">
+              <Image
+                src="/logo.png"
+                alt="Vercel Logo"
+                width={60}
+                height={160}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="navbar bg-gray w-full h-[60px]">
-        <div className="navbar-content container ml-auto mr-auto flex justify-between">
-          <div className="navbar-logo flex items-center">
-            <Image
-              src="/logo-detail.png"
-              alt="Vercel Logo"
-              width={140}
-              height={90}
-            />
-          </div>
-          <div className="navbar-menu w-1/3 flex justify-between">
-            {links.map((item, index) => (
+        <div className="navbar bg-gray w-full p-2.5">
+          <div className="navbar-content container ml-auto mr-auto flex justify-between">
+            <div className="navbar-logo flex items-center justify-center">
+              <Image
+                src="/logo-detail.png"
+                alt="Vercel Logo"
+                width={140}
+                height={50}
+              />
+            </div>
+            <div className="navbar-menu w-1/3 flex justify-between">
+              {links.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="navbar-item hover:bg-darkGray px-5 font-bold text-black text-sm h-[50px] flex items-center"
+                >
+                  {item.text}
+                </Link>
+              ))}
+            </div>
+            <div className="mr-right">
               <Link
-                key={index}
-                href={item.href}
-                className="navbar-item hover:bg-darkGray px-5 font-bold text-black text-lg h-[60px] flex items-center"
+                href="/"
+                className="navbar-item bg-darkGray font-bold text-sm px-10  text-black h-[50px] flex items-center"
               >
-                {item.text}
+                Contact
               </Link>
-            ))}
-          </div>
-          <div className="mr-right">
-            <Link
-              href="/"
-              className="navbar-item bg-darkGray font-bold text-lg px-10  text-black h-[60px] flex items-center"
-            >
-              Contact
-            </Link>
+            </div>
           </div>
         </div>
       </div>

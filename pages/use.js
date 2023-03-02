@@ -2,10 +2,10 @@
 import Image from "next/image";
 export default function Use() {
   return (
-    <div className="home w-full bg-primary">
-      <div className="container ml-auto mr-auto">
-        <section className="image relative mt-10">
-          <h1 className="text-center">Powerfull</h1>
+    <div className="home w-full">
+      <div className="container mx-auto">
+        <section className="image relative">
+          <h1 className="text-center py-10">Powerfull</h1>
           <h3 className="mb-10 text-center">easy-to-use</h3>
           <div className="images w-full relative flex items-center justify-center">
             <Image
@@ -32,7 +32,7 @@ export default function Use() {
               <h2 className="text-right">Key features fast review</h2>
             </div>
             <div className="col">
-              <p className="text-left">
+              <p className="text-left text-sm">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                 diam nonummy nibh euismod tincidunt ut laoreet dolore.
               </p>
@@ -83,23 +83,23 @@ export default function Use() {
               erat volutpat. Ut wisi enim ad scipit lobortis nisl ut aliquip ex
               ea commodo consequat equat.
             </h5>
-            <div className="box p-10 w-full h-[400px] bg-black flex flex-col justify-between flex-[0.3]">
+            <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between flex-[0.3]">
               <div className="top flex w-full justify-start">
-                <div className="square w-[60px] h-[60px] bg-primary"></div>
+                <div className="square w-[40px] h-[40px] bg-primary"></div>
               </div>
               <div className="title">
-                <h3 className="text-white">
-                  We Develope Special IOT Solutions for you
-                </h3>
-              </div>
-              <div className="body">
                 <h5 className="text-white">
-                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
-                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
+                  We Develope Special IOT Solutions for you
                 </h5>
               </div>
+              <div className="body">
+                <p className="text-white text-sm">
+                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
+                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
+                </p>
+              </div>
               <div className="footer flex justify-end">
-                <button className="button px-5">Contact Now</button>
+                <button className="button px-5 text-sm">Contact Now</button>
               </div>
             </div>
           </div>
@@ -122,23 +122,23 @@ export default function Use() {
                 aliquip ex ea commodo consequat equat.
               </h5>
             </div>
-            <div className="box p-10 w-full h-[400px] bg-black flex flex-col justify-between flex-[0.3]">
+            <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between flex-[0.3]">
               <div className="top flex w-full justify-start">
-                <div className="square w-[60px] h-[60px] bg-primary"></div>
+                <div className="square w-[40px] h-[40px] bg-primary"></div>
               </div>
               <div className="title">
-                <h3 className="text-white">
-                  We Develope Special IOT Solutions for you
-                </h3>
-              </div>
-              <div className="body">
                 <h5 className="text-white">
-                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
-                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
+                  We Develope Special IOT Solutions for you
                 </h5>
               </div>
+              <div className="body">
+                <p className="text-white text-sm">
+                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
+                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
+                </p>
+              </div>
               <div className="footer flex justify-end">
-                <button className="button px-5">Contact Now</button>
+                <button className="button px-5 text-sm">Contact Now</button>
               </div>
             </div>
           </div>

@@ -7,11 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "bg-blue-image": "url('/bg-image.png')",
+      },
       colors: {
         primary: "#FFF",
         gray: "#DDDEDD",
         darkGray: "#C7C9CA",
-        green:"#B0CB32",
+        green: "#B0CB32",
       },
     },
   },

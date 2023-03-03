@@ -6,10 +6,9 @@ import React from "react";
 export default function Navbar() {
   const links = [
     { id: 0, text: "Home", href: "/" },
-    { id: 1, text: "Products", href: "/products" },
+    { id: 1, text: "Solutions", href: "/" },
     { id: 2, text: "Order", href: "/order" },
-    { id: 3, text: "Projects", href: "/use" },
-    { id: 4, text: "Customers", href: "/customers" },
+    { id: 3, text: "Pricing", href: "/pricing" },
   ];
   return (
     <div className="wrapper">
@@ -25,18 +24,6 @@ export default function Navbar() {
         />
       </Head>
       <div className="container mx-auto shadow-lg">
-        <div className="w-full head bg-primary p-5">
-          <div className="head-content container ml-auto mr-auto h-[90px] items-center flex">
-            <div className="logo w-[60px]">
-              <Image
-                src="/logo.png"
-                alt="Vercel Logo"
-                width={60}
-                height={160}
-              />
-            </div>
-          </div>
-        </div>
         <div className="navbar bg-gray w-full p-2.5">
           <div className="navbar-content container ml-auto mr-auto flex justify-between">
             <div className="navbar-logo flex items-center justify-center">
@@ -60,7 +47,7 @@ export default function Navbar() {
             </div>
             <div className="mr-right">
               <Link
-                href="/"
+                href="/contact"
                 className="navbar-item bg-darkGray font-bold text-sm px-10  text-black h-[50px] flex items-center"
               >
                 Contact

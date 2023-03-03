@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Orders() {
   return (
     <div className="products w-full">
-      <div className="container mx-auto">
+      <div className="container mx-auto bg-white">
         <section className="top w-full h-auto relative">
           <div className="content grid grid-cols-2">
             <div className="left">

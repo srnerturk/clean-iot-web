@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Products() {
   return (
     <div className="products w-full">
-      <div className="container mx-auto">
+      <div className="container mx-auto bg-white">
         <section className="top w-full h-auto relative">
           <Image
             className="w-full h-auto opacity-40"
@@ -18,21 +18,22 @@ export default function Products() {
               <div className="left flex-1 lg:flex items-end flex-col justify-end">
                 <div className="content p-10 shadow-xl">
                   <p className="text-lg font-medium  text-black">
-                    We provide cutting-edge <strong>IoT SIM card</strong> technology to help
-                    businesses connect their devices to the internet. Our SIM
-                    cards are designed specifically for IoT devices and provide
-                    reliable connectivity, security, and flexibility to support
-                    your business needs.
+                    We provide cutting-edge <strong>IoT SIM card</strong>{" "}
+                    technology to help businesses connect their devices to the
+                    internet. Our SIM cards are designed specifically for IoT
+                    devices and provide reliable connectivity, security, and
+                    flexibility to support your business needs.
                   </p>
 
                   <p className="text-lg font-medium mt-5">
-                    With our <strong>IoT SIM cards</strong>, you can connect your devices to the
-                    internet from anywhere in the world. Our SIM cards use the
-                    latest technologies to ensure fast and secure data transfer.
-                    Whether you are monitoring a fleet of vehicles, managing a
-                    smart home, or tracking inventory, our IoT SIM cards offer
-                    the connectivity you need to make informed decisions and
-                    operate your business more efficiently.
+                    With our <strong>IoT SIM cards</strong>, you can connect
+                    your devices to the internet from anywhere in the world. Our
+                    SIM cards use the latest technologies to ensure fast and
+                    secure data transfer. Whether you are monitoring a fleet of
+                    vehicles, managing a smart home, or tracking inventory, our
+                    IoT SIM cards offer the connectivity you need to make
+                    informed decisions and operate your business more
+                    efficiently.
                   </p>
                 </div>
               </div>
@@ -95,13 +96,13 @@ export default function Products() {
             </div>
           </div>
         </section>
-        <section className="process container ml-auto mr-auto mt-10">
+        <section className="process container ml-auto mr-auto p-10">
           <div className="title w-full flex space-x-20">
-            <div className="left flex-[0.5] flex items-center  justify-center space-x-2 ">
+            <div className="left flex-1 flex items-center  justify-center space-x-2 ">
               <Image src="/star2.png" width={50} height={50} alt="star" />
               <h3 className="text-black text-4xl font-bold">Order Process</h3>
             </div>
-            <div className="right flex-[0.5] justify-start items-center">
+            <div className="right flex-1 justify-start items-center">
               <p className="text-xl max-w-[500px] font-light text-black leading-relaxed">
                 Our streamlined process ensures that you receive your SIM cards
                 quickly and efficiently. Here are the steps you can expect when
@@ -147,48 +148,51 @@ export default function Products() {
               </div>
             </div>
           </div>
-          <div className="title w-full flex space-x-20 mt-20">
-            <div className="left flex-[0.5] flex items-start  justify-end space-x-2 ">
-              <Image src="/star2.png" width={50} height={50} alt="star" />
-              <h2 className="text-black text-3xl font-bold">
-                I got my SIM Now what?
+        </section>
+        <section className="sim p-10">
+          <div className="content w-full flex">
+            <div className="left flex-none flex items-start justify-end space-x-20">
+              <h2 className="text-black text-3xl font-light">
+                I got my{" "}
+                <strong>
+                  SIM <br />
+                  Now
+                </strong>{" "}
+                what?
               </h2>
+              <Image src="/star2.png" width={50} height={50} alt="star" />
             </div>
-            <div className="divider flex-none w-1  bg-gray justify-start items-center"></div>
-            <div className="right flex-[0.5] justify-start items-center">
-              <p className="text-sm max-w-[500px] font-medium text-black leading-relaxed">
-                Congratulations on receiving your new IoT SIM card! You are now
-                one step closer to connecting your IoT devices to the internet
-                and leveraging the power of data to optimize your business
-                operations. Heres what you need to do next: Activate your SIM
-                card: Before you can start using your IoT SIM card, you will
-                need to activate it. Our SIM cards come with instructions on how
-                to activate, or you can contact our customer support team for
-                assistance. Install your SIM card in your IoT device: Once your
-                SIM card is activated, you will need to install it in your IoT
-                device. Our IoT SIM cards are designed to be easy to install,
-                and we provide instructions on how to do this on our website.
-                Configure your IoT device: Depending on the type of IoT device
-                you are using, you may need to configure it to work with our IoT
-                SIM card. Our customer support team can assist you with this
-                process and ensure that your device is properly configured for
-                optimal performance. Test your connection: Once your IoT device
-                is configured, its time to test your connection. Make sure that
-                your device is connected to the internet and that you can access
-                and transfer data. Monitor your data: With your IoT device
-                connected to the internet, you can now start collecting and
-                analyzing data to optimize your business operations. Our IoT
-                management portal makes it easy to monitor your data and ensure
-                that your devices are functioning properly. If you have any
-                questions or issues during this process, our team of experts is
-                always available to help. We are committed to providing our
-                customers with the best possible service and support to ensure
-                that your IoT solutions are optimized for performance, security,
-                and scalability. Contact us today to learn more about our IoT
-                SIM card products and services.
-              </p>
+            <div className="right flex-1 ml-10">
+              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+                <p className="text-sm font-bold">
+                  Receiving your new IoT SIM Card
+                </p>
+              </div>
+              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+                <p className="text-sm font-bold">Activate your SIM card</p>
+              </div>
+              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+                <p className="text-sm font-bold">Install your SIM card</p>
+              </div>
+              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+                <p className="text-sm font-bold">Configure your SIM card</p>
+              </div>
+              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+                <p className="text-sm font-bold">Test your connection</p>
+              </div>
+              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+                <p className="text-sm font-bold">Login to web platform</p>
+              </div>
             </div>
           </div>
+          <p className="text-sm mt-10 text-center">
+            If you have any questions or issues during this process, our team of
+            experts is always available to help. We are committed to providing
+            our customers with the best possible service and support to ensure
+            that your IoT solutions are optimized for performance, security, and
+            scalability. Contact us today to learn more about our IoT SIM card
+            products and services.
+          </p>
         </section>
       </div>
     </div>

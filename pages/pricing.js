@@ -89,10 +89,10 @@ export default function Customers() {
     };
   };
   return (
-    <div className="orders w-full bg-primary">
-      <section className="top w-full h-auto bg-primary relative">
-        <div className="container mx-auto">
-          <h2 className="py-10">Top choices by our customers </h2>
+    <div className="orders w-ful">
+      <section className="top w-full h-auto relative">
+        <div className="container mx-auto bg-white">
+          <h2 className="py-10 px-5">Top choices by our customers </h2>
           <div className="grid grid-cols-4 gap-5">
             <div className="info-box p-5 bg-gray flex space-y-5 flex-col justify-between">
               <div className="title">
@@ -169,7 +169,7 @@ export default function Customers() {
         </div>
       </section>
 
-      <section className="top w-full h-auto bg-primary relative mt-20">
+      <section className="top w-full h-auto relative py-10 px-5">
         <div className="container ml-auto mr-auto">
           <div className="flex flex-row items-center justify-between">
             <h2 className="flex-1">Tailored plans for your needs </h2>
@@ -178,7 +178,7 @@ export default function Customers() {
               customized to meet your specific needs and requirements
             </p>
           </div>
-          <table className="w-full mt-20">
+          <table className="w-full mt-10">
             <thead>
               <tr className="bg-black h-[50px]">
                 <td className="font-bold">Data Amount</td>
@@ -210,7 +210,7 @@ export default function Customers() {
         </div>
       </section>
 
-      <section className="top w-full h-auto bg-primary relative mt-20">
+      <section className="top w-full h-auto relative p-10">
         <div className="container ml-auto mr-auto">
           <div className="flex flex-row items-center justify-between space-x-5">
             <p className="flex-[0.7] text-lg font-light leading-relaxed">

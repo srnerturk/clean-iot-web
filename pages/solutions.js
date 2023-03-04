@@ -16,20 +16,20 @@ export default function Iot() {
           />
           <div className="left flex-[0.7] p-10">
             <h1 className="mb-5">IOT</h1>
-            <h2>connectivity</h2>
-            <p className="mt-10">
-              IoT connectivity is typically how we refer to the methods used to
+            <h2 className="font-medium">connectivity</h2>
+            <p className="mt-10 text-sm leading-relaxed">
+              <strong>IoT connectivity</strong> is typically how we refer to the methods used to
               connect IoT devices. The term “IoT” (Internet of Things) mostly
               refers to wireless devices including applications, sensors,
               tracking devices, gateways and network
             </p>
-            <p className="mt-2">
-              IoT devices requiring less maintenance of technologies such as
+            <p className="mt-10 leading-relaxed">
+              <strong>IoT devices</strong> requiring less maintenance of technologies such as
               Ethernet and WiFi networks. Which can be less reliable and have
               problems of their own compared to cellular network.
             </p>
-            <p className="mt-2">
-              What is IoT?To understand what IoT SIM cards are in the first
+            <p className="mt-10 leading-relaxed">
+              What is IoT? To understand what <strong>IoT SIM cards</strong> are in the first
               place, it is necessary to explain the term IoT. This is in fact
               the abbreviation for the term Internet of Things. With the
               Internet of Things, it is possible for smart devices to connect to

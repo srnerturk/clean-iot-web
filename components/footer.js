@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
           <div className="contact flex flex-col space-y-2">
             <h5 className="text-white font-bold">Contact:</h5>
-            <a className="text-sm" mail href="#">
+            <a className="text-sm" href="#">
               info@cleaniot.com
             </a>
             <p className="text-sm text-white">

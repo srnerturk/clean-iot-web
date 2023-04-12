@@ -93,7 +93,7 @@ export default function Customers() {
       <section className="top w-full h-auto relative">
         <div className="container mx-auto bg-white">
           <h2 className="py-10 px-5">Top choices by our customers </h2>
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid lg:grid-cols-4 grid-cols-1 gap-5">
             <div className="info-box p-5 bg-gray flex space-y-5 flex-col justify-between">
               <div className="title">
                 <h3 className="font-bold">150 mb</h3>
@@ -171,7 +171,7 @@ export default function Customers() {
 
       <section className="top w-full h-auto relative py-10 px-5">
         <div className="container ml-auto mr-auto">
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex lg:flex-row flex-col items-center justify-between">
             <h2 className="flex-1">Tailored plans for your needs </h2>
             <p className="flex-1 text-lg font-light leading-relaxed">
               Get the perfect IoT connectivity plan with our tailored plans,
@@ -210,10 +210,10 @@ export default function Customers() {
         </div>
       </section>
 
-      <section className="top w-full h-auto relative p-10">
+      <section className="top w-full h-auto relative lg:p-10 p-5">
         <div className="container ml-auto mr-auto">
-          <div className="flex flex-row items-center justify-between space-x-5">
-            <p className="flex-[0.7] text-lg font-light leading-relaxed">
+          <div className="flex lg:flex-row flex-col items-center lg:justify-between space-x-5">
+            <p className="flex-1 text-lg font-light leading-relaxed">
               We understand that every business has unique needs when it comes
               to IoT connectivity. Thats why we offer tailored plans that are
               designed to meet your specific requirements. Our flexible plans
@@ -224,7 +224,7 @@ export default function Customers() {
               today to learn more about our tailored plans and how they can
               benefit your business.
             </p>
-            <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between flex-[0.3]">
+            <div className="box p-5 w-full lg:h-[300px] bg-black flex flex-col lg:justify-between  flex-1">
               <div className="top flex w-full justify-start">
                 <div className="square w-[40px] h-[40px] bg-primary"></div>
               </div>

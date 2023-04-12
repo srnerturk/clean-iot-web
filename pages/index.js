@@ -87,7 +87,7 @@ export default function Home() {
             <button className="button px-4">Book a Demo!</button>
           </div>
         </section>
-        <section className="p-5 bg-black partners">
+        <section className="lg:p-5 bg-black partners">
           <div className="title">
             <h3 className="text-lg text-white text-center font-bold">
               Our Partners
@@ -110,15 +110,15 @@ export default function Home() {
           </div>
         </section>
         <section className="py-10 bg-white px-5">
-          <div className="title w-full flex space-x-20">
-            <div className="left flex-[0.5] flex items-center  justify-center space-x-2 ">
+          <div className="title w-full flex lg:flex-row flex-col lg:space-x-20">
+            <div className="left flex-1  flex items-center  justify-center space-x-2 ">
               <h3 className="text-black text-4xl font-light">
                 We offer the latest in <strong>IoT SIM Card</strong> Technology
               </h3>
               <Image src="/star2.png" width={50} height={50} alt="star" />
             </div>
-            <div className="right flex-[0.5] justify-start items-center">
-              <p className="text-xl max-w-[500px] font-light text-black leading-relaxed italic">
+            <div className="right mt-10 lg:mt-0 flex-1 justify-start items-center">
+              <p className="text-xl font-light text-black leading-relaxed italic">
                 Our SIM cards are designed specifically for IoT devices and
                 provide reliable connectivity, security, and flexibility to
                 support your business needs.
@@ -126,9 +126,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="card relative container ml-auto mr-auto p-10 bg-white">
-          <div className="card-content bg-black rounded-[60px] w-full h-[480px] flex">
-            <div className="left flex-[0.5] p-20">
+        <section className="card relative container ml-auto mr-auto lg:p-10 bg-white">
+          <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[480px] flex">
+            <div className="left flex-[0.5] lg:p-20 p-5">
               <div className="title flex items-center space-x-2">
                 <Image
                   src="/star.png"
@@ -175,7 +175,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="boxes container ml-auto mr-auto p-10 bg-white">
+        <section className="boxes container ml-auto mr-auto mt-10 lg:mt-0 lg:p-10 bg-white">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
             <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between">
               <div className="top flex w-full justify-start">
@@ -234,7 +234,7 @@ export default function Home() {
           />
         </section>
 
-        <section className="p-5 bg-black partners">
+        <section className="lg:p-5 bg-black partners">
           <div className="title">
             <h3 className="text-lg text-white text-center font-bold">
               Happy Customers
@@ -256,7 +256,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="questions container ml-auto mr-auto bg-white px-10 py-20">
+        <section className="questions container ml-auto mr-auto bg-white p-5 lg:px-10 lg:py-20">
           <div className="title flex items-start flex-col space-y-2 mb-10">
             <h2>General FAQs</h2>
             <p>

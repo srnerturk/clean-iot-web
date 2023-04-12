@@ -4,7 +4,7 @@ export default function Orders() {
     <div className="products w-full">
       <div className="container mx-auto bg-white">
         <section className="top w-full h-auto relative">
-          <div className="content grid grid-cols-2">
+          <div className="content grid lg:grid-cols-2 grid-cols-1">
             <div className="left">
               <Image
                 className="w-full h-auto"
@@ -16,7 +16,7 @@ export default function Orders() {
                 sizes="100vw"
               />
             </div>
-            <div className="right p-10">
+            <div className="right lg:p-10 p-3">
               <div className="title flex flex-col space-y-2">
                 <h1>Hello!</h1>
                 <h3>So, you have a question!</h3>

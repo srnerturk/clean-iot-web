@@ -5,7 +5,7 @@ export default function Products() {
       <div className="container mx-auto bg-white">
         <section className="top w-full h-auto relative">
           <Image
-            className="w-full h-auto opacity-40"
+            className="w-full h-auto opacity-20"
             objectFit="contain"
             src="/main2.png"
             width={0}
@@ -13,10 +13,10 @@ export default function Products() {
             alt="Vercel Logo"
             sizes="100vw"
           />
-          <div className="content flex absolute top-0 left-0 w-full h-full">
-            <div className="container ml-auto mr-auto flex">
-              <div className="left flex-1 lg:flex items-end flex-col justify-end">
-                <div className="content p-10 shadow-xl">
+          <div className="content flex lg:absolute top-0 left-0 w-full h-full">
+            <div className="container ml-auto mr-auto flex flex-col">
+              <div className="left flex-1  items-end flex-col">
+                <div className="content p-10 shadow-xl flex flex-col" >
                   <p className="text-lg font-medium  text-black">
                     We provide cutting-edge <strong>IoT SIM card</strong>{" "}
                     technology to help businesses connect their devices to the
@@ -37,11 +37,11 @@ export default function Products() {
                   </p>
                 </div>
               </div>
-              <div className="right hidden lg:flex flex-col flex-1 pt-20 space-y-10">
+              <div className="right flex-col flex-1 pt-20 space-y-10">
                 <div className="title px-20">
                   <h1>IoT SimCard</h1>
                 </div>
-                <div className="body px-20 flex flex-col space-y-5">
+                <div className="body p-2 lg:px-20 flex flex-col space-y-5">
                   <div className="row flex items-end space-x-4">
                     <div className="box flex-[0.5]">
                       <label className="text-sm font-medium text-black">
@@ -96,14 +96,14 @@ export default function Products() {
             </div>
           </div>
         </section>
-        <section className="process container ml-auto mr-auto p-10">
+        <section className="process container ml-auto mr-auto p-2 lg:p-10">
           <div className="title w-full flex space-x-20">
             <div className="left flex-1 flex items-center  justify-center space-x-2 ">
               <Image src="/star2.png" width={50} height={50} alt="star" />
               <h3 className="text-black text-4xl font-bold">Order Process</h3>
             </div>
             <div className="right flex-1 justify-start items-center">
-              <p className="text-xl max-w-[500px] font-light text-black leading-relaxed">
+              <p className="text-xl lg:max-w-[500px] font-light text-black leading-relaxed">
                 Our streamlined process ensures that you receive your SIM cards
                 quickly and efficiently. Here are the steps you can expect when
                 ordering IoT SIM cards from us
@@ -121,7 +121,7 @@ export default function Products() {
               sizes="100vw"
             />
             <div className="descriptions grid grid-cols-1 lg:grid-cols-3">
-              <div className="col flex space-x-3 items-center justify-center mt-10">
+              <div className="col flex space-x-3 items-center lg:justify-center mt-10">
                 <div className="number border border-black rounded-full flex-none flex justify-center items-center w-[40px] h-[40px]">
                   <span className="text-2xl font-bold text-black">1</span>
                 </div>
@@ -138,7 +138,7 @@ export default function Products() {
                   you for further details.
                 </div>
               </div>
-              <div className="col flex space-x-2 items-center justify-center mt-10">
+              <div className="col flex space-x-2 items-center lg:justify-center mt-10">
                 <div className="number border border-black rounded-full flex-none flex justify-center items-center w-[40px] h-[40px]">
                   <span className="text-2xl font-bold text-black ">3</span>
                 </div>
@@ -149,9 +149,9 @@ export default function Products() {
             </div>
           </div>
         </section>
-        <section className="sim p-10">
+        <section className="sim lg:p-10">
           <div className="content w-full flex">
-            <div className="left flex-none flex items-start justify-end space-x-20">
+            <div className="left hidden lg:flex-none lg:flex items-start justify-end space-x-20">
               <h2 className="text-black text-3xl font-light">
                 I got my{" "}
                 <strong>
@@ -162,7 +162,7 @@ export default function Products() {
               </h2>
               <Image src="/star2.png" width={50} height={50} alt="star" />
             </div>
-            <div className="right flex-1 ml-10">
+            <div className="right flex-1 lg:ml-10 p-2">
               <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">
                   Receiving your new IoT SIM Card

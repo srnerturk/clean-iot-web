@@ -7,14 +7,14 @@ export default function Iot() {
       <section className="top w-full h-aut relative">
         <div className="container ml-auto mr-auto flex flex-row-reverse bg-primary">
           <Image
-            className="flex-[0.3]"
+            className="flex-1 hidden lg:flex"
             src="/iot-r.png"
             width={470}
             height={890}
             alt="Vercel Logo"
             sizes="100vw"
           />
-          <div className="left flex-[0.7] p-10">
+          <div className="left flex-1 p-5 lg:p-10">
             <h1 className="mb-5">IOT</h1>
             <h2 className="font-medium">connectivity</h2>
             <p className="mt-10 text-sm leading-relaxed">
@@ -42,10 +42,10 @@ export default function Iot() {
           </div>
         </div>
         <div className="card-container container mx-auto bg-white">
-          <div className="card relative container mx-auto px-12 top-[-50px]">
-            <div className="card-content bg-black rounded-[60px] w-full h-[480px] flex">
-              <div className="content flex">
-                <div className="left flex-[0.6] p-20">
+          <div className="card relative container mx-auto lg:px-12 lg:top-[-50px]">
+            <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[480px] flex">
+              <div className="content flex lg:flex-row flex-col">
+                <div className="left flex-1 p-20">
                   <div className="title fle items-center space-x-2">
                     <div className="title">
                       <h1 className="text-white tracking-wide mb-2">
@@ -64,7 +64,7 @@ export default function Iot() {
                     </p>
                   </div>
                 </div>
-                <div className="right flex-[0.4] p-20">
+                <div className="right flex-1 p-20">
                   <ul className="list-r p-5">
                     <li className="text-left">
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

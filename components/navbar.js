@@ -3,7 +3,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router";
 export default function Navbar() {
+  const router = useRouter();
+
+  React.useEffect(() => {
+    setActiveRoute(router.asPath);
+    if (show) {
+      setShow(false);
+    }
+  }, [router.asPath]);
   const links = [
     { id: 0, text: "Home", href: "/" },
     { id: 1, text: "Solutions", href: "/solutions" },
@@ -11,6 +20,7 @@ export default function Navbar() {
     { id: 3, text: "Pricing", href: "/pricing" },
   ];
   const [show, setShow] = React.useState(false);
+  const [activeRoute, setActiveRoute] = React.useState("/");
   return (
     <div className="wrapper">
       <Head>
@@ -56,6 +66,7 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={item.href}
+                  style={{backgroundColor: activeRoute === item.href ? "#ccc" : ""}}
                   className="navbar-item hover:bg-darkGray px-5 font-bold text-black text-sm h-[50px] flex items-center"
                 >
                   {item.text}
@@ -63,7 +74,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="navbar-item bg-darkGray font-bold text-sm px-5  text-black h-[50px] flex items-center"
+                className="navbar-item font-bold text-sm px-5  text-black h-[50px] flex items-center"
               >
                 Contact
               </Link>

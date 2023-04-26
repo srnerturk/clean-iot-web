@@ -2,9 +2,38 @@
 import react, { useState } from "react";
 import Image from "next/image";
 export default function Iot() {
+  const [listItems, setListItems] = useState([
+    {
+      title: "M2M",
+      items: [
+        "Designed for a wide range of devices",
+        "Uses cellular networks for connectivity",
+        "Can be expensive",
+        "Not available in all areas",
+        "Works well for connecting a large number of devices",
+        "Offers fast data transfer speeds, including high data usage",
+        "Requires more power than NB-IoT",
+        "Larger form factor",
+      ],
+    },
+    {
+      title: "NB-IoT",
+      items: [
+        "Low-power wide area network (LPWAN)",
+        "Offers better coverage in hard-to-reach areas",
+        "Has lower data usage requirements but slower data transfer speeds",
+        "Longer battery life, specifically designed for low-power IoT devices",
+        "Lower cost",
+        "Smaller form factor",
+        "Suitable for connecting a smaller number of devices",
+        "Works well for sensor-based applications",
+      ],
+    },
+  ]);
+
   return (
     <div className="home w-full">
-      <section className="top w-full h-aut relative">
+      <section className="top w-full h-auto relative">
         <div className="container ml-auto mr-auto flex flex-row-reverse bg-primary">
           <Image
             className="flex-1 hidden lg:flex"
@@ -18,33 +47,34 @@ export default function Iot() {
             <h1 className="mb-5">IOT</h1>
             <h2 className="font-medium">connectivity</h2>
             <p className="mt-10 text-sm leading-relaxed">
-              <strong>IoT connectivity</strong> is typically how we refer to the methods used to
-              connect IoT devices. The term “IoT” (Internet of Things) mostly
-              refers to wireless devices including applications, sensors,
-              tracking devices, gateways and network
+              <strong>IoT connectivity</strong> is typically how we refer to the
+              methods used to connect IoT devices. The term “IoT” (Internet of
+              Things) mostly refers to wireless devices including applications,
+              sensors, tracking devices, gateways and network
             </p>
             <p className="mt-10 leading-relaxed">
-              <strong>IoT devices</strong> requiring less maintenance of technologies such as
-              Ethernet and WiFi networks. Which can be less reliable and have
-              problems of their own compared to cellular network.
+              <strong>IoT devices</strong> requiring less maintenance of
+              technologies such as Ethernet and WiFi networks. Which can be less
+              reliable and have problems of their own compared to cellular
+              network.
             </p>
             <p className="mt-10 leading-relaxed">
-              What is IoT? To understand what <strong>IoT SIM cards</strong> are in the first
-              place, it is necessary to explain the term IoT. This is in fact
-              the abbreviation for the term Internet of Things. With the
-              Internet of Things, it is possible for smart devices to connect to
-              each other on the one hand and to the outside world on the other.
-              To make it easier to understand, you can also imagine that through
-              these SIM cards the devices have the ability to talk to each other
-              without involving a human being. This makes it possible for
-              everyday objects to become intelligent devices.
+              What is IoT? To understand what <strong>IoT SIM cards</strong> are
+              in the first place, it is necessary to explain the term IoT. This
+              is in fact the abbreviation for the term Internet of Things. With
+              the Internet of Things, it is possible for smart devices to
+              connect to each other on the one hand and to the outside world on
+              the other. To make it easier to understand, you can also imagine
+              that through these SIM cards the devices have the ability to talk
+              to each other without involving a human being. This makes it
+              possible for everyday objects to become intelligent devices.
             </p>
           </div>
         </div>
-        <div className="card-container container mx-auto bg-white">
+        <div className="card-container lg:pb-16 container mx-auto bg-white">
           <div className="card relative container mx-auto lg:px-12 lg:top-[-50px]">
-            <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[480px] flex">
-              <div className="content flex lg:flex-row flex-col">
+            <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[650px] flex">
+              <div className="content flex lg:flex-row flex-col ">
                 <div className="left flex-1 p-20">
                   <div className="title fle items-center space-x-2">
                     <div className="title">
@@ -56,32 +86,31 @@ export default function Iot() {
                   </div>
                   <div className="content w-full flex">
                     <p className="text-white">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                      magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                      quis nostrud exerci tation ullamcorper suscipit lobortis
-                      nisl ut aliquip ex ea commod.
+                      When choosing between M2M and NB-IoT, it&apos;s important
+                      to consider your specific business needs and the
+                      requirements of your IoT devices. If you require high data
+                      usage or need to connect a wide range of devices, M2M
+                      technology may be the better choice. However, if
+                      you&apos;re looking to connect low-power IoT devices with
+                      long battery life and need coverage in hard-to-reach
+                      areas, NB-IoT may be the way to go.
                     </p>
                   </div>
                 </div>
-                <div className="right flex-1 p-20">
-                  <ul className="list-r p-5">
-                    <li className="text-left">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </li>
-                    <li className="text-left">
-                      Aliquam tincidunt mauris eu risus.
-                    </li>
-                    <li className="text-left">
-                      Vestibulum auctor dapibus neque.
-                    </li>
-                    <li className="text-left">unc dignissim risus id metus.</li>
-                    <li className="text-left">Cras ornare tristique elit.</li>
-                    <li className="text-left">
-                      Vivamus vestibulum ntulla nec ante.
-                    </li>
-                  </ul>
-                </div>
+                {listItems.map((item, index) => (
+                  <div key={index} className="right flex-1 pb-10 px-20">
+                    <h2 className="font-bold text-white text-3xl mt-8">
+                      {item.title}:
+                    </h2>
+                    <ul className="list-r py-3 px-5 space-y-3">
+                      {item.items.map((item, index) => (
+                        <li key={index} className="text-left text-white m-0">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

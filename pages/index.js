@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import react, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   const [questions, setQuestions] = useState([
     {
@@ -193,7 +195,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="footer flex justify-end">
-                <button className="button px-5">Contact Now</button>
+                <Link href={"/contact"} className="button px-5">
+                  Contact Now
+                </Link>
               </div>
             </div>
             <div className="box p-5 w-full h-[300px] bg-green flex flex-col justify-between">
@@ -213,12 +217,15 @@ export default function Home() {
                 </p>
               </div>
               <div className="footer flex justify-end">
-                <button className="button bg-gray px-5">Contact Now</button>
+                <Link href={"/contact"} className="button bg-gray px-5">
+                  Contact Now
+                </Link>
               </div>
             </div>
             <div className="description px-10">
               <h4 className="text-black text-3xl font-light">
-                At our company, we understand each business requirements
+                At CleanIoT we sight to offer you the best tailored solution for
+                your need
               </h4>
             </div>
           </div>

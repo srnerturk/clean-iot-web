@@ -74,8 +74,8 @@ export default function Iot() {
         <div className="card-container lg:pb-16 container mx-auto bg-white">
           <div className="card relative container mx-auto lg:px-12 lg:top-[-50px]">
             <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[650px] flex">
-              <div className="content flex lg:flex-row flex-col ">
-                <div className="left flex-1 p-20">
+              <div className="content flex flex-col">
+                <div className="left flex-1 px-20 lg:pt-10">
                   <div className="title fle items-center space-x-2">
                     <div className="title">
                       <h1 className="text-white tracking-wide mb-2">
@@ -97,20 +97,22 @@ export default function Iot() {
                     </p>
                   </div>
                 </div>
-                {listItems.map((item, index) => (
-                  <div key={index} className="right flex-1 pb-10 px-20">
-                    <h2 className="font-bold text-white text-3xl mt-8">
-                      {item.title}:
-                    </h2>
-                    <ul className="list-r py-3 px-5 space-y-3">
-                      {item.items.map((item, index) => (
-                        <li key={index} className="text-left text-white m-0">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <div className="flex flex-col lg:flex-row">
+                  {listItems.map((item, index) => (
+                    <div key={index} className="right flex-1 pb-10 px-20">
+                      <h2 className="font-bold text-white text-2xl mt-8">
+                        {item.title}:
+                      </h2>
+                      <ul className="list-r py-3 space-y-2">
+                        {item.items.map((item, index) => (
+                          <div key={index} className="text-left text-white m-0">
+                            {item}
+                          </div>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

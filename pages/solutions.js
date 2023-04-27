@@ -75,8 +75,8 @@ export default function Iot() {
           <div className="card relative container mx-auto lg:px-12 lg:top-[-50px]">
             <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[650px] flex">
               <div className="content flex flex-col">
-                <div className="left flex-1 px-20 lg:pt-10">
-                  <div className="title fle items-center space-x-2">
+                <div className="left flex-1 px-20 lg:pt-10 lg:flex lg:basis-4/12">
+                  <div className="title fle items-center space-x-2 lg:basis-1/2">
                     <div className="title">
                       <h1 className="text-white tracking-wide mb-2">
                         M2M vs NB-Iot
@@ -84,7 +84,7 @@ export default function Iot() {
                       <h2 className="text-white mb-5">Which one to choose</h2>
                     </div>
                   </div>
-                  <div className="content w-full flex">
+                  <div className="content w-full flex lg:basis-1/2">
                     <p className="text-white">
                       When choosing between M2M and NB-IoT, it&apos;s important
                       to consider your specific business needs and the
@@ -97,10 +97,10 @@ export default function Iot() {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col lg:flex-row">
+                <div className="flex flex-col lg:flex-row px-20 lg:basis-8/12">
                   {listItems.map((item, index) => (
-                    <div key={index} className="right flex-1 pb-10 px-20">
-                      <h2 className="font-bold text-white text-2xl mt-8">
+                    <div key={index} className="right flex-1 pb-10">
+                      <h2 className="font-bold text-white text-2xl">
                         {item.title}:
                       </h2>
                       <ul className="list-r py-3 space-y-2">

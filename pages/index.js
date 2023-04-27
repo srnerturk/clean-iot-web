@@ -4,35 +4,62 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const [selectedQuestion, setSelectedQuestion] = useState(0);
   const [questions, setQuestions] = useState([
     {
       id: 0,
       text: "Getting started with CleanIoT",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       collapsed: false,
     },
-    { id: 1, text: "About SIM management platform", collapsed: false },
+    {
+      id: 1,
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      text: "About SIM management platform",
+      collapsed: false,
+    },
     {
       id: 2,
       text: "What data plan should i choose?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       collapsed: false,
     },
     {
       id: 3,
       text: "I would like to buy a large number of SIM cards. Can i get volume discount?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       collapsed: false,
     },
     {
       id: 4,
       text: "How long does it take to activate a SIM card?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       collapsed: false,
     },
     {
       id: 5,
       text: "Which devices are compatible with the SIM cards?",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       collapsed: false,
     },
-    { id: 6, text: "IoT SIM models and their functionality", collapsed: false },
+    {
+      id: 6,
+      text: "IoT SIM models and their functionality",
+      answer:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      collapsed: false,
+    },
   ]);
+
+  const changeSelection = (id) => {
+    setSelectedQuestion(id);
+  };
 
   const [customers, setCustomers] = useState([
     {
@@ -275,16 +302,38 @@ export default function Home() {
             {questions.map((item, index) => (
               <div
                 key={index}
-                className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between"
+                className="question-item cursor-pointer border-b border-b-gray flex-col flex"
               >
-                <p className="text-sm font-bold">{item.text}</p>
-                <Image
-                  alt="arrow"
-                  className="image"
-                  src="/arrow.png"
-                  width={18}
-                  height={9}
-                />
+                <div
+                  onClick={() => changeSelection(index)}
+                  className="flex w-full justify-between items-center h-[52px]"
+                >
+                  <p className="text-sm font-bold">{item.text}</p>
+                  {index !== selectedQuestion ? (
+                    <Image
+                      alt="arrow"
+                      className="image"
+                      src="/arrow.png"
+                      width={18}
+                      height={9}
+                    />
+                  ) : (
+                    <Image
+                      alt="arrow"
+                      className="image transform rotate-180"
+                      src="/arrow.png"
+                      width={18}
+                      height={9}
+                    />
+                  )}
+                </div>
+                {index === selectedQuestion && (
+                  <div className="collapse-description p-5">
+                    <p className="text-sm font-light text-black">
+                      {item.answer}
+                    </p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

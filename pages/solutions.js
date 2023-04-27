@@ -97,7 +97,7 @@ export default function Iot() {
                     </p>
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex flex-col lg:flex-row">
                   {listItems.map((item, index) => (
                     <div key={index} className="right flex-1 pb-10 px-20">
                       <h2 className="font-bold text-white text-2xl mt-8">

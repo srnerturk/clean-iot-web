@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 export default function Customers() {
   const [prices, setPrices] = useState([
     {
@@ -108,7 +109,12 @@ export default function Customers() {
                 <h5 className="font-extrabold">$4.95/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full text-sm">Start Now!</button>
+                <Link
+                  href={"/contact"}
+                  className="button w-full text-sm block text-center"
+                >
+                  Start Now!
+                </Link>
               </div>
             </div>
 
@@ -126,7 +132,12 @@ export default function Customers() {
                 <h5 className="text-white font-extrabold">$5.95/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full text-sm">Start Now!</button>
+                <Link
+                  href={"/contact"}
+                  className="button w-full text-sm block text-center"
+                >
+                  Start Now!
+                </Link>
               </div>
             </div>
 
@@ -141,10 +152,15 @@ export default function Customers() {
                 </p>
               </div>
               <div className="price">
-                <h5 className="font-extrabold">$$56.45/mo</h5>
+                <h5 className="font-extrabold">$56.45/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full text-sm">Start Now!</button>
+                <Link
+                  href={"/contact"}
+                  className="button w-full text-sm block text-center"
+                >
+                  Start Now!
+                </Link>
               </div>
             </div>
 
@@ -162,7 +178,12 @@ export default function Customers() {
                 <h5 className="text-white font-extrabold">$2.95/mo</h5>
               </div>
               <div className="actions">
-                <button className="button w-full text-sm">Start Now!</button>
+                <Link
+                  href={"/contact"}
+                  className="button w-full text-sm block text-center"
+                >
+                  Start Now!
+                </Link>
               </div>
             </div>
           </div>

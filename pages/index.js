@@ -138,15 +138,21 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="py-10 bg-white px-5">
-          <div className="title w-full flex lg:flex-row flex-col lg:space-x-20">
-            <div className="left flex-1  flex items-center  justify-center space-x-2 ">
-              <h3 className="text-black text-4xl font-light">
+        <section className="py-28 bg-white px-5">
+          <div className="title max-w-5xl flex mx-auto lg:flex-row flex-col lg:space-x-20">
+            <div className="flex-1 relative  flex items-center  justify-center space-x-2 ">
+              <h3 className="text-black text-4xl lg:text-[42px] font-normal z-20">
                 We offer the latest in <strong>IoT SIM Card</strong> Technology
               </h3>
-              <Image src="/star2.png" width={50} height={50} alt="star" />
+              <Image
+                className="absolute right-0 z-10"
+                src="/star2.png"
+                width={50}
+                height={50}
+                alt="star"
+              />
             </div>
-            <div className="right mt-10 lg:mt-0 flex-1 justify-start items-center">
+            <div className="mt-10 lg:mt-0 flex-1 justify-start items-center">
               <p className="text-xl font-light text-black leading-relaxed italic">
                 Our SIM cards are designed specifically for IoT devices and
                 provide reliable connectivity, security, and flexibility to
@@ -155,21 +161,33 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="card relative container ml-auto mr-auto lg:p-10 bg-white">
-          <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[480px] flex">
-            <div className="left flex-[0.5] lg:p-20 p-5">
-              <div className="title flex items-center space-x-2">
-                <Image
-                  src="/star.png"
-                  width={40}
-                  height={40}
-                  alt="Vercel Logo"
-                />
-                <h1 className="text-white tracking-wide">Start</h1>
-                <h1 className="text-white">your journey.</h1>
+        <section className="card relative container ml-auto mr-auto lg:px-10 lg:pb-10 bg-white">
+          <div className="card-content bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
+            <div className="flex-[0.6] lg:pl-20 lg:py-20 p-5 lg:mx-0 lg:w-full relative">
+              <div className="title space-x-2 max-w-lg mx-auto flex-1 lg:mx-0 lg:min-w-full">
+                <div className="flex w-full flex-wrap md:flex-nowrap">
+                  <Image
+                    src="/star.png"
+                    width={40}
+                    height={40}
+                    alt="Vercel Logo"
+                    className="self-start"
+                  />
+                  <h1 className="text-white tracking-wide lg:text-6xl">
+                    Start your journey.
+                  </h1>
+                </div>
+                {/* <h1 className="text-white tracking-wide">
+                  Start your journey.
+                  <span>
+                    with this <span>simple</span> step.
+                  </span>
+                </h1> */}
               </div>
-              <h2 className="text-white mt-5 mb-20">with this simple step.</h2>
-              <div className="slidecontainer w-full">
+              <h2 className="text-white mt-5 mb-20 lg:text-6xl font-normal lg:flex-nowrap max-w-lg xl:max-w-xl mx-auto lg:mx-0 lg:w-full">
+                with this <span className="font-bold">simple</span> step.
+              </h2>
+              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full">
                 <div className="input">
                   <input
                     type="range"
@@ -186,11 +204,11 @@ export default function Home() {
                   <p className="text-white">$400 TOTAL</p>
                 </div>
                 <div className="actions mt-10">
-                  <button className="button px-20">Order Now!</button>
+                  <button className="button px-20 w-full">Order Now!</button>
                 </div>
               </div>
             </div>
-            <div className="right flex-[0.5] relative bottom-[-120px] right-[-100px] flex items-end justify-end">
+            <div className="lg:absolute xl:scale-[130%] max-w-xl mx-auto lg:mx-0 lg:w-full -bottom-14 top-28 xl:top-40 -right-8 xl:-right-3">
               <Image
                 className="w-full h-auto"
                 objectFit="contain"
@@ -198,7 +216,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 alt="Vercel Logo"
-                sizes="100vw"
+                sizes="240vw"
               />
             </div>
           </div>

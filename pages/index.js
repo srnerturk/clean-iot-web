@@ -208,7 +208,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="lg:absolute xl:scale-[130%] max-w-xl mx-auto lg:mx-0 lg:w-full -bottom-14 top-28 xl:top-40 -right-8 xl:-right-3">
+            <div className="lg:absolute xl:scale-[140%] max-w-xl mx-auto lg:mx-0 lg:w-full -bottom-14 top-28 xl:top-40 -right-8 xl:right-9">
               <Image
                 className="w-full h-auto"
                 objectFit="contain"

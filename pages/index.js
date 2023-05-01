@@ -94,7 +94,7 @@ export default function Home() {
     },
   ]);
   return (
-    <div className="home">
+    <div className="home relative">
       <div className="container mx-auto">
         <section className="top h-auto bg-primary relative">
           <Image

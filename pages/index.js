@@ -162,7 +162,7 @@ export default function Home() {
           </div>
         </section>
         <section className="card relative container ml-auto mr-auto lg:px-10 lg:pb-10 bg-white">
-          <div className="card-content lg:mb-5 bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
+          <div className="card-content relative z-20 lg:mb-5 bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
             <div className="flex-[0.6] lg:pl-20 lg:py-20 p-5 lg:mx-0 lg:w-full relative">
               <div className="title space-x-2 max-w-lg mx-auto flex-1 lg:mx-0 lg:min-w-full">
                 <div className="flex w-full flex-wrap md:flex-nowrap">
@@ -222,10 +222,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="boxes relative container ml-auto mr-auto lg:p-10 bg-white">
-          <div className="absolute mt-32 z-0">
+        <section className="boxes relative container ml-auto mr-auto lg:p-10 lg:py-36 bg-white">
+          <div className="absolute mt-28 sm:mt-20 z-0 lg:ml-72 lg:-top-[360px] ">
             <Image
-              className="w-full h-auto -z-10"
+              className="w-full h-auto lg:ml-16"
               objectFit="contain"
               src="/Rectangle.svg"
               width={0}
@@ -247,13 +247,13 @@ export default function Home() {
                   sizes="240vw"
                 />
               </div>
-              <div className="title pr-32 mb-5">
+              <div className="title pr-32 mb-5 flex-1">
                 <h5 className="text-white text-2xl">
                   We Develope Special IOT Solutions for you
                 </h5>
               </div>
               <div className="body">
-                <p className="text-white text-base italic pr-4  mb-14">
+                <p className="text-white text-base italic pr-4 flex-1 mb-14">
                   Our team of experts can develop customised IOT solution to
                   meet your specific business needs and requirements.
                 </p>
@@ -276,7 +276,7 @@ export default function Home() {
                   sizes="240vw"
                 />
               </div>
-              <div className="title pr-16 mb-5">
+              <div className="title pr-16 mb-5 sm:flex-1 xl:flex-none">
                 <h5 className="text-2xl">
                   Tailored IOT Solutions: Optimized for performance & security
                 </h5>
@@ -288,7 +288,7 @@ export default function Home() {
                   scalability.
                 </p>
               </div>
-              <div className="footer flex justify-end self-end">
+              <div className="footer flex justify-end justify-self-start self-end md:mr-auto">
                 <Link href={"/contact"} className="button-black px-5">
                   Contact <strong>Now!</strong>
                 </Link>

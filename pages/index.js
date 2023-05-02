@@ -105,15 +105,21 @@ export default function Home() {
             alt="Vercel Logo"
             sizes="100vw"
           />
-          <div className="text-view absolute top-[50px] left-[50px]">
-            <h1 className=" font-light">We offer the latest in</h1>
-            <h2 className="font-light">
+          <div className="text-view text-center lg:text-start top-9 right-0 left-0 absolute lg:top-[50px] lg:left-[50px]">
+            <h1 className="font-normal text-2xl md:text-4xl">
+              We offer the latest in
+            </h1>
+            <h1 className="font-normal text-2xl md:text-4xl">
               <strong>IOT SIM Card</strong> Technologly
-            </h2>
+            </h1>
           </div>
-          <div className="actions w-full flex items-center justify-center absolute bottom-[50px] space-x-10">
-            <button className="button px-4">Start your journey Now!</button>
-            <button className="button px-4">Book a Demo!</button>
+          <div className="actions w-full flex flex-col gap-3 md:gap-0 md:flex-row items-end md:items-center justify-center absolute bottom-4 md:bottom-16 md:space-x-10">
+            <button className="w-60 md:text-xl bg-black py-2 text-green px-4 mr-5 md:mr-0">
+              Start your journey <strong>Now!</strong>
+            </button>
+            <button className="w-60 md:text-xl bg-black py-2 text-green text-start px-4 mr-5 md:mr-0">
+              Book a <strong>Demo!</strong>
+            </button>
           </div>
         </section>
         <section className="lg:p-5 bg-black partners">

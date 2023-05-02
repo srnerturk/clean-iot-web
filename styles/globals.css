@@ -82,7 +82,11 @@ p {
 }
 
 .button {
-  @apply py-3 font-bold bg-green text-black;
+  @apply py-3 font-normal bg-green text-black;
+}
+
+.button-black {
+  @apply py-3 font-normal bg-black text-white;
 }
 td {
   @apply p-2

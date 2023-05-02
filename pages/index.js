@@ -162,7 +162,7 @@ export default function Home() {
           </div>
         </section>
         <section className="card relative container ml-auto mr-auto lg:px-10 lg:pb-10 bg-white">
-          <div className="card-content bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
+          <div className="card-content mb-5 bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
             <div className="flex-[0.6] lg:pl-20 lg:py-20 p-5 lg:mx-0 lg:w-full relative">
               <div className="title space-x-2 max-w-lg mx-auto flex-1 lg:mx-0 lg:min-w-full">
                 <div className="flex w-full flex-wrap md:flex-nowrap">
@@ -222,8 +222,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="boxes container ml-auto mr-auto mt-10 lg:mt-0 lg:p-10 bg-white">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <section className="boxes relative container ml-auto mr-auto mt-10 lg:mt-0 lg:p-10 bg-white">
+          <div className="absolute mt-32 z-0">
+            <Image
+              className="w-full h-auto -z-10"
+              objectFit="contain"
+              src="/Rectangle.svg"
+              width={0}
+              height={0}
+              alt="Vercel Logo"
+              sizes="500vw"
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-10 relative z-0 lg:grid-cols-3">
             <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between">
               <div className="top flex w-full justify-start">
                 <div className="square w-[40px] h-[40px] bg-primary mb-5"></div>
@@ -267,8 +278,8 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="description px-10">
-              <h4 className="text-black text-3xl font-light">
+            <div className="description px-10 py-20 lg:py-0 order-first lg:order-last">
+              <h4 className="text-black text-3xl text-center lg:text-start font-normal">
                 At CleanIoT we sight to offer you the best tailored solution for
                 your need
               </h4>

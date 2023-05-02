@@ -258,8 +258,11 @@ export default function Home() {
                   meet your specific business needs and requirements.
                 </p>
               </div>
-              <div className="footer flex justify-end ">
-                <Link href={"/contact"} className="button px-5 ">
+              <div className="footer flex justify-end w-full">
+                <Link
+                  href={"/contact"}
+                  className="button px-5 w-full sm:w-auto"
+                >
                   Contact <strong>Now!</strong>
                 </Link>
               </div>
@@ -288,8 +291,11 @@ export default function Home() {
                   scalability.
                 </p>
               </div>
-              <div className="footer flex justify-end justify-self-start self-end md:mr-auto">
-                <Link href={"/contact"} className="button-black px-5">
+              <div className="footer flex justify-end justify-self-start self-end md:mr-auto w-full">
+                <Link
+                  href={"/contact"}
+                  className="button-black px-5 w-full sm:w-auto"
+                >
                   Contact <strong>Now!</strong>
                 </Link>
               </div>

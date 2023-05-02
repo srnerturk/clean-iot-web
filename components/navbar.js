@@ -36,7 +36,7 @@ export default function Navbar() {
         />
       </Head>
       <div className="container mx-auto shadow-lg sticky top-0">
-        <div className="topnav lg:hidden z-50 bg-gray">
+        <div className="topnav lg:hidden relative z-[99999] bg-gray">
           <div className="logo flex w-full justify-between p-5">
             <Image
               src="/logo-detail.png"

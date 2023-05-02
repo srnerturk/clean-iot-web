@@ -93,96 +93,128 @@ export default function Customers() {
     <div className="orders w-ful">
       <section className="top w-full h-auto relative">
         <div className="container mx-auto bg-white">
-          <h2 className="py-10 px-5">Top choices by our customers </h2>
-          <div className="grid lg:grid-cols-4 grid-cols-1 gap-5">
-            <div className="info-box p-5 bg-gray flex space-y-5 flex-col justify-between">
-              <div className="title">
-                <h3 className="font-bold">150 mb</h3>
+          <h2 className="py-10 font-normal pl-5">
+            <strong>Top</strong> choices by <br /> our{" "}
+            <strong>customers</strong>
+          </h2>
+          <div className="grid lg:grid-cols-4  grid-cols-1 gap-5 max-w-5xl mx-auto">
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-gray flex flex-col justify-start">
+              <div className="title p-5 mb-1">
+                <h3 className="font-normal text-3xl">
+                  <strong>150</strong> MB
+                </h3>
               </div>
-              <div className="body">
-                <p className="text-sm">
-                  Best for manufacturing ·Best for tracking ·Best for small
-                  fleet applications
+              <div className="body italic px-5 pb-6 flex-1">
+                <p className="text-sm font-semibold">·Best for manufacturing</p>
+                <p className="text-sm font-semibold">·Best for tracking</p>
+                <p className="text-sm font-semibold">
+                  ·Best for small fleet applications
                 </p>
               </div>
-              <div className="price">
-                <h5 className="font-extrabold">$4.95/mo</h5>
+              <div className="price px-5 pb-2">
+                <h5 className="font-normal text-3xl">
+                  <strong>$4.95</strong>/mo
+                </h5>
               </div>
-              <div className="actions">
+              <div className="actions mx-5">
                 <Link
                   href={"/contact"}
-                  className="button w-full text-sm block text-center"
+                  className="w-full text-2xl text-black bg-green py-2 block text-center"
                 >
-                  Start Now!
+                  Start <strong>Now!</strong>
                 </Link>
               </div>
             </div>
 
-            <div className="info-box p-5 bg-black flex space-y-5 flex-col justify-between">
-              <div className="title">
-                <h3 className="text-white font-bold">250 mb</h3>
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#231F20] flex flex-col justify-start">
+              <div className="title p-5 mb-1">
+                <h3 className="text-white font-normal text-3xl">
+                  <strong>250</strong> MB
+                </h3>
               </div>
-              <div className="body">
-                <p className="text-white text-sm">
-                  ·Best for smart city projects ·Best for IoT sensors ·Best for
-                  busy fleet applications
+              <div className="body px-5 pb-6 italic flex-1">
+                <p className="text-white text-sm font-semibold">
+                  ·Best for smart city projects
+                </p>
+                <p className="text-white text-sm font-semibold">
+                  ·Best for IoT sensors
+                </p>
+                <p className="text-white text-sm font-semibold">
+                  ·Best for busy fleet applications
                 </p>
               </div>
-              <div className="price">
-                <h5 className="text-white font-extrabold">$5.95/mo</h5>
+              <div className="price px-5 pb-2">
+                <h5 className="font-normal text-white text-3xl">
+                  <strong>$5.95</strong>/mo
+                </h5>
               </div>
-              <div className="actions">
+              <div className="actions mx-5">
                 <Link
                   href={"/contact"}
-                  className="button w-full text-sm block text-center"
+                  className="w-full text-2xl text-black bg-green py-2 block text-center"
                 >
-                  Start Now!
+                  Start <strong>Now!</strong>
                 </Link>
               </div>
             </div>
 
-            <div className="info-box p-5 bg-gray flex space-y-5 flex-col justify-between">
-              <div className="title">
-                <h3 className="font-bold">5 GB</h3>
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-gray flex  flex-col justify-start">
+              <div className="title bg-[#231F20] p-5 mb-1">
+                <h3 className="font-normal text-3xl text-white">
+                  <strong>5</strong> GB
+                </h3>
               </div>
-              <div className="body">
-                <p className="text-sm">
-                  ·Best for complex aplications ·Best for network ·Best for busy
-                  fleet applications
+              <div className="body italic pb-6 px-5 flex-1">
+                <p className="text-sm font-semibold">
+                  ·Best for complex aplications
+                </p>
+                <p className="text-sm mt-1 font-semibold">·Best for network</p>
+                <p className="text-sm mt-1 font-semibold">
+                  ·Best for busy fleet applications
                 </p>
               </div>
-              <div className="price">
-                <h5 className="font-extrabold">$56.45/mo</h5>
+              <div className="price px-5 pb-2">
+                <h5 className="font-normal text-3xl">
+                  <strong>$56.45</strong>/mo
+                </h5>
               </div>
-              <div className="actions">
+              <div className="actions mx-5">
                 <Link
                   href={"/contact"}
-                  className="button w-full text-sm block text-center"
+                  className="w-full text-2xl text-black bg-green py-2 block text-center"
                 >
-                  Start Now!
+                  Start <strong>Now!</strong>
                 </Link>
               </div>
             </div>
 
-            <div className="info-box p-5 bg-black flex space-y-5 flex-col justify-between">
-              <div className="title">
-                <h3 className="text-white font-bold">NB-IOT</h3>
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-gray flex flex-col justify-start">
+              <div className="title p-5 mb-1 bg-[#231F20]">
+                <h3 className="font-normal text-white text-3xl">
+                  NB-<strong>IoT</strong>
+                </h3>
               </div>
-              <div className="body">
-                <p className="text-white text-sm">
-                  ·Best for smart city projects ·Best for IoT sensors ·Best for
-                  busy fleet applications
+              <div className="body px-5 pb-6 italic flex-1">
+                <p className="text-sm font-semibold">
+                  ·Best for smart city projects
                 </p>
+                <p className="text-sm font-semibold">·Best for IoT sensors</p>
+                <p className="text-sm font-semibold">
+                  ·Best for busy fleet applications
+                </p>
+                <p className="text-sm"></p>
               </div>
-              <div className="price">
-                <h5 className="text-white font-extrabold">$2.95/mo</h5>
+              <div className="price px-5 pb-2">
+                <h5 className="font-normal text-3xl">
+                  <strong>$2.95</strong>/mo
+                </h5>
               </div>
-              <div className="actions">
+              <div className="actions mx-5">
                 <Link
                   href={"/contact"}
-                  className="button w-full text-sm block text-center"
+                  className="w-full border-4 text-2xl text-black border-black bg-green py-2 block text-center justify-end justify-self-start"
                 >
-                  Start Now!
+                  Start <strong>Now!</strong>
                 </Link>
               </div>
             </div>

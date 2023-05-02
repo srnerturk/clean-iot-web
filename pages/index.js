@@ -105,15 +105,21 @@ export default function Home() {
             alt="Vercel Logo"
             sizes="100vw"
           />
-          <div className="text-view absolute top-[50px] left-[50px]">
-            <h1 className=" font-light">We offer the latest in</h1>
-            <h2 className="font-light">
+          <div className="text-view text-center lg:text-start top-9 right-0 left-0 absolute lg:top-[50px] lg:left-[50px]">
+            <h1 className="font-normal text-2xl md:text-4xl">
+              We offer the latest in
+            </h1>
+            <h1 className="font-normal text-2xl md:text-4xl">
               <strong>IOT SIM Card</strong> Technologly
-            </h2>
+            </h1>
           </div>
-          <div className="actions w-full flex items-center justify-center absolute bottom-[50px] space-x-10">
-            <button className="button px-4">Start your journey Now!</button>
-            <button className="button px-4">Book a Demo!</button>
+          <div className="actions w-full flex flex-col gap-3 md:gap-0 md:flex-row items-end md:items-center justify-center absolute bottom-4 md:bottom-16 md:space-x-10">
+            <button className="w-60 md:text-xl bg-black py-2 text-green px-4 mr-5 md:mr-0">
+              Start your journey <strong>Now!</strong>
+            </button>
+            <button className="w-60 md:text-xl bg-black py-2 text-green text-start px-4 mr-5 md:mr-0">
+              Book a <strong>Demo!</strong>
+            </button>
           </div>
         </section>
         <section className="lg:p-5 bg-black partners">
@@ -162,7 +168,7 @@ export default function Home() {
           </div>
         </section>
         <section className="card relative container ml-auto mr-auto lg:px-10 lg:pb-10 bg-white">
-          <div className="card-content mb-5 bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
+          <div className="card-content relative z-20 lg:mb-5 bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
             <div className="flex-[0.6] lg:pl-20 lg:py-20 p-5 lg:mx-0 lg:w-full relative">
               <div className="title space-x-2 max-w-lg mx-auto flex-1 lg:mx-0 lg:min-w-full">
                 <div className="flex w-full flex-wrap md:flex-nowrap">
@@ -222,10 +228,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="boxes relative container ml-auto mr-auto mt-10 lg:mt-0 lg:p-10 bg-white">
-          <div className="absolute mt-32 z-0">
+        <section className="boxes relative container ml-auto mr-auto lg:p-10 lg:py-36 bg-white">
+          <div className="absolute mt-28 sm:mt-20 z-0 lg:ml-72 lg:-top-[360px] ">
             <Image
-              className="w-full h-auto -z-10"
+              className="w-full h-auto lg:ml-16"
               objectFit="contain"
               src="/Rectangle.svg"
               width={0}
@@ -234,51 +240,73 @@ export default function Home() {
               sizes="500vw"
             />
           </div>
-          <div className="grid grid-cols-1 gap-10 relative z-0 lg:grid-cols-3">
-            <div className="box p-5 w-full h-[300px] bg-black flex flex-col justify-between">
-              <div className="top flex w-full justify-start">
-                <div className="square w-[40px] h-[40px] bg-primary mb-5"></div>
+          <div className="grid grid-cols-1 sm:gap-3 md:gap-6 lg:gap-10 sm:px-3 md:px-10 relative z-0 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="box p-5 pt-7 lg:max-w-[342px] w-full bg-black flex flex-col justify-start">
+              <div className="top flex w-full pb-7 justify-start">
+                <Image
+                  className="w-28 h-auto"
+                  objectFit="contain"
+                  src={"/card-icons-green.svg"}
+                  width={0}
+                  height={0}
+                  alt="Vercel Logo"
+                  sizes="240vw"
+                />
               </div>
-              <div className="title">
-                <h5 className="text-white">
+              <div className="title pr-32 mb-5 flex-1">
+                <h5 className="text-white text-2xl">
                   We Develope Special IOT Solutions for you
                 </h5>
               </div>
               <div className="body">
-                <p className="text-white text-sm">
+                <p className="text-white text-base italic pr-4 flex-1 mb-14">
                   Our team of experts can develop customised IOT solution to
                   meet your specific business needs and requirements.
                 </p>
               </div>
-              <div className="footer flex justify-end">
-                <Link href={"/contact"} className="button px-5">
-                  Contact Now
+              <div className="footer flex justify-end w-full">
+                <Link
+                  href={"/contact"}
+                  className="button px-5 w-full sm:w-auto"
+                >
+                  Contact <strong>Now!</strong>
                 </Link>
               </div>
             </div>
-            <div className="box p-5 w-full h-[300px] bg-green flex flex-col justify-between">
-              <div className="top flex w-full justify-start">
-                <div className="square w-[40px] h-[40px] bg-black mb-5"></div>
+            <div className="box p-5 pt-7 lg:max-w-[342px] w-full bg-green flex flex-col justify-start">
+              <div className="top flex w-full pb-7 justify-start">
+                <Image
+                  className="w-28 h-auto"
+                  objectFit="contain"
+                  src={"/card-icons-black.svg"}
+                  width={0}
+                  height={0}
+                  alt="Vercel Logo"
+                  sizes="240vw"
+                />
               </div>
-              <div className="title">
-                <h5>
+              <div className="title pr-16 mb-5 sm:flex-1 xl:flex-none">
+                <h5 className="text-2xl">
                   Tailored IOT Solutions: Optimized for performance & security
                 </h5>
               </div>
-              <div className="body">
-                <p className="text-white text-sm">
+              <div className="body flex-1">
+                <p className="text-black text-base italic pr-3 mb-14">
                   From concept to deployment, we work closely with your IOT
                   solution is optimized for performance, security and
                   scalability.
                 </p>
               </div>
-              <div className="footer flex justify-end">
-                <Link href={"/contact"} className="button bg-gray px-5">
-                  Contact Now
+              <div className="footer flex justify-end justify-self-start self-end md:mr-auto w-full">
+                <Link
+                  href={"/contact"}
+                  className="button-black px-5 w-full sm:w-auto"
+                >
+                  Contact <strong>Now!</strong>
                 </Link>
               </div>
             </div>
-            <div className="description px-10 py-20 lg:py-0 order-first lg:order-last">
+            <div className="description px-10 lg:px-0 lg:pr-20 py-16 sm:py-24 lg:py-0 order-first lg:order-last sm:col-span-2 lg:col-span-1">
               <h4 className="text-black text-3xl text-center lg:text-start font-normal">
                 At CleanIoT we sight to offer you the best tailored solution for
                 your need

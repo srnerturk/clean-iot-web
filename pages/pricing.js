@@ -313,7 +313,7 @@ export default function Customers() {
             <strong>customers</strong>
           </h2>
           <div className="grid lg:grid-cols-4  grid-cols-1 gap-5 max-w-5xl mx-auto">
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-gray flex flex-col justify-start">
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
               <div className="title p-5 mb-1">
                 <h3 className="font-normal text-3xl">
                   <strong>150</strong> MB
@@ -373,7 +373,7 @@ export default function Customers() {
               </div>
             </div>
 
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-gray flex  flex-col justify-start">
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex  flex-col justify-start">
               <div className="title bg-[#231F20] p-5 mb-1">
                 <h3 className="font-normal text-3xl text-white">
                   <strong>5</strong> GB
@@ -402,7 +402,7 @@ export default function Customers() {
                 </Link>
               </div>
             </div>
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-gray flex flex-col justify-start">
+            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
               <div className="title p-5 mb-1 bg-[#231F20]">
                 <h3 className="font-normal text-white text-3xl">
                   NB-<strong>IoT</strong>
@@ -489,8 +489,8 @@ export default function Customers() {
         </div>
       </section>
 
-      <section className="top w-full h-auto relative lg:p-10 p-5">
-        <div className="container ml-auto mr-auto">
+      <section className="top w-full h-auto relative  lg:px-10 px-5">
+        <div className="container mx-auto bg-white">
           <div className="flex lg:flex-row flex-col items-center lg:justify-between space-x-5">
             <p className="flex-1 text-lg font-light leading-relaxed">
               We understand that every business has unique needs when it comes

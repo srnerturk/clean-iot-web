@@ -669,7 +669,7 @@ export default function Home() {
                       ))}
                       <ul
                         key={index}
-                        className="collapse-description list-decimal list-inside px-5 pb-5"
+                        className="collapse-description list-decimal list-inside px-5 pb-5 mt-3"
                       >
                         {item.complexAnswer.map((answer, index) => (
                           <div key={index}>
@@ -706,10 +706,10 @@ export default function Home() {
                       {item.answer.map((answer, index) => (
                         <div
                           key={index}
-                          className="collapse-description px-5 pb-5"
+                          className="collapse-description px-5 pb-5 pt-3"
                         >
                           {answer.type === "text" ? (
-                            <p className="text-sm font-light text-black mt-3">
+                            <p className="text-sm font-light text-black">
                               {answer.content}
                             </p>
                           ) : answer.type === "list" ? (

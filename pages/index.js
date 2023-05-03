@@ -9,51 +9,313 @@ export default function Home() {
     {
       id: 0,
       text: "Getting started with CleanIoT",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      isAnswerComplex: false,
+      answer: [
+        {
+          type: "text",
+          content:
+            "Welcome to CleanIOT! We are thrilled to have you onboard and look forward to helping you harness the power of our advanced IoT SIM card technology. To get started with CleanIOT, follow these simple steps:",
+        },
+        {
+          type: "list",
+          content: [
+            "Choose Your Plan: First, select the best-suited plan for your IoT needs from our range of flexible and cost-effective pricing options. Visit our Pricing page on our website to review the available plans and their features.",
+            "Order Your SIM Cards: Once you have chosen a plan, order the required number of IoT SIM cards from our online store. We will promptly ship the SIM cards to your specified address.",
+            'Activate Your SIM Cards: After receiving your CleanIOT SIM cards, you need to activate them. To do so, log in to the CleanIOT Management Platform using the credentials provided in your welcome email. Once logged in, navigate to the "SIM Management" section and follow the instructions to activate your SIM cards.',
+            "Insert the SIM Cards: Install the CleanIOT SIM cards into your IoT devices, making sure they are properly seated and securely fastened.",
+            "Configure Your Devices: Depending on your device type and application, you may need to configure the network settings to ensure seamless connectivity. Refer to your device's user manual or consult with our customer support team for guidance on device configuration.",
+            "Monitor and Manage Your IoT Network: With your SIM cards activated and devices configured, you can now monitor and manage your IoT network through the CleanIOT Management Platform. This user-friendly interface allows you to track device usage, set data limits, remotely control devices, and more.",
+            "Get Support: If you need assistance at any stage of the process, our dedicated customer support team is available 24/7 to help you with any questions or concerns. You can reach us via phone, email, or live chat.",
+          ],
+        },
+      ],
+
       collapsed: false,
     },
     {
       id: 1,
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       text: "About SIM management platform",
+      isAnswerComplex: false,
+      answer: [
+        {
+          type: "text",
+          content:
+            "Our SIM Management Platform is a comprehensive, user-friendly web-based tool that allows you to efficiently manage and monitor your IoT SIM cards and connected devices. With its intuitive interface and powerful features, the platform simplifies the process of managing your IoT ecosystem while providing you with valuable insights.",
+        },
+        {
+          type: "text",
+          content: "Key Features of the SIM Management Platform:",
+        },
+        {
+          type: "list",
+          content: [
+            "Centralized Dashboard: The platform offers a centralized dashboard that provides a holistic view of your IoT SIM cards and devices, giving you real-time information on their status, connectivity, and usage.",
+            "Remote SIM Activation and Deactivation: Easily activate or deactivate IoT SIM cards remotely without the need for physical intervention. This feature allows for quick deployment and decommissioning of devices as needed.",
+            "Usage Monitoring and Reporting: Track your IoT SIM cards' data usage and generate customizable reports, enabling you to analyze usage patterns, optimize your data plans, and avoid unexpected costs.",
+            "Group Management: Organize your IoT SIM cards and devices into groups based on criteria like location, function, or ownership. This feature allows for easier management and monitoring of your IoT infrastructure.",
+            "Security Management: Our SIM Management Platform includes advanced security features that help you protect your IoT SIM cards and devices. Configure and manage encryption and authentication settings to ensure data integrity and confidentiality.",
+            "Customer Support: Our dedicated support team is available 24/7 to assist you with any questions or issues you may encounter while using the SIM Management Platform.",
+          ],
+        },
+        {
+          type: "text",
+          content:
+            "In summary, the SIM Management Platform is designed to provide you with unparalleled control over your IoT SIM cards and connected devices. By leveraging its powerful features and intuitive interface, you can streamline your IoT management tasks and make more informed decisions about your IoT infrastructure.",
+        },
+      ],
+
       collapsed: false,
     },
     {
       id: 2,
       text: "What data plan should i choose?",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      isAnswerComplex: false,
+      answer: [
+        {
+          type: "text",
+          content:
+            "Selecting the right data plan for your IoT SIM cards depends on various factors, such as your connectivity requirements, the number of devices, and the specific use case. To determine the most suitable data plan for your needs, consider the following aspects:",
+        },
+        {
+          type: "text",
+          content:
+            "Data Usage: Estimate the average data usage per device per month. This can be based on the device's specific functions and the frequency of data transmission. If you are unsure about the exact data requirements, it is advisable to start with a lower-tier plan and monitor your usage patterns to make adjustments as needed.",
+        },
+        {
+          type: "text",
+          content:
+            "Number of Devices: The total number of devices you plan to connect will influence your data plan choice. Larger networks may benefit from higher-tier plans or customized enterprise solutions that cater to the specific needs of your IoT ecosystem.",
+        },
+        {
+          type: "text",
+          content:
+            "By considering these factors and evaluating your specific IoT connectivity requirements, you can make an informed decision when choosing the most suitable data plan for your IoT SIM cards. It's essential to strike the right balance between cost and performance, ensuring that you get the best value for your investment.",
+        },
+      ],
       collapsed: false,
     },
     {
       id: 3,
       text: "I would like to buy a large number of SIM cards. Can i get volume discount?",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      isAnswerComplex: false,
+      answer: [
+        {
+          type: "text",
+          content:
+            "Yes, at CleanIOT, we understand the importance of providing cost-effective solutions for businesses looking to deploy a large number of IoT SIM cards. We offer volume discounts to cater to your needs and ensure you receive the best value for your investment.",
+        },
+        {
+          type: "text",
+          content:
+            "Our pricing structure is designed to be flexible and transparent, allowing you to take advantage of reduced rates as your IoT SIM card requirements grow. The more SIM cards you purchase, the greater the discount you can benefit from.",
+        },
+        {
+          type: "text",
+          content:
+            "To discuss your specific requirements and receive a personalized quote, please reach out to our sales team. They will be more than happy to help you determine the optimal package for your business and provide you with a tailored pricing plan that reflects the volume discount.",
+        },
+        {
+          type: "text",
+          content:
+            "You can contact our sales team via email, phone, or the live chat feature on our website. They are available to assist you with any questions or concerns you may have and guide you through the process of purchasing your IoT SIM cards with volume discounts.",
+        },
+      ],
       collapsed: false,
     },
     {
       id: 4,
       text: "How long does it take to activate a SIM card?",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      isAnswerComplex: false,
+      answer: [
+        {
+          type: "text",
+          content:
+            "Activating a CleanIOT SIM card is a quick and straightforward process. Once you have received your IoT SIM card and inserted it into your device, the activation process typically takes only a few minutes. However, in some cases, it may take up to 24 hours for the SIM card to be fully activated and operational.",
+        },
+        {
+          type: "text",
+          content:
+            "To ensure a smooth activation process, please follow these steps:",
+        },
+        {
+          type: "list",
+          content: [
+            "Insert the CleanIOT SIM card into your IoT device according to the manufacturer's instructions.",
+            "Power on your device and ensure it is in an area with adequate network coverage.",
+            "Log in to the CleanIOT SIM Management Platform using your account credentials.",
+            'Locate the SIM card in question on the platform, and click the "Activate" button.',
+            "The platform will confirm the activation process has started, and you will receive a notification once the SIM card is successfully activated.",
+          ],
+        },
+        {
+          type: "text",
+          content:
+            "Please note that the actual activation time may vary depending on factors such as network conditions and device compatibility. If you encounter any issues during the activation process or your SIM card has not been activated within 24 hours, please contact our customer support team for further assistance. Our dedicated experts are available 24/7 to help you resolve any issues and ensure a seamless activation experience.",
+        },
+      ],
       collapsed: false,
     },
     {
       id: 5,
       text: "Which devices are compatible with the SIM cards?",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      isAnswerComplex: false,
+      answer: [
+        {
+          type: "text",
+          content:
+            "CleanIOT's IoT SIM cards are designed with versatility in mind, ensuring compatibility with a wide range of devices across various industries and applications. Our SIM cards can be used in any device that supports cellular connectivity and complies with the relevant IoT communication standards.",
+        },
+        {
+          type: "text",
+          content: "Some examples of compatible devices include:",
+        },
+        {
+          type: "list",
+          content: [
+            "Smart meters and sensors for monitoring energy consumption, environmental conditions, and infrastructure health.",
+            "Fleet management and vehicle tracking systems, such as GPS trackers and telematics devices.",
+            "Security and surveillance equipment, including CCTV cameras and alarm systems.",
+            "Industrial automation and control systems used in manufacturing, agriculture, and logistics.",
+            "Wearable devices, such as smartwatches and fitness trackers, for health monitoring and tracking purposes.",
+            "Smart home and building automation devices, including thermostats, lighting systems, and access control systems.",
+            "Retail and payment systems, like POS terminals, vending machines, and digital signage.",
+          ],
+        },
+        {
+          type: "text",
+          content:
+            "It is important to note that the specific compatibility of CleanIOT's IoT SIM cards may depend on factors like network coverage, device specifications, and cellular frequency bands supported by the device. To ensure seamless integration and optimal performance, we recommend verifying these details with your device manufacturer or consulting our customer support team for guidance.",
+        },
+      ],
       collapsed: false,
     },
     {
       id: 6,
       text: "IoT SIM models and their functionality",
-      answer:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      collapsed: false,
+      isAnswerComplex: true,
+      answer: [
+        {
+          type: "text",
+          content:
+            "At CleanIOT, we offer a range of IoT SIM card models to cater to various applications and connectivity requirements. Each model is designed to provide seamless connectivity, robust security, and easy management to suit your specific needs. Below is an overview of our IoT SIM models and their unique functionalities.",
+        },
+      ],
+      complexAnswer: [
+        {
+          listTitle: "Basic IoT SIM:",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "Our Basic IoT SIM card is designed for low-data usage applications, such as asset tracking, smart metering, and environmental monitoring. This SIM card model provides cost-effective connectivity for devices that transmit small amounts of data infrequently.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	Low data usage plans",
+                    "-	Global connectivity with multiple network providers",
+                    "-	Basic security features",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          listTitle: "Advanced IoT SIM:",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "The Advanced IoT SIM card is tailored for applications that require higher data usage and more frequent connectivity, such as video surveillance, connected vehicles, and industrial automation. This model offers enhanced performance and additional security features to handle more data-intensive applications.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	High data usage plans",
+                    "-	Faster connectivity with priority network access",
+                    "-	Advanced security features, including encryption and authentication",
+                    "-	Remote management and monitoring capabilities",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          listTitle: "Multi-Network IoT SIM:",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "Our Multi-Network IoT SIM card is designed to provide seamless connectivity across multiple networks, ensuring uninterrupted communication even in areas with limited coverage. This model is ideal for mission-critical applications that demand high reliability and availability, such as emergency response, healthcare, and transportation.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	Seamless switching between multiple networks for optimal coverage",
+                    "-	High data usage plans",
+                    "-	Advanced security features",
+                    "-	Remote management and monitoring capabilities",
+                    "-	Priority customer support",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          listTitle: "eSIM (Embedded SIM):",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "The eSIM (Embedded SIM) is a next-generation IoT SIM card that is integrated directly into your IoT devices. This model offers all the features of our other IoT SIM cards but eliminates the need for a physical SIM card, providing greater flexibility and durability.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	Embedded within the device for increased durability and ease of use",
+                    "-	Global connectivity with multiple network providers",
+                    "-	High data usage plans",
+                    "-	Advanced security features",
+                    "-	Remote management and monitoring capabilities",
+                  ],
+                },
+                {
+                  type: "text",
+                  content:
+                    "By offering a diverse range of IoT SIM card models, CleanIOT ensures that you can find the perfect solution to meet your specific connectivity, security, and management requirements. With our cutting-edge IoT SIM cards, you can unlock the full potential of your IoT ecosystem while enjoying a seamless and secure user experience.",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   ]);
 
@@ -355,14 +617,20 @@ export default function Home() {
               Can’t find an as answer? Please contact our friendly team.
             </p>
           </div>
-          <div className="body flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2">
             {questions.map((item, index) => (
               <div
                 key={index}
-                className="question-item cursor-pointer border-b border-b-gray flex-col flex"
+                className="cursor-pointer border-b border-b-gray"
               >
                 <div
-                  onClick={() => changeSelection(index)}
+                  onClick={() => {
+                    if (index === selectedQuestion) {
+                      return setSelectedQuestion(null);
+                    } else {
+                      changeSelection(index);
+                    }
+                  }}
                   className="flex w-full justify-between items-center h-[52px]"
                 >
                   <p className="text-sm font-bold">{item.text}</p>
@@ -384,13 +652,85 @@ export default function Home() {
                     />
                   )}
                 </div>
-                {index === selectedQuestion && (
-                  <div className="collapse-description p-5">
-                    <p className="text-sm font-light text-black">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
+                {index === selectedQuestion ? (
+                  item.isAnswerComplex ? (
+                    <>
+                      {item.answer.map((answer, index) => (
+                        <div
+                          key={index}
+                          className="collapse-description px-5 pb-5"
+                        >
+                          {answer.type === "text" ? (
+                            <p className="text-sm font-light text-black mt-3">
+                              {answer.content}
+                            </p>
+                          ) : null}
+                        </div>
+                      ))}
+                      <ul
+                        key={index}
+                        className="collapse-description list-decimal list-inside px-5 pb-5"
+                      >
+                        {item.complexAnswer.map((answer, index) => (
+                          <div key={index}>
+                            <li className="text-black">{answer.listTitle}</li>
+                            {answer.content[0].listContent.map((item, index) =>
+                              item.type === "text" ? (
+                                <p
+                                  key={index}
+                                  className="pl-3 text-sm font-light text-black mt-3"
+                                >
+                                  {item.content}
+                                </p>
+                              ) : item.type === "list" ? (
+                                <>
+                                  <ul className="list-inside mb-3">
+                                    {item.content.map((listItem, index) => (
+                                      <li
+                                        key={index}
+                                        className="pl-3 list-item text-sm font-light text-black mt-2"
+                                      >
+                                        {listItem}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </>
+                              ) : null
+                            )}
+                          </div>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <>
+                      {item.answer.map((answer, index) => (
+                        <div
+                          key={index}
+                          className="collapse-description px-5 pb-5"
+                        >
+                          {answer.type === "text" ? (
+                            <p className="text-sm font-light text-black mt-3">
+                              {answer.content}
+                            </p>
+                          ) : answer.type === "list" ? (
+                            <>
+                              <ul className="list-decimal list-inside">
+                                {answer.content.map((item, index) => (
+                                  <li
+                                    key={index}
+                                    className="list-item text-sm font-light text-black mt-2"
+                                  >
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
+                          ) : null}
+                        </div>
+                      ))}
+                    </>
+                  )
+                ) : null}
               </div>
             ))}
           </div>

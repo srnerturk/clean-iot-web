@@ -90,7 +90,7 @@ export default function Customers() {
     };
   };
   return (
-    <div className="orders w-ful">
+    <div className="orders w-full">
       <section className="top w-full h-auto relative">
         <div className="container mx-auto bg-white">
           <h2 className="py-10 font-normal pl-5">
@@ -222,15 +222,22 @@ export default function Customers() {
         </div>
       </section>
 
-      <section className="top w-full h-auto relative py-10 px-5">
-        <div className="container ml-auto mr-auto">
-          <div className="flex lg:flex-row flex-col items-center justify-between">
-            <h2 className="flex-1">Tailored plans for your needs </h2>
-            <p className="flex-1 text-lg font-light leading-relaxed">
-              Get the perfect IoT connectivity plan with our tailored plans,
-              customized to meet your specific needs and requirements
-            </p>
+      <section className="top w-full h-auto relative">
+        <div className="container ml-auto mr-auto py-10 bg-white">
+          <div className="bg-black lg:bg-white py-10">
+            <div className="max-w-4xl mx-auto lg:flex">
+              <h2 className="text-white lg:text-black font-normal text-center md:text-start px-5 lg:px-0 lg:w-64">
+                <strong>Tailored</strong> plans
+                <br className="hidden lg:block" /> for your{" "}
+                <strong>needs</strong>
+              </h2>
+              <p className="text-white lg:text-black px-5 text-center md:text-start italic mt-3 lg:mt-0 font-thin text-base">
+                Get the perfect IoT connectivity plan with our tailored plans,
+                customized to meet your specific needs and requirements
+              </p>
+            </div>
           </div>
+
           <table className="w-full mt-10">
             <thead>
               <tr className="bg-black h-[50px]">

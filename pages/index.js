@@ -9,6 +9,7 @@ export default function Home() {
     {
       id: 0,
       text: "Getting started with CleanIoT",
+      isAnswerComplex: false,
       answer: [
         {
           type: "text",
@@ -34,6 +35,7 @@ export default function Home() {
     {
       id: 1,
       text: "About SIM management platform",
+      isAnswerComplex: false,
       answer: [
         {
           type: "text",
@@ -67,6 +69,7 @@ export default function Home() {
     {
       id: 2,
       text: "What data plan should i choose?",
+      isAnswerComplex: false,
       answer: [
         {
           type: "text",
@@ -94,6 +97,7 @@ export default function Home() {
     {
       id: 3,
       text: "I would like to buy a large number of SIM cards. Can i get volume discount?",
+      isAnswerComplex: false,
       answer: [
         {
           type: "text",
@@ -121,6 +125,7 @@ export default function Home() {
     {
       id: 4,
       text: "How long does it take to activate a SIM card?",
+      isAnswerComplex: false,
       answer: [
         {
           type: "text",
@@ -153,6 +158,7 @@ export default function Home() {
     {
       id: 5,
       text: "Which devices are compatible with the SIM cards?",
+      isAnswerComplex: false,
       answer: [
         {
           type: "text",
@@ -183,28 +189,134 @@ export default function Home() {
       ],
       collapsed: false,
     },
-    // {
-    //   id: 6,
-    //   text: "IoT SIM models and their functionality",
-    //   answer: [
-    //     {
-    //       type: "text",
-    //       content:
-    //         "At CleanIOT, we offer a range of IoT SIM card models to cater to various applications and connectivity requirements. Each model is designed to provide seamless connectivity, robust security, and easy management to suit your specific needs. Below is an overview of our IoT SIM models and their unique functionalities.",
-    //     },
-    //     {
-    //       type: "list",
-    //       listWithContent: true,
-    //       listContent: [
-    //         {
-    //           listTitle:
-    //         }
-    //       ]
-    //     },
-
-    //   ],
-    //   collapsed: false,
-    // },
+    {
+      id: 6,
+      text: "IoT SIM models and their functionality",
+      isAnswerComplex: true,
+      answer: [
+        {
+          type: "text",
+          content:
+            "At CleanIOT, we offer a range of IoT SIM card models to cater to various applications and connectivity requirements. Each model is designed to provide seamless connectivity, robust security, and easy management to suit your specific needs. Below is an overview of our IoT SIM models and their unique functionalities.",
+        },
+      ],
+      complexAnswer: [
+        {
+          listTitle: "Basic IoT SIM:",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "Our Basic IoT SIM card is designed for low-data usage applications, such as asset tracking, smart metering, and environmental monitoring. This SIM card model provides cost-effective connectivity for devices that transmit small amounts of data infrequently.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	Low data usage plans",
+                    "-	Global connectivity with multiple network providers",
+                    "-	Basic security features",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          listTitle: "Advanced IoT SIM:",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "The Advanced IoT SIM card is tailored for applications that require higher data usage and more frequent connectivity, such as video surveillance, connected vehicles, and industrial automation. This model offers enhanced performance and additional security features to handle more data-intensive applications.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	High data usage plans",
+                    "-	Faster connectivity with priority network access",
+                    "-	Advanced security features, including encryption and authentication",
+                    "-	Remote management and monitoring capabilities",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          listTitle: "Multi-Network IoT SIM:",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "Our Multi-Network IoT SIM card is designed to provide seamless connectivity across multiple networks, ensuring uninterrupted communication even in areas with limited coverage. This model is ideal for mission-critical applications that demand high reliability and availability, such as emergency response, healthcare, and transportation.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	Seamless switching between multiple networks for optimal coverage",
+                    "-	High data usage plans",
+                    "-	Advanced security features",
+                    "-	Remote management and monitoring capabilities",
+                    "-	Priority customer support",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          listTitle: "eSIM (Embedded SIM):",
+          content: [
+            {
+              listContent: [
+                {
+                  type: "text",
+                  content:
+                    "The eSIM (Embedded SIM) is a next-generation IoT SIM card that is integrated directly into your IoT devices. This model offers all the features of our other IoT SIM cards but eliminates the need for a physical SIM card, providing greater flexibility and durability.",
+                },
+                {
+                  type: "text",
+                  content: "Functionality:",
+                },
+                {
+                  type: "list",
+                  content: [
+                    "-	Embedded within the device for increased durability and ease of use",
+                    "-	Global connectivity with multiple network providers",
+                    "-	High data usage plans",
+                    "-	Advanced security features",
+                    "-	Remote management and monitoring capabilities",
+                  ],
+                },
+                {
+                  type: "text",
+                  content:
+                    "By offering a diverse range of IoT SIM card models, CleanIOT ensures that you can find the perfect solution to meet your specific connectivity, security, and management requirements. With our cutting-edge IoT SIM cards, you can unlock the full potential of your IoT ecosystem while enjoying a seamless and secure user experience.",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ]);
 
   const changeSelection = (id) => {
@@ -505,14 +617,20 @@ export default function Home() {
               Can’t find an as answer? Please contact our friendly team.
             </p>
           </div>
-          <div className="body flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2">
             {questions.map((item, index) => (
               <div
                 key={index}
-                className="question-item cursor-pointer border-b border-b-gray flex-col flex"
+                className="cursor-pointer border-b border-b-gray"
               >
                 <div
-                  onClick={() => changeSelection(index)}
+                  onClick={() => {
+                    if (index === selectedQuestion) {
+                      return setSelectedQuestion(null);
+                    } else {
+                      changeSelection(index);
+                    }
+                  }}
                   className="flex w-full justify-between items-center h-[52px]"
                 >
                   <p className="text-sm font-bold">{item.text}</p>
@@ -534,13 +652,85 @@ export default function Home() {
                     />
                   )}
                 </div>
-                {index === selectedQuestion && (
-                  <div className="collapse-description p-5">
-                    <p className="text-sm font-light text-black">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
+                {index === selectedQuestion ? (
+                  item.isAnswerComplex ? (
+                    <>
+                      {item.answer.map((answer, index) => (
+                        <div
+                          key={index}
+                          className="collapse-description px-5 pb-5"
+                        >
+                          {answer.type === "text" ? (
+                            <p className="text-sm font-light text-black mt-3">
+                              {answer.content}
+                            </p>
+                          ) : null}
+                        </div>
+                      ))}
+                      <ul
+                        key={index}
+                        className="collapse-description list-decimal list-inside px-5 pb-5"
+                      >
+                        {item.complexAnswer.map((answer, index) => (
+                          <div key={index}>
+                            <li className="text-black">{answer.listTitle}</li>
+                            {answer.content[0].listContent.map((item, index) =>
+                              item.type === "text" ? (
+                                <p
+                                  key={index}
+                                  className="pl-3 text-sm font-light text-black mt-3"
+                                >
+                                  {item.content}
+                                </p>
+                              ) : item.type === "list" ? (
+                                <>
+                                  <ul className="list-inside mb-3">
+                                    {item.content.map((listItem, index) => (
+                                      <li
+                                        key={index}
+                                        className="pl-3 list-item text-sm font-light text-black mt-2"
+                                      >
+                                        {listItem}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </>
+                              ) : null
+                            )}
+                          </div>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <>
+                      {item.answer.map((answer, index) => (
+                        <div
+                          key={index}
+                          className="collapse-description px-5 pb-5"
+                        >
+                          {answer.type === "text" ? (
+                            <p className="text-sm font-light text-black mt-3">
+                              {answer.content}
+                            </p>
+                          ) : answer.type === "list" ? (
+                            <>
+                              <ul className="list-decimal list-inside">
+                                {answer.content.map((item, index) => (
+                                  <li
+                                    key={index}
+                                    className="list-item text-sm font-light text-black mt-2"
+                                  >
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            </>
+                          ) : null}
+                        </div>
+                      ))}
+                    </>
+                  )
+                ) : null}
               </div>
             ))}
           </div>

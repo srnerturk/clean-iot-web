@@ -313,15 +313,16 @@ export default function Customers() {
     };
   };
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return (
@@ -332,14 +333,17 @@ export default function Customers() {
             <strong>Top</strong> choices by <br /> our{" "}
             <strong>customers</strong>
           </h2>
-          <div className=" lg:hidden">
+          <div className=" lg:hidden relative">
+            <div className=" hidden xs:block absolute bg-gradient-to-r from-transparent top-0 bottom-0 right-0 h-80 to-white w-28 z-50"></div>
+            <div className="hidden xs:block absolute bg-gradient-to-l from-transparent top-0 bottom-0 left-0 h-80 to-white w-28 z-50"></div>
             <Swiper
-              slidesPerView={windowWidth > 740 ? 3 : windowWidth > 400 ? 2 : 1}
+              slidesPerView={windowWidth > 740 ? 3 : windowWidth > 545 ? 2 : 1}
               spaceBetween={30}
               centeredSlides={true}
               pagination={{
                 clickable: true,
               }}
+              grabCursor={true}
               modules={[Pagination]}
               className="mySwiper"
             >

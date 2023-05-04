@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
 export default function Customers() {
   const [prices, setPrices] = useState([
     {
@@ -304,6 +312,18 @@ export default function Customers() {
       },
     };
   };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="orders w-full">
       <section className="top w-full h-auto relative">
@@ -312,7 +332,151 @@ export default function Customers() {
             <strong>Top</strong> choices by <br /> our{" "}
             <strong>customers</strong>
           </h2>
-          <div className="grid lg:grid-cols-4  grid-cols-1 gap-5 max-w-5xl mx-auto">
+          <div className=" lg:hidden">
+            <Swiper
+              slidesPerView={windowWidth > 740 ? 3 : windowWidth > 400 ? 2 : 1}
+              spaceBetween={30}
+              centeredSlides={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className="info-box max-w-[250px] h-80 mx-auto rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
+                  <div className="title p-5 mb-1">
+                    <h3 className="font-normal text-3xl">
+                      <strong>150</strong> MB
+                    </h3>
+                  </div>
+                  <div className="body italic px-5 pb-6 flex-1">
+                    <p className="text-sm font-semibold">
+                      ·Best for manufacturing
+                    </p>
+                    <p className="text-sm font-semibold">·Best for tracking</p>
+                    <p className="text-sm font-semibold">
+                      ·Best for small fleet applications
+                    </p>
+                  </div>
+                  <div className="price px-5 pb-2">
+                    <h5 className="font-normal text-3xl">
+                      <strong>$4.95</strong>/mo
+                    </h5>
+                  </div>
+                  <div className="actions mx-5">
+                    <Link
+                      href={"/contact"}
+                      className="w-full text-2xl text-black bg-green py-2 block text-center"
+                    >
+                      Start <strong>Now!</strong>
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="info-box max-w-[250px] h-80 mx-auto rounded-md overflow-hidden pb-5 bg-[#231F20] flex flex-col justify-start">
+                  <div className="title p-5 mb-1">
+                    <h3 className="text-white font-normal text-3xl">
+                      <strong>250</strong> MB
+                    </h3>
+                  </div>
+                  <div className="body px-5 pb-6 italic flex-1">
+                    <p className="text-white text-sm font-semibold">
+                      ·Best for smart city projects
+                    </p>
+                    <p className="text-white text-sm font-semibold">
+                      ·Best for IoT sensors
+                    </p>
+                    <p className="text-white text-sm font-semibold">
+                      ·Best for busy fleet applications
+                    </p>
+                  </div>
+                  <div className="price px-5 pb-2">
+                    <h5 className="font-normal text-white text-3xl">
+                      <strong>$5.95</strong>/mo
+                    </h5>
+                  </div>
+                  <div className="actions mx-5">
+                    <Link
+                      href={"/contact"}
+                      className="w-full text-2xl text-black bg-green py-2 block text-center"
+                    >
+                      Start <strong>Now!</strong>
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="info-box max-w-[250px] h-80 mx-auto rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex  flex-col justify-start">
+                  <div className="title bg-[#231F20] p-5 mb-1">
+                    <h3 className="font-normal text-3xl text-white">
+                      <strong>5</strong> GB
+                    </h3>
+                  </div>
+                  <div className="body italic pb-6 px-5 flex-1">
+                    <p className="text-sm font-semibold">
+                      ·Best for complex aplications
+                    </p>
+                    <p className="text-sm mt-1 font-semibold">
+                      ·Best for network
+                    </p>
+                    <p className="text-sm mt-1 font-semibold">
+                      ·Best for busy fleet applications
+                    </p>
+                  </div>
+                  <div className="price px-5 pb-2">
+                    <h5 className="font-normal text-3xl">
+                      <strong>$56.45</strong>/mo
+                    </h5>
+                  </div>
+                  <div className="actions mx-5">
+                    <Link
+                      href={"/contact"}
+                      className="w-full text-2xl text-black bg-green py-2 block text-center"
+                    >
+                      Start <strong>Now!</strong>
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="info-box max-w-[250px] h-80 mx-auto rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
+                  <div className="title p-5 mb-1 bg-[#231F20]">
+                    <h3 className="font-normal text-white text-3xl">
+                      NB-<strong>IoT</strong>
+                    </h3>
+                  </div>
+                  <div className="body px-5 pb-6 italic flex-1">
+                    <p className="text-sm font-semibold">
+                      ·Best for smart city projects
+                    </p>
+                    <p className="text-sm font-semibold">
+                      ·Best for IoT sensors
+                    </p>
+                    <p className="text-sm font-semibold">
+                      ·Best for busy fleet applications
+                    </p>
+                    <p className="text-sm"></p>
+                  </div>
+                  <div className="price px-5 pb-2">
+                    <h5 className="font-normal text-3xl">
+                      <strong>$2.95</strong>/mo
+                    </h5>
+                  </div>
+                  <div className="actions mx-5">
+                    <Link
+                      href={"/contact"}
+                      className="w-full border-4 text-2xl text-black border-black bg-green py-2 block text-center justify-end justify-self-start"
+                    >
+                      Start <strong>Now!</strong>
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+          <div className="hidden lg:grid lg:grid-cols-4 grid-cols-1 gap-5 max-w-5xl mx-auto">
             <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
               <div className="title p-5 mb-1">
                 <h3 className="font-normal text-3xl">

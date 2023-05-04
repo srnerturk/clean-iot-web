@@ -445,17 +445,11 @@ export default function Home() {
                     Start your journey.
                   </h1>
                 </div>
-                {/* <h1 className="text-white tracking-wide">
-                  Start your journey.
-                  <span>
-                    with this <span>simple</span> step.
-                  </span>
-                </h1> */}
               </div>
               <h2 className="text-white mt-5 mb-20 lg:text-6xl font-normal lg:flex-nowrap max-w-lg xl:max-w-xl mx-auto lg:mx-0 lg:w-full">
                 with this <span className="font-bold">simple</span> step.
               </h2>
-              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full">
+              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full opacity-0 cursor-default">
                 <div className="input">
                   <input
                     type="range"
@@ -517,7 +511,7 @@ export default function Home() {
               </div>
               <div className="title pr-32 mb-5 flex-1">
                 <h5 className="text-white text-2xl">
-                  We Develope Special IOT Solutions for you
+                  We Develop Special IOT Solutions for you
                 </h5>
               </div>
               <div className="body">
@@ -669,7 +663,7 @@ export default function Home() {
                       ))}
                       <ul
                         key={index}
-                        className="collapse-description list-decimal list-inside px-5 pb-5"
+                        className="collapse-description list-decimal list-inside px-5 pb-5 mt-3"
                       >
                         {item.complexAnswer.map((answer, index) => (
                           <div key={index}>
@@ -706,10 +700,10 @@ export default function Home() {
                       {item.answer.map((answer, index) => (
                         <div
                           key={index}
-                          className="collapse-description px-5 pb-5"
+                          className="collapse-description px-5 pb-5 pt-3"
                         >
                           {answer.type === "text" ? (
-                            <p className="text-sm font-light text-black mt-3">
+                            <p className="text-sm font-light text-black">
                               {answer.content}
                             </p>
                           ) : answer.type === "list" ? (

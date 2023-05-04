@@ -89,7 +89,7 @@ export default function Use() {
               </div>
               <div className="title">
                 <h5 className="text-white">
-                  We Develope Special IOT Solutions for you
+                  We Develop Special IOT Solutions for you
                 </h5>
               </div>
               <div className="body">
@@ -128,7 +128,7 @@ export default function Use() {
               </div>
               <div className="title">
                 <h5 className="text-white">
-                  We Develope Special IOT Solutions for you
+                  We Develop Special IOT Solutions for you
                 </h5>
               </div>
               <div className="body">

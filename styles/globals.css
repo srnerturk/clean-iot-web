@@ -93,3 +93,19 @@ td {
   text-center
   text-sm;
 }
+
+.mySwiper {
+  height: 380px;
+}
+
+.swiper-pagination-bullet {
+  width: 64px !important;
+  height: 10px !important;
+  border-radius: 8px !important;
+  background: #777575 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #9dc538 !important;
+}

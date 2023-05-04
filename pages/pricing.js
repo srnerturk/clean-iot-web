@@ -489,37 +489,60 @@ export default function Customers() {
         </div>
       </section>
 
-      <section className="top w-full h-auto relative  lg:px-10 px-5">
-        <div className="container mx-auto bg-white">
-          <div className="flex lg:flex-row flex-col items-center lg:justify-between space-x-5">
-            <p className="flex-1 text-lg font-light leading-relaxed">
-              We understand that every business has unique needs when it comes
-              to IoT connectivity. Thats why we offer tailored plans that are
-              designed to meet your specific requirements. Our flexible plans
-              allow you to choose the data usage and speed that works best for
-              your IoT devices, ensuring that you only pay for the data you
-              need. Whether you require low-data usage or high-speed data
-              transfer, we have a plan that can meet your needs. Contact us
-              today to learn more about our tailored plans and how they can
-              benefit your business.
-            </p>
-            <div className="box p-5 w-full lg:h-[300px] bg-black flex flex-col lg:justify-between  flex-1">
-              <div className="top flex w-full justify-start">
-                <div className="square w-[40px] h-[40px] bg-primary"></div>
+      <section className="top w-full h-auto relative">
+        <div className="container mx-auto bg-white px-5 lg:px-10">
+          <div className="pb-0 lg:pb-24 pt-11 flex flex-col max-w-[55rem] mx-auto lg:flex-row lg:gap-6 items-center lg:items-stretch lg:justify-between">
+            <div className="flex-1 mb-5 lg:mr-3 lg:basis-7/12">
+              <p className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic">
+                Our customers have spoken, and we&apos;re proud to share some of
+                their top choices for IoT solutions:
+              </p>
+              <ul className="list-inside list-decimal pl-2">
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                  Our IoT SIM cards, which offer reliable and secure
+                  connectivity to support a wide range of IoT devices.
+                </li>
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                  Our customized IoT solutions, designed to meet the specific
+                  needs of each business and optimize performance, security, and
+                  scalability.
+                </li>
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                  Our tailored plans, which provide flexible options for data
+                  usage and speed to fit the unique needs of each business.
+                </li>
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                  Our excellent customer support, which is always available to
+                  answer questions and provide assistance with any issues that
+                  may arise.
+                </li>
+              </ul>
+              <p className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic">
+                At our company, we are committed to providing the highest level
+                of service and support to our customers. We take great pride in
+                their satisfaction with our IoT solutions and will continue to
+                work hard to meet their evolving needs. Contact us today to
+                learn more about how our IoT solutions can benefit your
+                business.
+              </p>
+            </div>
+            <div className="box mb-5 p-5 w-full lg:basis-1/4 bg-black flex flex-col lg:justify-start flex-1">
+              <div className="top flex w-full justify-start mb-3 lg:mb-4">
+                <Image alt="qr" src="/qr.svg" width={50} height={50} />
               </div>
-              <div className="title">
-                <h5 className="text-white">
-                  We Develope Special IOT Solutions for you
-                </h5>
-              </div>
-              <div className="body">
-                <p className="text-white">
-                  Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit,sed
-                  diam nonummy nibh euismod tincidunt ut laoreet{" "}
-                </p>
-              </div>
+              <h5 className="text-white mb-2 lg:mb-3 lg:text-2xl lg:mr-8 font-normal">
+                We Develop Special IOT Solutions for you
+              </h5>
+
+              <p className="text-white text-lg leading-6 font-thin italic flex-1">
+                Our team of experts can develop customised IOT solution to meet
+                your specific business needs and requirements
+              </p>
+
               <div className="footer flex justify-end mt-5">
-                <button className="button px-5 text-sm">Contact Now</button>
+                <button className="py-1 w-full md:w-auto font-normal bg-green text-black px-5 lg:text-xl">
+                  Contact <strong>Now!</strong>
+                </button>
               </div>
             </div>
           </div>

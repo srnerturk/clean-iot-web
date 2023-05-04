@@ -517,7 +517,7 @@ export default function Home() {
               </div>
               <div className="title pr-32 mb-5 flex-1">
                 <h5 className="text-white text-2xl">
-                  We Develope Special IOT Solutions for you
+                  We Develop Special IOT Solutions for you
                 </h5>
               </div>
               <div className="body">

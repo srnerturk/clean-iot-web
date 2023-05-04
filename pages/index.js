@@ -445,17 +445,11 @@ export default function Home() {
                     Start your journey.
                   </h1>
                 </div>
-                {/* <h1 className="text-white tracking-wide">
-                  Start your journey.
-                  <span>
-                    with this <span>simple</span> step.
-                  </span>
-                </h1> */}
               </div>
               <h2 className="text-white mt-5 mb-20 lg:text-6xl font-normal lg:flex-nowrap max-w-lg xl:max-w-xl mx-auto lg:mx-0 lg:w-full">
                 with this <span className="font-bold">simple</span> step.
               </h2>
-              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full">
+              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full opacity-0 cursor-default">
                 <div className="input">
                   <input
                     type="range"

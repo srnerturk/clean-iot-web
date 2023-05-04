@@ -25,8 +25,8 @@ export default function Portal() {
           />
         </div>
       </div>
-      <div className="max-w-xl mx-auto">
-        <p>
+      <div className="max-w-xl mx-auto mt-20">
+        <p className="italic font-thin text-lg mb-5">
           Our IoT SIM card products are designed to be powerful and easy-to-use,
           offering reliable and secure connectivity for your IoT devices.
         </p>

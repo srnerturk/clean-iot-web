@@ -661,31 +661,31 @@ export default function Customers() {
         <div className="container mx-auto bg-white px-5 lg:px-10">
           <div className="pb-0 lg:pb-24 pt-11 flex flex-col max-w-[55rem] mx-auto lg:flex-row lg:gap-6 items-center lg:items-stretch lg:justify-between">
             <div className="flex-1 mb-5 lg:mr-3 lg:basis-7/12">
-              <p className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic">
+              <p className="text-lg lg:text-xl mb-1 font-light leading-relaxed">
                 Our customers have spoken, and we&apos;re proud to share some of
                 their top choices for IoT solutions:
               </p>
               <ul className="list-inside list-decimal pl-2">
-                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed text-black">
                   Our IoT SIM cards, which offer reliable and secure
                   connectivity to support a wide range of IoT devices.
                 </li>
-                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed text-black">
                   Our customized IoT solutions, designed to meet the specific
                   needs of each business and optimize performance, security, and
                   scalability.
                 </li>
-                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed text-black">
                   Our tailored plans, which provide flexible options for data
                   usage and speed to fit the unique needs of each business.
                 </li>
-                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic text-black">
+                <li className="text-lg lg:text-xl mb-1 font-light leading-relaxed text-black">
                   Our excellent customer support, which is always available to
                   answer questions and provide assistance with any issues that
                   may arise.
                 </li>
               </ul>
-              <p className="text-lg lg:text-xl mb-1 font-light leading-relaxed italic">
+              <p className="text-lg lg:text-xl mb-1 font-light leading-relaxed">
                 At our company, we are committed to providing the highest level
                 of service and support to our customers. We take great pride in
                 their satisfaction with our IoT solutions and will continue to

@@ -18,6 +18,7 @@ export default function Navbar() {
     { id: 1, text: "Solutions", href: "/solutions" },
     { id: 2, text: "Order", href: "/order" },
     { id: 3, text: "Pricing", href: "/pricing" },
+    { id: 4, text: "Portal", href: "/portal" },
   ];
   const [show, setShow] = React.useState(false);
   const [activeRoute, setActiveRoute] = React.useState("/");

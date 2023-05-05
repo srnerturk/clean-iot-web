@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Portal() {
@@ -104,21 +105,21 @@ export default function Portal() {
 
   return (
     <div className="container bg-white mx-auto text-black">
-      <h2 className="py-10 pl-5 font-normal">
+      <h2 className="py-10 md:pb-0 md:pt-10 pl-5 font-normal">
         <strong>Poweful,</strong>
         <br /> easy-to-use
       </h2>
       <div className="relative mx-auto max-w-4xl">
         <div className="relative px-10">
           <Image
-            className="ml-10 pb-14"
+            className="ml-10 mx-auto px-10 lg:px-20 z-20 relative pb-14"
             src="/web1.png"
             width={850}
             height={400}
             alt="Vercel Logo"
           />
           <Image
-            className="absolute top-10 right-10"
+            className="absolute z-0 top-10 lg:top-14 right-10 lg:right-20 mx-auto px-20 pb-14"
             src="/web2.png"
             width={850}
             height={400}
@@ -126,18 +127,21 @@ export default function Portal() {
           />
         </div>
       </div>
-      <div className="max-w-xl mx-auto mt-20">
+      <div className="max-w-xl mx-auto mt-20 px-5 xl:px-0">
         <p className="italic font-thin text-lg mb-7">
           Our IoT SIM card products are designed to be powerful and easy-to-use,
           offering reliable and secure connectivity for your IoT devices.
         </p>
-        <div className="flex justify-between mx-auto max-w-lg mt-3 mb-24 gap-5">
-          <button className="bg-[#404041] font-semibold text-end text-lg px-6 py-2 w-full text-white shadow-lg shadow-slate-600">
+        <div className="flex flex-col sm:flex-row justify-between mx-auto max-w-lg mt-3 mb-24 gap-5">
+          <button className="bg-[#404041] font-semibold text-center sm:text-end text-lg px-6 py-2 w-full text-white shadow-lg shadow-slate-300">
             Datasheet
           </button>
-          <button className="bg-green py-2 text-end text-lg px-6 w-full font-normal shadow-lg shadow-slate-600">
+          <Link
+            href={"/contact"}
+            className="bg-green py-2 text-center sm:text-end text-lg px-6 w-full font-normal shadow-lg shadow-slate-300"
+          >
             Book a <strong>DEMO!</strong>
-          </button>
+          </Link>
         </div>
         <div className="w-full border-b-2 mx-auto max-w-[545px] border-black mb-11"></div>
         <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-2 lg:px-0 mt-6">
@@ -217,7 +221,7 @@ export default function Portal() {
 
         <div className="max-w-5xl relative mx-auto z-10">
           <div className="px-5 xl:px-0 pb-10 md:pb-24">
-            <h2 className="text-3xl font-normal ">
+            <h2 className="text-4xl font-normal ">
               <strong>Key</strong> features
             </h2>
             <p className="md:w-80 font-thin italic">

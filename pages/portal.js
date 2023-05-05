@@ -6,86 +6,99 @@ export default function Portal() {
     {
       id: 1,
       title: "High-speed connectivity",
-      description: "",
-      image: "",
+      description:
+        "Our IoT SIM card technology offers fast and reliable cellular connectivity to power your IoT devices.",
+      image: "/listImage1.png",
     },
     {
       id: 2,
       title: "Global coverage",
-      description: "",
-      image: "",
+      description:
+        "Our SIM cards provide global coverage, allowing you to connect your devices to the internet from anywhere in the world.",
+      image: "/listImage2.png",
     },
     {
       id: 3,
       title: "Robust security",
-      description: "",
-      image: "",
+      description:
+        "We prioritize the security of your IoT network and offer end-to-end encryption and secure data transfer to protect your sensitive information.",
+      image: "/listImage3.png",
     },
     {
       id: 4,
       title: "Easy integration",
-      description: "",
-      image: "",
+      description:
+        "Our SIM cards are designed to work seamlessly with your IoT devices and can be easily integrated with your existing network infrastructure.",
+      image: "/listImage4.png",
     },
     {
       id: 5,
       title: "Flexible plans",
-      description: "",
-      image: "",
+      description:
+        "We offer a variety of flexible plans to meet your IoT connectivity needs, whether you require high bandwidth or low-cost connectivity.",
+      image: "/listImage5.png",
     },
     {
       id: 6,
       title: "Real-time monitoring",
-      description: "",
-      image: "",
+      description:
+        "Our platform provides real-time monitoring and reporting, giving you full visibility into your IoT network and the ability to quickly troubleshoot any issues.",
+      image: "/listImage6.png",
     },
     {
       id: 7,
       title: "Scalability",
-      description: "",
-      image: "",
+      description:
+        "Our IoT SIM cards and platform are designed to scale with your business needs, allowing you to easily add or remove devices as your requirements change.",
+      image: "/listImage7.png",
     },
     {
       id: 8,
       title: "Reliable and secure connectivity",
-      description: "",
-      image: "",
+      description:
+        "Our IoT SIM cards provide reliable and secure connectivity for your IoT devices, ensuring that your data remains safe and accessible at all times.",
+      image: "/listImage8.png",
     },
     {
       id: 9,
       title: "Flexibility and versatility",
-      description: "",
-      image: "",
+      description:
+        "We offer a range of IoT SIM card types and configurations to meet your specific business needs, providing flexibility and versatility for your IoT solutions.",
+      image: "/listImage9.png",
     },
     {
       id: 10,
       title: "Powerful IoT management",
-      description: "",
-      image: "",
+      description:
+        "Our easy-to-use IoT management portal allows you to monitor and manage your SIM cards and devices in real-time, ensuring that everything is functioning as it should be.",
+      image: "/listImage10.png",
     },
     {
       id: 11,
       title: "Easy-to-use web portal",
-      description: "",
-      image: "",
+      description:
+        "Our IoT SIM cards are designed to be easy to install and use, allowing you to quickly and easily connect your devices to the internet and start collecting and analyzing data.",
+      image: "/listImage11.png",
     },
     {
       id: 12,
       title: "Tailored data plans",
       description: "",
-      image: "",
+      image: "/listImage12.png",
     },
     {
       id: 13,
       title: "Multiple IoT device compatibility",
-      description: "",
-      image: "",
+      description:
+        "Our IoT SIM cards are designed to work with a wide range of IoT devices, including those that require a larger form factor or those that are smaller and more compact",
+      image: "/listImage13.png",
     },
     {
       id: 14,
       title: "High-speed data transfer",
-      description: "",
-      image: "",
+      description:
+        "M2M IoT SIM cards are designed to offer fast data transfer speeds, ensuring that you can quickly collect and analyze data in real-time.",
+      image: "/listImage14.png",
     },
   ]);
 
@@ -193,9 +206,58 @@ export default function Portal() {
           </div>
         </div>
       </section>
+      <div className="container relative bg-white">
+        <Image
+          alt=""
+          className="absolute bottom-0 z-0"
+          src={"/listBgImage.png"}
+          height={500}
+          width={500}
+        />
 
-      <div>TEXT_INFO</div>
-      <div>KEY_FEATURES</div>
+        <div className="max-w-5xl relative mx-auto z-10">
+          <div className="px-5 xl:px-0 pb-10 md:pb-24">
+            <h2 className="text-3xl font-normal ">
+              <strong>Key</strong> features
+            </h2>
+            <p className="md:w-80 font-thin italic">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              optio cum, nemo hic delectus, animi laborum nostrum esse culpa
+              praesentium nulla atque vel provident aliquid incidunt fugit
+              dolore, laboriosam quod?
+            </p>
+          </div>
+
+          <div className="px-5 pb-28">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-x-28 gap-y-12">
+              {listItems.map((item, index) =>
+                item.description !== "" ? (
+                  <li
+                    key={index}
+                    className="flex flex-col justify-evenly md:flex-row gap-3 sm:last:col-start-2"
+                  >
+                    <div className="h-32 md:basis-2/5">
+                      <Image
+                        className="h-full w-auto overflow-hidden object-cover"
+                        src={item.image}
+                        width={0}
+                        height={0}
+                        alt="Vercel Logo"
+                        sizes="100vw"
+                      />
+                    </div>
+                    {/* <Image src={item.image} width={50} height={50} /> */}
+                    <div className="basis-3/5 flex flex-col justify-center">
+                      <h4 className="font-bold text-lg">{item.title}:</h4>
+                      <p className="font-thin italic">{item.description}</p>
+                    </div>
+                  </li>
+                ) : null
+              )}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

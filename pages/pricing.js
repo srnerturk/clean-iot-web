@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import HappyCustomersSlider from "../components/HappyCustomersSlider";
 
 export default function Customers() {
   const [prices, setPrices] = useState([
@@ -714,6 +715,9 @@ export default function Customers() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="container mx-auto">
+          <HappyCustomersSlider />
         </div>
       </section>
     </div>

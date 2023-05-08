@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import react, { useEffect, useState } from "react";
 import Image from "next/image";
+
+import HappyCustomersSlider from "../components/HappyCustomersSlider";
+
 export default function Iot() {
   const [listItems, setListItems] = useState([
     {
@@ -45,7 +48,7 @@ export default function Iot() {
 
   return (
     <div className="home w-full relative z-10">
-      <section className="top container mx-auto h-auto relative">
+      <section className="top container bg-white mx-auto h-auto relative">
         <div className="absolute w-56 md:w-[800px] z-10">
           <Image
             src="/RectangleSolution.svg"
@@ -57,7 +60,7 @@ export default function Iot() {
             sizes="100vw"
           />
         </div>
-        <div className="md:flex justify-between flex-row-reverse relative z-30">
+        <div className="md:flex justify-between flex-row-reverse relative z-40">
           <div className="hidden md:block basis-3/6 md:pr-28 pl-10 lg:pl-28 lg:pr-52 mt-36 md:mt-52 lg:mt-56 xl:mt-9 mb-0 lg:mb-10">
             <Image
               src="/iot-r.png"
@@ -104,7 +107,7 @@ export default function Iot() {
         <div className="container mx-auto md:px-10">
           <div className="relative lg:top-[-50px] z-30 w-full bg-black md:rounded-[60px] px-5 md:px-14 pt-8 md:pt-12">
             <div className="lg:flex">
-              <div className="mb-6 lg:mb-0 basis-1/2">
+              <div className="mb-6  basis-1/2">
                 <div className="flex items-center justify-start">
                   <Image
                     src={"/greenStar.png"}
@@ -152,52 +155,57 @@ export default function Iot() {
             </div>
           </div>
         </div>
-        {/* <div className="card-container lg:pb-16 container mx-auto bg-white">
-          <div className="card relative z-20 container mx-auto lg:px-12 lg:top-[-50px]">
-            <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[650px] flex">
-              <div className="content flex flex-col">
-                <div className="left flex-1 px-20 lg:pt-10 lg:flex lg:basis-4/12">
-                  <div className="title fle items-center space-x-2 lg:basis-1/2">
-                    <div className="title">
-                      <h1 className="text-white tracking-wide mb-2">
-                        M2M vs NB-Iot
-                      </h1>
-                      <h2 className="text-white mb-5">Which one to choose</h2>
-                    </div>
-                  </div>
-                  <div className="content w-full flex lg:basis-1/2">
-                    <p className="text-white">
-                      When choosing between M2M and NB-IoT, it&apos;s important
-                      to consider your specific business needs and the
-                      requirements of your IoT devices. If you require high data
-                      usage or need to connect a wide range of devices, M2M
-                      technology may be the better choice. However, if
-                      you&apos;re looking to connect low-power IoT devices with
-                      long battery life and need coverage in hard-to-reach
-                      areas, NB-IoT may be the way to go.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col lg:flex-row px-20 lg:basis-8/12">
-                  {listItems.map((item, index) => (
-                    <div key={index} className="right flex-1 pb-10">
-                      <h2 className="font-bold text-white text-2xl">
-                        {item.title}:
-                      </h2>
-                      <ul className="list-r py-3 space-y-2">
-                        {item.items.map((item, index) => (
-                          <div key={index} className="text-left text-white m-0">
-                            {item}
-                          </div>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+        <section className="container mx-auto px-5 md:px-10 pt-5 bg-white text-black">
+          <div className="md:flex justify-between md:gap-3 xl:gap-5">
+            <div className="md:basis-6/12 lg:basis-5/12 xl:basis-4/12">
+              <h2 className="font-normal mb-7">
+                An <strong>M2M IoT</strong> SIM Card and <br />
+                <strong>NB-IoT</strong> with multiple
+                <br /> configurations
+              </h2>
+            </div>
+            <p className="md:basis-6/12 lg:basis-7/12 xl:basis-8/12 font-semibold italic text-base mb-4">
+              Our M2M IoT SIM cards are designed for a wide range of devices,
+              including those that require high data usage and fast data
+              transfer speeds. Our NB-IoT IoT SIM cards, on the other hand, are
+              specifically designed for low-power IoT devices that require long
+              battery life and better coverage in hard-to-reach areas.
+            </p>
+          </div>
+          <div className="flex items-stretch flex-col-reverse lg:flex-row lg:gap-3 xl:gap-5">
+            <div className="lg:basis-5/12 xl:basis-4/12 lg:pr-5">
+              <div>
+                <h3 className="font-semibold text-xl mt-8 mb-0 lg:mb-5">
+                  Removable IoT SIM Card
+                </h3>
+                <p className="italic lg:not-italic font-thin lg:font-normal text-base">
+                  Swap between IoT devices effortlessly with our removable SIM
+                  card, ensuring reliable and secure connectivity for your
+                  business needs.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="font-semibold text-xl mt-8 mb-0 lg:mb-5">
+                  IoT SIM Card Features
+                </h3>
+                <p className="italic lg:not-italic font-thin lg:font-normal text-base">
+                  - Data plans for 2G, 3G, 4G LTE, Cat-M1 coverage in 150 <br />
+                  - countries Pay-as-you-go pricing – only ever pay only for the
+                  data you use(NB-IoT) <br />
+                  - A totally secure IoT connection that bypasses the public
+                  internet <br />
+                  - Direct integration with AWS, Azure, and Google Cloud <br />-
+                  Easy network control and management with the CleanIoT web
+                  platform and API
+                </p>
               </div>
             </div>
+            <div className="lg:basis-7/12 xl:basis-8/12">
+              <Image alt="" src={"/SIMOne.png"} width={55} height={200} />
+            </div>
           </div>
-        </div> */}
+        </section>
+        <HappyCustomersSlider />
       </section>
     </div>
   );

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import Image from "next/image";
 export default function Iot() {
   const [listItems, setListItems] = useState([
@@ -31,10 +31,22 @@ export default function Iot() {
     },
   ]);
 
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
-    <div className="home w-full">
+    <div className="home w-full relative z-10">
       <section className="top container mx-auto h-auto relative">
-        <div className="absolute w-[800px] z-10">
+        <div className="absolute w-56 md:w-[800px] z-10">
           <Image
             src="/RectangleSolution.svg"
             className="w-full h-auto"
@@ -45,8 +57,8 @@ export default function Iot() {
             sizes="100vw"
           />
         </div>
-        <div className="flex justify-between flex-row-reverse relative z-40">
-          <div className="basis-3/6 pl-28 pr-52 mt-20 mb-10">
+        <div className="md:flex justify-between flex-row-reverse relative z-30">
+          <div className="hidden md:block basis-3/6 md:pr-28 pl-10 lg:pl-28 lg:pr-52 mt-36 md:mt-52 lg:mt-56 xl:mt-9 mb-0 lg:mb-10">
             <Image
               src="/iot-r.png"
               className="w-full h-auto"
@@ -58,7 +70,7 @@ export default function Iot() {
             />
           </div>
           <div className="left basis-3/6 p-5 lg:p-10">
-            <h1 className=" font-normal mb-2">
+            <h1 className="font-normal mb-40 md:mb-2">
               <strong>IoT</strong>
               <br />
               connectivity
@@ -89,7 +101,58 @@ export default function Iot() {
             </p>
           </div>
         </div>
-        <div className="card-container lg:pb-16 container mx-auto bg-white">
+        <div className="container mx-auto md:px-10">
+          <div className="relative lg:top-[-50px] z-30 w-full bg-black md:rounded-[60px] px-5 md:px-14 pt-8 md:pt-12">
+            <div className="lg:flex">
+              <div className="mb-6 lg:mb-0 basis-1/2">
+                <div className="flex items-center justify-start">
+                  <Image
+                    src={"/greenStar.png"}
+                    width={windowWidth > 768 ? 52 : 40}
+                    height={windowWidth > 768 ? 52 : 40}
+                    alt="Vercel Logo"
+                    className="self-start"
+                  />
+                  <h2 className="text-white font-normal md:text-[46px] xl:text-6xl">
+                    <strong>M2M</strong> vs <strong>NB-IoT:</strong>
+                  </h2>
+                </div>
+                <h2 className="text-white font-normal md:text-[39px] xl:text-5xl md:mt-3">
+                  Which one to choose?
+                </h2>
+              </div>
+              <p className="text-white font-thin basis-1/2">
+                When choosing between M2M and NB-IoT, it&apos;s important to
+                consider your specific business needs and the requirements of
+                your IoT devices. If you require high data usage or need to
+                connect a wide range of devices, M2M technology may be the
+                better choice. However, if you&apos;re looking to connect
+                low-power IoT devices with long battery life and need coverage
+                in hard-to-reach areas, NB-IoT may be the way to go.
+              </p>
+            </div>
+            <div className="flex flex-col lg:flex-row mt-10 lg:basis-8/12">
+              {listItems.map((item, index) => (
+                <div key={index} className="right flex-1 pb-10">
+                  <h2 className="font-semibold text-white text-lg md:text-2xl">
+                    {item.title}:
+                  </h2>
+                  <ul className="list-r">
+                    {item.items.map((item, index) => (
+                      <div
+                        key={index}
+                        className="text-left text-white mb-2 italic lg:not-italic font-thin"
+                      >
+                        - {item}
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* <div className="card-container lg:pb-16 container mx-auto bg-white">
           <div className="card relative z-20 container mx-auto lg:px-12 lg:top-[-50px]">
             <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[650px] flex">
               <div className="content flex flex-col">
@@ -134,7 +197,7 @@ export default function Iot() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );

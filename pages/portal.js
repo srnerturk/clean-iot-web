@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import HappyCustomersSlider from "../components/HappyCustomersSlider";
 
 export default function Portal() {
   const [listItems, setListItems] = useState([
@@ -262,6 +263,8 @@ export default function Portal() {
           </div>
         </div>
       </div>
+
+      <HappyCustomersSlider />
     </div>
   );
 }

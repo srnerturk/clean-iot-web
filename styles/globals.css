@@ -109,3 +109,10 @@ td {
 .swiper-pagination-bullet-active {
   background: #9dc538 !important;
 }
+
+.happy-customer-slide-item {
+  height: 98px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-items: center !important;
+}

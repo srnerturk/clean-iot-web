@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+import HappyCustomersSlider from "../components/HappyCustomersSlider";
 
 export default function Home() {
   const [selectedQuestion, setSelectedQuestion] = useState(0);
@@ -319,42 +321,6 @@ export default function Home() {
     },
   ]);
 
-  const changeSelection = (id) => {
-    setSelectedQuestion(id);
-  };
-
-  const [customers, setCustomers] = useState([
-    {
-      id: 0,
-      alt: "Denali Logo",
-      image: "/Denali.png",
-    },
-    {
-      id: 0,
-      alt: "Evam Logo",
-      image: "/Evam.png",
-    },
-    {
-      id: 0,
-      alt: "Nova Logo",
-      image: "/Nova.png",
-    },
-    {
-      id: 0,
-      alt: "pia Logo",
-      image: "/pia.png",
-    },
-    {
-      id: 0,
-      alt: "ThirdEye Logo",
-      image: "/ThirdEye.png",
-    },
-    {
-      id: 0,
-      alt: "Tmobile Logo",
-      image: "/Tmobile.png",
-    },
-  ]);
   return (
     <div className="home relative">
       <div className="container mx-auto">
@@ -384,28 +350,7 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <section className="lg:p-5 bg-black partners">
-          <div className="title">
-            <h3 className="text-lg text-white text-center font-bold">
-              Our Partners
-            </h3>
-          </div>
-          <div className="body grid grid-cols-6 gap-5 p-5">
-            {customers.map((item, index) => (
-              <div
-                className="customer-item flex items-center justify-center"
-                key={index}
-              >
-                <Image
-                  src={`${item.image}`}
-                  alt={item.alt}
-                  width={120}
-                  height={120}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+        <HappyCustomersSlider />
         <section className="py-28 bg-white px-5">
           <div className="title max-w-5xl flex mx-auto lg:flex-row flex-col lg:space-x-20">
             <div className="flex-1 relative  flex items-center  justify-center space-x-2 ">
@@ -580,29 +525,7 @@ export default function Home() {
             sizes="100vw"
           />
         </section>
-
-        <section className="lg:p-5 bg-black partners">
-          <div className="title">
-            <h3 className="text-lg text-white text-center font-bold">
-              Happy Customers
-            </h3>
-          </div>
-          <div className="body grid grid-cols-6 gap-5 p-5">
-            {customers.map((item, index) => (
-              <div
-                className="customer-item flex items-center justify-center"
-                key={index}
-              >
-                <Image
-                  src={`${item.image}`}
-                  alt={item.alt}
-                  width={120}
-                  height={120}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+        <HappyCustomersSlider />
         <section className="questions container ml-auto mr-auto bg-white p-5 lg:px-10 lg:py-20">
           <div className="title flex items-start flex-col space-y-2 mb-10">
             <h2>General FAQs</h2>

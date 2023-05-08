@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HappyCustomersSlider from "../components/HappyCustomersSlider";
 export default function Orders() {
   return (
     <div className="products w-full">
@@ -83,6 +84,7 @@ export default function Orders() {
             </div>
           </div>
         </section>
+        <HappyCustomersSlider />
       </div>
     </div>
   );

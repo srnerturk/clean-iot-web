@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HappyCustomersSlider from "../components/HappyCustomersSlider";
 export default function Products() {
   return (
     <div className="products w-full">
@@ -16,7 +17,7 @@ export default function Products() {
           <div className="content flex lg:absolute top-0 left-0 w-full h-full">
             <div className="container ml-auto mr-auto flex flex-col">
               <div className="left flex-1  items-end flex-col">
-                <div className="content p-10 shadow-xl flex flex-col" >
+                <div className="content p-10 shadow-xl flex flex-col">
                   <p className="text-lg font-medium  text-black">
                     We provide cutting-edge <strong>IoT SIM card</strong>{" "}
                     technology to help businesses connect their devices to the
@@ -194,6 +195,7 @@ export default function Products() {
             products and services.
           </p>
         </section>
+        <HappyCustomersSlider />
       </div>
     </div>
   );

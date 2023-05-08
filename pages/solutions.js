@@ -33,19 +33,37 @@ export default function Iot() {
 
   return (
     <div className="home w-full">
-      <section className="top w-full h-auto relative">
-        <div className="container ml-auto mr-auto flex flex-row-reverse bg-primary">
+      <section className="top container mx-auto h-auto relative">
+        <div className="absolute w-[800px] z-10">
           <Image
-            className="flex-1 hidden lg:flex"
-            src="/iot-r.png"
-            width={470}
-            height={890}
-            alt="Vercel Logo"
+            src="/RectangleSolution.svg"
+            className="w-full h-auto"
+            objectFit="contain"
+            width={0}
+            height={0}
+            alt=""
             sizes="100vw"
           />
-          <div className="left flex-1 p-5 lg:p-10">
-            <h1 className="mb-5">IOT</h1>
-            <h2 className="font-medium">connectivity</h2>
+        </div>
+        <div className="flex justify-between flex-row-reverse relative z-40">
+          <div className="basis-3/6 pl-28 pr-52 mt-20 mb-10">
+            <Image
+              src="/iot-r.png"
+              className="w-full h-auto"
+              objectFit="contain"
+              width={0}
+              height={0}
+              alt=""
+              sizes="100vw"
+            />
+          </div>
+          <div className="left basis-3/6 p-5 lg:p-10">
+            <h1 className=" font-normal mb-2">
+              <strong>IoT</strong>
+              <br />
+              connectivity
+            </h1>
+            <h2 className="font-medium"></h2>
             <p className="mt-10 text-sm leading-relaxed">
               <strong>IoT connectivity</strong> is typically how we refer to the
               methods used to connect IoT devices. The term “IoT” (Internet of
@@ -72,7 +90,7 @@ export default function Iot() {
           </div>
         </div>
         <div className="card-container lg:pb-16 container mx-auto bg-white">
-          <div className="card relative container mx-auto lg:px-12 lg:top-[-50px]">
+          <div className="card relative z-20 container mx-auto lg:px-12 lg:top-[-50px]">
             <div className="card-content bg-black lg:rounded-[60px] w-full lg:h-[650px] flex">
               <div className="content flex flex-col">
                 <div className="left flex-1 px-20 lg:pt-10 lg:flex lg:basis-4/12">

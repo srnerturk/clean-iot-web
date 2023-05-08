@@ -49,9 +49,20 @@ export default function Iot() {
   return (
     <div className="home w-full relative z-10">
       <section className="top container bg-white mx-auto h-auto relative">
-        <div className="absolute w-56 md:w-[800px] z-10">
+        <div className="absolute w-56 md:w-[800px] z-10 hidden md:block">
           <Image
             src="/RectangleSolution.svg"
+            className="w-full h-auto "
+            objectFit="contain"
+            width={0}
+            height={0}
+            alt=""
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute w-screen  z-10 sm:hidden">
+          <Image
+            src="/kadın-ve-bulut.png"
             className="w-full h-auto"
             objectFit="contain"
             width={0}
@@ -60,11 +71,11 @@ export default function Iot() {
             sizes="100vw"
           />
         </div>
-        <div className="md:flex justify-between flex-row-reverse relative z-40">
-          <div className="hidden md:block basis-3/6 md:pr-28 pl-10 lg:pl-28 lg:pr-52 mt-36 md:mt-52 lg:mt-56 xl:mt-9 mb-0 lg:mb-10">
+        <div className="flex justify-between flex-row-reverse relative z-40">
+          <div className="basis-1/2 md:basis-3/6 md:pr-28 md:pl-10 lg:pl-28 lg:pr-52 mt-72 md:mt-52 lg:mt-56 xl:mt-9 mb-0 lg:mb-10">
             <Image
               src="/iot-r.png"
-              className="w-full h-auto"
+              className="w-full h-auto hidden md:block"
               objectFit="contain"
               width={0}
               height={0}
@@ -72,26 +83,38 @@ export default function Iot() {
               sizes="100vw"
             />
           </div>
-          <div className="left basis-3/6 p-5 lg:p-10">
+          <div className="left basis-1/2 md:basis-3/6 p-5 lg:p-10">
             <h1 className="font-normal mb-40 md:mb-2">
               <strong>IoT</strong>
               <br />
               connectivity
             </h1>
             <h2 className="font-medium"></h2>
-            <p className="mt-10 text-sm leading-relaxed">
+            <p className="hidden md:block mt-10 text-sm leading-relaxed">
               <strong>IoT connectivity</strong> is typically how we refer to the
               methods used to connect IoT devices. The term “IoT” (Internet of
               Things) mostly refers to wireless devices including applications,
               sensors, tracking devices, gateways and network
             </p>
-            <p className="mt-10 leading-relaxed">
+            <p className="md:hidden mt-10 text-sm leading-relaxed">
+              IoT connectivity is typically how we refer to the methods used to
+              connect IoT devices. The term “IoT” (Internet of Things) mostly
+              refers to wireless devices including applications, sensors,
+              tracking devices, gateways and network{" "}
+            </p>
+            <p className="hidden md:block mt-10 leading-relaxed">
               <strong>IoT devices</strong> requiring less maintenance of
               technologies such as Ethernet and WiFi networks. Which can be less
               reliable and have problems of their own compared to cellular
               network.
             </p>
-            <p className="mt-10 leading-relaxed">
+            <p className="md:hidden mt-10 leading-relaxed">
+              IoT devices requiring less maintenance of technologies such as
+              Ethernet and WiFi networks. Which can be less reliable and have
+              problems of their own compared to cellular network.
+            </p>
+
+            <p className="hidden md:block mt-10 leading-relaxed">
               What is IoT? To understand what <strong>IoT SIM cards</strong> are
               in the first place, it is necessary to explain the term IoT. This
               is in fact the abbreviation for the term Internet of Things. With

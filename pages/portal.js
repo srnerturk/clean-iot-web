@@ -226,10 +226,8 @@ export default function Portal() {
               <strong>Key</strong> features
             </h2>
             <p className="md:w-80 font-thin italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-              optio cum, nemo hic delectus, animi laborum nostrum esse culpa
-              praesentium nulla atque vel provident aliquid incidunt fugit
-              dolore, laboriosam quod?
+              Our IoT sim cards enables seamless device connectivity, real-time
+              data collection, and automation for improved efficiency.
             </p>
           </div>
 

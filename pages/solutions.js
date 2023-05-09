@@ -49,7 +49,7 @@ export default function Iot() {
   return (
     <div className="home w-full relative z-10">
       <section className="top container bg-white mx-auto h-auto relative">
-        <div className="absolute w-56 md:w-[800px] z-10 hidden md:block">
+        <div className="absolute w-56 md:w-[800px] z-10">
           <Image
             src="/RectangleSolution.svg"
             className="w-full h-auto "
@@ -60,7 +60,7 @@ export default function Iot() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute w-screen  z-10 sm:hidden">
+        {/* <div className="absolute w-screen  z-10 sm:hidden">
           <Image
             src="/kadın-ve-bulut.png"
             className="w-full h-auto"
@@ -70,20 +70,20 @@ export default function Iot() {
             alt=""
             sizes="100vw"
           />
-        </div>
+        </div> */}
         <div className="flex justify-between flex-row-reverse relative z-40">
-          <div className="basis-1/2 md:basis-3/6 md:pr-28 md:pl-10 lg:pl-28 lg:pr-52 mt-72 md:mt-52 lg:mt-56 xl:mt-9 mb-0 lg:mb-10">
+          <div className="relative basis-2/3 sm:basis-3/6 md:pr-28 md:pl-10 lg:pl-28 lg:pr-52 md:mt-52 lg:mt-56 xl:mt-9 lg:mb-10">
             <Image
               src="/iot-r.png"
-              className="w-full h-auto hidden md:block"
-              objectFit="contain"
+              className="w-full h-auto absolute bottom-0 right-10 sm:static"
               width={0}
               height={0}
               alt=""
               sizes="100vw"
+              priority={true}
             />
           </div>
-          <div className="left basis-1/2 md:basis-3/6 p-5 lg:p-10">
+          <div className="left basis-1/3 md:basis-3/6 p-5 lg:p-10">
             <h1 className="font-normal mb-40 md:mb-2">
               <strong>IoT</strong>
               <br />

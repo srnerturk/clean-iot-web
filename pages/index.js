@@ -545,7 +545,7 @@ export default function Home() {
                     if (index === selectedQuestion) {
                       return setSelectedQuestion(null);
                     } else {
-                      changeSelection(index);
+                      setSelectedQuestion(index);
                     }
                   }}
                   className="flex w-full justify-between items-center h-[52px]"

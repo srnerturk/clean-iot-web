@@ -49,7 +49,7 @@ export default function Iot() {
   return (
     <div className="home w-full relative z-10">
       <section className="top container bg-white mx-auto h-auto relative">
-        <div className="absolute w-56 md:w-[800px] z-10 hidden md:block">
+        <div className="absolute w-56 md:w-[800px] z-10">
           <Image
             src="/RectangleSolution.svg"
             className="w-full h-auto "
@@ -60,7 +60,7 @@ export default function Iot() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute w-screen  z-10 sm:hidden">
+        {/* <div className="absolute w-screen  z-10 sm:hidden">
           <Image
             src="/kadın-ve-bulut.png"
             className="w-full h-auto"
@@ -70,20 +70,20 @@ export default function Iot() {
             alt=""
             sizes="100vw"
           />
-        </div>
+        </div> */}
         <div className="flex justify-between flex-row-reverse relative z-40">
-          <div className="basis-1/2 md:basis-3/6 md:pr-28 md:pl-10 lg:pl-28 lg:pr-52 mt-72 md:mt-52 lg:mt-56 xl:mt-9 mb-0 lg:mb-10">
+          <div className="relative basis-2/3 sm:basis-3/6 md:pr-28 md:pl-10 lg:pl-28 lg:pr-52 md:mt-52 lg:mt-56 xl:mt-9 lg:mb-10">
             <Image
               src="/iot-r.png"
-              className="w-full h-auto hidden md:block"
-              objectFit="contain"
+              className="w-full h-auto absolute bottom-0 right-10 sm:static"
               width={0}
               height={0}
               alt=""
               sizes="100vw"
+              priority={true}
             />
           </div>
-          <div className="left basis-1/2 md:basis-3/6 p-5 lg:p-10">
+          <div className="left basis-1/3 md:basis-3/6 p-5 lg:p-10">
             <h1 className="font-normal mb-40 md:mb-2">
               <strong>IoT</strong>
               <br />
@@ -198,20 +198,20 @@ export default function Iot() {
           <div className="flex items-stretch flex-col-reverse lg:flex-row lg:gap-3 xl:gap-5">
             <div className="lg:basis-5/12 xl:basis-4/12 lg:pr-5">
               <div>
-                <h3 className="font-semibold text-xl mt-8 mb-0 lg:mb-5">
+                <h3 className="font-semibold text-xl mt-6 mb-0 lg:mb-3">
                   Removable IoT SIM Card
                 </h3>
-                <p className="italic lg:not-italic font-thin lg:font-normal text-base">
+                <p className="italic lg:not-italic font-thin lg:font-normal text-sm">
                   Swap between IoT devices effortlessly with our removable SIM
                   card, ensuring reliable and secure connectivity for your
                   business needs.
                 </p>
               </div>
               <div className="mb-10">
-                <h3 className="font-semibold text-xl mt-8 mb-0 lg:mb-5">
+                <h3 className="font-semibold text-xl mt-6 mb-0 lg:mb-3">
                   IoT SIM Card Features
                 </h3>
-                <p className="italic lg:not-italic font-thin lg:font-normal text-base">
+                <p className="italic lg:not-italic font-thin lg:font-normal text-sm">
                   - Data plans for 2G, 3G, 4G LTE, Cat-M1 coverage in 150 <br />
                   - countries Pay-as-you-go pricing – only ever pay only for the
                   data you use(NB-IoT) <br />
@@ -223,8 +223,56 @@ export default function Iot() {
                 </p>
               </div>
             </div>
-            <div className="lg:basis-7/12 xl:basis-8/12">
-              <Image alt="" src={"/SIMOne.png"} width={55} height={200} />
+            <div className="lg:basis-7/12 xl:basis-8/12 grid grid-cols-2 sm:grid-cols-4 gap-8 items-start md:items-end pb-20">
+              <div className="">
+                <Image alt="" src={"/SIMOne.png"} width={150} height={400} />
+                <div className="mt-3 min-h-[68px]">
+                  <h4 className="font-normal sm:whitespace-nowrap">
+                    NB-IoT <strong>SIM Tri-Punch</strong> <br />
+                    (2FF-3FF-4FF)
+                  </h4>
+                  <p className="text-sm font-bold">25mm x 15mm</p>
+                </div>
+              </div>
+              <div className="">
+                <Image alt="" src={"/SIMTwo.png"} width={150} height={400} />
+                <div className="mt-3 min-h-[68px]">
+                  <h4 className="font-normal">
+                    Mini <strong>SIM</strong>(2FF)
+                  </h4>
+                  <p className="text-sm font-bold">25mm x 15mm</p>
+                </div>
+              </div>
+              <div className="">
+                <Image
+                  className="sm:mt-28"
+                  alt=""
+                  src={"/SIMThree.png"}
+                  width={100}
+                  height={400}
+                />
+                <div className="mt-5 min-h-[68px]">
+                  <h4 className="font-normal">
+                    Micro <strong>SIM</strong>(3FF)
+                  </h4>
+                  <p className="text-sm font-bold">15mm x 12mm</p>
+                </div>
+              </div>
+              <div className="">
+                <Image
+                  className="sm:mt-28"
+                  alt=""
+                  src={"/SIMFour.png"}
+                  width={100}
+                  height={400}
+                />
+                <div className="mt-5 min-h-[68px]">
+                  <h4 className="font-normal">
+                    Nano <strong>SIM</strong>(4FF)
+                  </h4>
+                  <p className="text-sm font-bold">12.3mm x 8.8mm</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

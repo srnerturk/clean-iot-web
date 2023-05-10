@@ -136,34 +136,34 @@ export default function Products() {
                 <div className="number border border-black rounded-full flex-none flex justify-center items-center w-[40px] h-[40px]">
                   <span className="text-2xl font-bold text-black">1</span>
                 </div>
-                <div className="text text-sm text-black">
+                <p className="text text-sm text-black font-bold">
                   Select your SIM type and fill your order form
-                </div>
+                </p>
               </div>
               <div className="col flex space-x-3 justify-center mt-10">
                 <div className="number border border-black rounded-full flex-none flex justify-center items-center w-[40px] h-[40px]">
                   <span className="text-2xl font-bold text-black">2</span>
                 </div>
-                <div className="text text-sm text-black">
+                <p className="text text-sm text-black font-bold">
                   After we received your order, our experts get in touch with
                   you for further details.
-                </div>
+                </p>
               </div>
               <div className="col flex space-x-2 items-center lg:justify-center mt-10">
                 <div className="number border border-black rounded-full flex-none flex justify-center items-center w-[40px] h-[40px]">
                   <span className="text-2xl font-bold text-black ">3</span>
                 </div>
-                <div className="text text-sm text-black ">
+                <p className="text text-sm text-black font-bold ">
                   In 1-2 weeks wew ill ship your order
-                </div>
+                </p>
               </div>
             </div>
           </div>
         </section>
         <section className="sim lg:p-10">
-          <div className="content w-full flex">
-            <div className="left hidden lg:flex-none lg:flex items-start justify-end space-x-20">
-              <h2 className="text-black text-3xl font-light">
+          <div className="content w-full max-w-4xl mx-auto flex flex-col md:flex-row">
+            <div className="left px-5 lg:flex-none flex items-start md:justify-end space-x-10">
+              <h2 className="text-black text-4xl md:text-5xl font-normal">
                 I got my{" "}
                 <strong>
                   SIM <br />
@@ -173,7 +173,7 @@ export default function Products() {
               </h2>
               <Image src="/star2.png" width={50} height={50} alt="star" />
             </div>
-            <div className="right flex-1 lg:ml-10 p-2">
+            <div className="right flex-1 lg:ml-10 px-5">
               <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">
                   Receiving your new IoT SIM Card
@@ -196,7 +196,7 @@ export default function Products() {
               </div>
             </div>
           </div>
-          <p className="text-sm mt-10 text-center">
+          <p className="max-w-4xl mx-auto text-base italic font-thin my-10 text-start px-5">
             If you have any questions or issues during this process, our team of
             experts is always available to help. We are committed to providing
             our customers with the best possible service and support to ensure

@@ -1,6 +1,39 @@
 import Image from "next/image";
 import HappyCustomersSlider from "../components/HappyCustomersSlider";
-export default function Products() {
+import { useEffect, useState } from "react";
+export default function Products({
+  simCards,
+  selectedSimCard,
+  setSelectedSimCard,
+  totalPrice,
+  setTotalPrice,
+}) {
+  const [orderInput, setOrderInput] = useState(1);
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  console.log(simCards);
+
+  const [openSelectBox, setOpenSelectBox] = useState(false);
+
+  const closeSelectBoxHandler = () => {
+    setOpenSelectBox(false);
+  };
+
+  const openSelectBoxHandler = () => {
+    setOpenSelectBox(true);
+  };
+
+  const toggleSelectBoxHandler = () => {
+    setOpenSelectBox(!openSelectBox);
+  };
+
+  useEffect(() => {
+    if (orderInput) {
+      setTotalPrice(simCards[selectedSimCard].price * orderInput);
+    }
+  }, [selectedSimCard, orderInput]);
+
   return (
     <div className="products w-full">
       <div className="container mx-auto bg-white">
@@ -40,22 +73,77 @@ export default function Products() {
               <div className="max-w-sm mb-10 lg:mb-32">
                 <h4 className="font-extrabold text-black">Sim Type</h4>
                 <div className="flex justify-between gap-5">
-                  <button className="bg-[#231F20] w-full text-xl h-11">
+                  <button
+                    onClick={() => setActiveTab(0)}
+                    className={`w-full text-xl font-semibold h-11 ${
+                      activeTab === 0
+                        ? "bg-green text-black"
+                        : "bg-[#231F20] text-white"
+                    }`}
+                  >
                     M2M
                   </button>
-                  <button className="bg-[#231F20] w-full text-xl h-11">
+                  <button
+                    onClick={() => setActiveTab(1)}
+                    className={`w-full text-xl font-semibold h-11 ${
+                      activeTab === 1
+                        ? "bg-green text-black"
+                        : "bg-[#231F20] text-white"
+                    }`}
+                  >
                     NB-IoT
                   </button>
                 </div>
                 <div className="flex justify-between items-end gap-5 mt-6">
-                  <div className="bg-[#231F20] flex items-center px-4 w-full basis-3/4 h-11 relative py-1 text-lg">
-                    adasds
+                  <div
+                    onClick={toggleSelectBoxHandler}
+                    className="bg-[#231F20] relative flex justify-between items-center px-4 w-full basis-3/4 h-11  py-1 text-lg cursor-pointer"
+                  >
+                    <p className="text-white font-bold">
+                      {simCards[selectedSimCard].name}
+                    </p>{" "}
+                    <Image
+                      className="-rotate-90"
+                      src="/sliderArrow.png"
+                      width={10}
+                      height={10}
+                      alt="arrow"
+                    />
+                    <div
+                      className={`absolute left-0 right-0 top-11 bg-[#231F20] max-h-48 w-full flex flex-col items-center justify-center ${
+                        openSelectBox ? "block" : "hidden"
+                      } `}
+                    >
+                      {simCards
+                        .filter((simCards) => simCards.type === activeTab)
+                        .map((simCard, i) => (
+                          <div
+                            onClick={() => {
+                              setSelectedSimCard(simCard.id);
+                              closeSelectBoxHandler();
+                            }}
+                            key={i}
+                            className="flex justify-between items-center w-full px-4 h-11 py-1 text-lg cursor-pointer group hover:bg-white text-black"
+                          >
+                            <p className="text-white font-bold group-hover:text-black">
+                              {simCard.name}
+                            </p>
+                          </div>
+                        ))}
+                    </div>
                   </div>
                   <div className="basis-1/4">
                     <p className="text-black font-extrabold">Quantity</p>
                     <input
-                      className="w-full h-11 outline-none p-3 border border-black"
+                      className="w-full h-11 outline-none p-3 border border-black text-black text-lg font-bold"
                       type="text"
+                      pattern="[0-9]*"
+                      onInput={(e) => {
+                        e.target.validity.valid &&
+                          setOrderInput(e.target.value);
+                        orderInput === undefined && setOrderInput(0);
+                      }}
+                      value={orderInput}
                     />
                   </div>
                 </div>
@@ -64,7 +152,7 @@ export default function Products() {
                     <p className="text-black font-extrabold">Total</p>
                     <div className="h-11">
                       <p className="text-black font-normal text-4xl">
-                        $<strong>243.00</strong>
+                        $<strong>{totalPrice.toFixed(2)}</strong>
                       </p>
                       <p className="italic text-xs leading-2 text-black">
                         taxes, fees and shipping will be calculated at checkout

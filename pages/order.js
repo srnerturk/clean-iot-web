@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HappyCustomersSlider from "../components/HappyCustomersSlider";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 export default function Products({
   simCards,
   selectedSimCard,
@@ -161,12 +162,14 @@ export default function Products({
                     </div>
                   </div>
                   <div className="basis-full w-full xs:basis-2/3">
-                    <button
-                      onClick={() => setIsOrder(true)}
-                      className="w-full bg-green shadow-slate-500 shadow-lg h-11 px-5 text-end text-black text-lg whitespace-nowrap"
-                    >
-                      Order <strong> Now!</strong>
-                    </button>
+                    <Link href={"/contact"} legacyBehavior>
+                      <a
+                        onClick={() => setIsOrder(true)}
+                        className="w-full flex items-center justify-end bg-green shadow-slate-500 shadow-lg h-11 px-5 text-end text-black text-lg whitespace-nowrap"
+                      >
+                        Order <strong> Now!</strong>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

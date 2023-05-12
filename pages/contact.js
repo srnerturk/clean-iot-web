@@ -1,6 +1,8 @@
 import Image from "next/image";
 import HappyCustomersSlider from "../components/HappyCustomersSlider";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 export default function Orders({
   simCards,
   selectedSimCard,
@@ -12,10 +14,16 @@ export default function Orders({
     name: "",
     email: "",
     message: "",
-    simType: isOrder ? "NB-Iot sim" : "",
+    number: "",
+    simType: isOrder
+      ? simCards[selectedSimCard].type === 0
+        ? "NB-Iot sim"
+        : "M2M sim"
+      : "NB-Iot sim",
     autoSelection: false,
     getKnowledge: false,
   });
+  const [checkBox, setCheckbox] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,9 +32,93 @@ export default function Orders({
     });
   };
 
-  console.log(formData);
+  const [formValidate, setFormValidate] = useState(false);
 
-  console.log("isOrderRRRRR", isOrder);
+  useEffect(() => {
+    if (
+      formData.name !== "" &&
+      formData.email !== "" &&
+      formData.message !== "" &&
+      checkBox === true
+    ) {
+      setFormValidate(true);
+    } else {
+      setFormValidate(false);
+    }
+  }, [formData, checkBox]);
+
+  useEffect(() => {
+    if (isOrder) {
+      setFormData({
+        ...formData,
+        simType:
+          simCards[selectedSimCard].type === 0 ? "M2M sim" : "NB-Iot sim",
+      });
+    }
+  }, [isOrder]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("/api/email", {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        number: formData.number === "" ? "-" : formData.number,
+        simType: formData.simType === "" ? "-" : formData.simType,
+        autoSelection: formData.autoSelection ? "selected" : "not selected",
+        getKnowledge: formData.getKnowledge ? "selected" : "not selected",
+        totalPrice: totalPrice === "" ? "-" : totalPrice,
+        itemQuantity:
+          totalPrice / simCards[selectedSimCard].price === ""
+            ? "-"
+            : totalPrice / simCards[selectedSimCard].price,
+        simName:
+          simCards[selectedSimCard].name === ""
+            ? "-"
+            : simCards[selectedSimCard].name,
+      })
+      .then((res) => {
+        setIsOrder(false);
+        // cleanAllFields
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+          number: "",
+          simType: isOrder
+            ? simCards[selectedSimCard].type === 0
+              ? "NB-Iot sim"
+              : "M2M sim"
+            : "NB-Iot sim",
+          autoSelection: false,
+          getKnowledge: false,
+        });
+        setCheckbox(false);
+      });
+    isOrder
+      ? console.log({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          number: formData.number,
+          simType: formData.simType,
+          autoSelection: formData.autoSelection,
+          getKnowledge: formData.getKnowledge,
+          totalPrice: totalPrice,
+          itemQuantity: totalPrice / simCards[selectedSimCard].price,
+          simName: simCards[selectedSimCard].name,
+        })
+      : console.log({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          number: formData.number,
+          simType: formData.simType,
+          autoSelection: formData.autoSelection,
+          getKnowledge: formData.getKnowledge,
+        });
+  };
 
   return (
     <div className="products w-full">
@@ -77,13 +169,13 @@ export default function Orders({
                   </div>
                   <div
                     onClick={() => {
-                      setIsOrder(true);
+                      setIsOrder(false);
                       setFormData({
                         ...formData,
                         simType: "NB-Iot sim",
                       });
                     }}
-                    className={`select cursor-pointer bg-black px-5 py-3 ${
+                    className={`select cursor-pointer px-5 py-3 ${
                       formData.simType === "NB-Iot sim"
                         ? "bg-green"
                         : "bg-black"
@@ -107,7 +199,7 @@ export default function Orders({
                         simType: "NB-Iot sim2",
                       });
                     }}
-                    className={`select cursor-pointer bg-black px-5 py-3 ${
+                    className={`select cursor-pointer px-5 py-3 ${
                       formData.simType === "NB-Iot sim2"
                         ? "bg-green"
                         : "bg-black"
@@ -167,7 +259,7 @@ export default function Orders({
               </div>
 
               <div className="form-content mt-10 p-5 bg-white shadow-sm">
-                <form className="flex flex-col">
+                <form onSubmit={handleSubmit} className="flex flex-col">
                   <input
                     className="border-b-2 mb-2 text-black outline-none border-b-black text-sm h-[52px]"
                     type="text"
@@ -178,7 +270,7 @@ export default function Orders({
                   />
                   <input
                     className="border-b-2 mb-2 text-black outline-none border-b-black text-sm h-[52px]"
-                    type="text"
+                    type="email"
                     placeholder="your email"
                     name="email"
                     value={formData.email}
@@ -192,9 +284,47 @@ export default function Orders({
                     value={formData.message}
                     onChange={handleChange}
                   />
+                  <input
+                    className="border-b-2 outline-none text-black border-b-black text-sm h-[52px]"
+                    type="text"
+                    placeholder="your phone number"
+                    name="number"
+                    pattern="[0-9]*"
+                    value={formData.number}
+                    onInput={handleChange}
+                  />
 
-                  <div className="action mt-5 flex items-end justify-end">
-                    <button className="action px-10 py-3 text-sm font-bold bg-green text-black">
+                  <div className="action mt-5 flex flex-col  sm:flex-row sm:items-end justify-between">
+                    <div className="flex items-center space-x-2 mb-3 sm:mb-0">
+                      <div className="flex gap-5 items-center justify-center">
+                        <div
+                          onClick={() => setCheckbox((prev) => !prev)}
+                          className={`${
+                            checkBox ? "bg-green" : "bg-black"
+                          } w-[45px] h-[45px] flex items-center justify-center cursor-pointer`}
+                        >
+                          <span
+                            className={`${
+                              checkBox ? "text-black" : "text-white"
+                            } text-xl font-bold`}
+                          >
+                            ✓
+                          </span>
+                        </div>
+                        <span className="text-black text-sm font-bold">
+                          I am not a robot
+                        </span>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={!checkBox}
+                      className={`action px-10 py-3 text-sm font-bold  ${
+                        formValidate
+                          ? "bg-green text-black"
+                          : "bg-black text-white"
+                      }`}
+                    >
                       Sent Request
                     </button>
                   </div>

@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Layout from "../components/layouts";
 import { useState } from "react";
+
 function MyApp({ Component, pageProps }) {
   const [simCards, setSimCards] = useState([
     {
@@ -33,7 +34,9 @@ function MyApp({ Component, pageProps }) {
 
   const [totalPrice, setTotalPrice] = useState(0);
 
-  console.log("SELECTEDSIMCARD", selectedSimCard);
+  const [isOrder, setIsOrder] = useState(false);
+
+  console.log("isOrder", isOrder);
 
   return (
     <Layout>
@@ -43,6 +46,8 @@ function MyApp({ Component, pageProps }) {
         setSelectedSimCard={setSelectedSimCard}
         totalPrice={totalPrice}
         setTotalPrice={setTotalPrice}
+        isOrder={isOrder}
+        setIsOrder={setIsOrder}
         {...pageProps}
       />
     </Layout>

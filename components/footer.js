@@ -6,24 +6,27 @@ export default function Footer() {
     { id: 1, text: "Solutions", href: "/solutions" },
     { id: 2, text: "Order", href: "/order" },
     { id: 3, text: "Pricing", href: "/pricing" },
-    { id: 4, text: "Contact", href: "/contact" },
+    { id: 4, text: "Portal", href: "/portal" },
+    { id: 5, text: "Contact", href: "/contact" },
   ];
   return (
     <div className="w-full">
       <div className="footer-content container mx-auto flex justify-between bg-black p-10">
-        <div className="left flex space-y-6 flex-col flex-1">
-          <div className="newsletter flex flex-col space-y-2">
+        <div className="left space-y-6 flex-1 max-w-md">
+          <div className="newsletter space-y-2">
             <h2 className="text-white">Join our newsletter</h2>
             <p className="text-sm text-white">
               We’ll send you best deals and hottest news about IoT
             </p>
-            <div className="form-control flex space-x-4">
+            <div className="form-control flex flex-col sm:flex-row gap-3">
               <input
-                className="h-[50px] outline-none min-w-[240px] bg-transparent border-b border-b-white"
+                className="h-[50px] outline-none basis-3/5 bg-transparent border-b border-b-white"
                 type="text"
                 placeholder="Enter Your email"
               />
-              <button className="button px-2">Subscribe!</button>
+              <button className="py-1 bg-green text-black px-2 basis-2/5 font-bold">
+                Subscribe!
+              </button>
             </div>
           </div>
           <div className="logo">
@@ -47,7 +50,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="right flex-1">
+        <div className="right hidden lg:block flex-1 self-center">
           <div className="flex flex-row space-x-4">
             {links.map((item, index) => (
               <Link

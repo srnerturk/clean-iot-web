@@ -47,5 +47,5 @@ export default async function handler(req, res) {
   } catch (error) {
     res.status(400).end(JSON.stringify({ message: "Error sending email" }));
   }
-  res.status(200).end(JSON.stringify({ message: authInfo }));
+  res.status(200).end(JSON.stringify({ message: "Send email" }));
 }

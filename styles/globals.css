@@ -22,8 +22,13 @@ a {
   height: 40px;
   border-radius: 9999px;
   background: #9dc538;
-  border: 2px solid white;
+  border: 7px solid white;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  border: 9px solid white;
 }
 
 .slider::-moz-range-thumb {

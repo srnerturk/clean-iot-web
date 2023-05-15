@@ -321,6 +321,20 @@ export default function Home() {
     },
   ]);
 
+  const [quantity, setQuantity] = useState(10);
+  const [size, setSize] = useState(500);
+
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  // console.log(String(size).trim().length);
+  useEffect(() => {
+    // calculate total price
+
+    setTotalPrice(quantity * size);
+    console.log(totalPrice);
+    console.log("EOIWJREIOWJRIOEWJ");
+  }, [quantity, size]);
+
   return (
     <div className="home relative">
       <div className="container mx-auto">
@@ -394,23 +408,45 @@ export default function Home() {
               <h2 className="text-white mt-5 mb-20 lg:text-6xl font-normal lg:flex-nowrap max-w-lg xl:max-w-xl mx-auto lg:mx-0 lg:w-full">
                 with this <span className="font-bold">simple</span> step.
               </h2>
-              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full opacity-0 cursor-default">
+              <div className="slidecontainer max-w-lg mx-auto lg:mx-0 lg:pr-36 lg:w-full cursor-default">
                 <div className="input">
+                  <h3 className="text-white mb-2">Quantity</h3>
                   <input
                     type="range"
-                    min="1"
-                    max="100"
-                    className="slider rounded-full w-full bg-white appearance-none h-[20px]"
+                    min={0}
+                    max={100}
+                    className="slider w-full mb-4 bg-white appearance-none h-2"
                     id="myRange"
                     defaultValue={50}
+                    value={quantity}
+                    step={5}
+                    onChange={(e) => setQuantity(e.target.value)}
+                  />
+                  <h3 className="text-white my-2">Storage</h3>
+                  <input
+                    type="range"
+                    min={1}
+                    max={10000}
+                    className="slider w-full bg-white appearance-none h-2"
+                    id="myRange"
+                    value={size}
+                    step={100}
+                    defaultValue={50}
+                    onChange={(e) => setSize(e.target.value)}
                   />
                 </div>
-                <div className="values mt-2 w-full flex justify-between">
-                  <p className="text-white">15 QTY</p>
-                  <p className="text-white">500 MB</p>
-                  <p className="text-white">$400 TOTAL</p>
+                <div className="values mt-10 w-full flex justify-between">
+                  <p className="text-white text-xl">
+                    {quantity} <strong>QTY</strong>
+                  </p>
+                  <p className="text-white text-xl">
+                    {size} <strong>MB</strong>
+                  </p>
+                  <p className="text-white text-xl">
+                    ${totalPrice} <strong>TOTAL</strong>
+                  </p>
                 </div>
-                <div className="actions mt-10">
+                <div className="actions mt-2">
                   <button className="button px-20 w-full">Order Now!</button>
                 </div>
               </div>

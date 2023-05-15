@@ -269,24 +269,24 @@ export default function Products({
               <Image src="/star2.png" width={50} height={50} alt="star" />
             </div>
             <div className="right flex-1 lg:ml-10 px-5">
-              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">
                   Receiving your new IoT SIM Card
                 </p>
               </div>
-              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">Activate your SIM card</p>
               </div>
-              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">Install your SIM card</p>
               </div>
-              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">Configure your SIM card</p>
               </div>
-              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">Test your connection</p>
               </div>
-              <div className="question-item cursor-pointer border-b border-b-gray flex h-[52px] items-center justify-between">
+              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
                 <p className="text-sm font-bold">Login to web platform</p>
               </div>
             </div>

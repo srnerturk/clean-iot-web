@@ -15,11 +15,12 @@ export default function Orders({
     email: "",
     message: "",
     number: "",
-    simType: isOrder
-      ? simCards[selectedSimCard].type === 0
-        ? "NB-Iot sim"
-        : "M2M sim"
-      : "NB-Iot sim",
+    simType:
+      isOrder && selectedSimCard !== -1
+        ? simCards[selectedSimCard].type === 0
+          ? "NB-Iot sim"
+          : "M2M sim"
+        : "NB-Iot sim",
     autoSelection: false,
     getKnowledge: false,
   });
@@ -48,11 +49,13 @@ export default function Orders({
   }, [formData, checkBox]);
 
   useEffect(() => {
-    if (isOrder) {
+    if (isOrder && selectedSimCard !== -1) {
       setFormData({
         ...formData,
         simType:
-          simCards[selectedSimCard].type === 0 ? "M2M sim" : "NB-Iot sim",
+          selectedSimCard !== -1 && simCards[selectedSimCard].type === 0
+            ? "M2M sim"
+            : "NB-Iot sim",
       });
     }
   }, [isOrder]);
@@ -70,11 +73,12 @@ export default function Orders({
         getKnowledge: formData.getKnowledge ? "selected" : "not selected",
         totalPrice: totalPrice === "" ? "-" : totalPrice,
         itemQuantity:
+          selectedSimCard !== -1 &&
           totalPrice / simCards[selectedSimCard].price === ""
             ? "-"
             : totalPrice / simCards[selectedSimCard].price,
         simName:
-          simCards[selectedSimCard].name === ""
+          selectedSimCard !== -1 && simCards[selectedSimCard].name === ""
             ? "-"
             : simCards[selectedSimCard].name,
       })

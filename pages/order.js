@@ -22,17 +22,15 @@ export default function Products({
     setOpenSelectBox(false);
   };
 
-  const openSelectBoxHandler = () => {
-    setOpenSelectBox(true);
-  };
-
   const toggleSelectBoxHandler = () => {
     setOpenSelectBox(!openSelectBox);
   };
 
   useEffect(() => {
-    if (orderInput) {
+    if (orderInput && selectedSimCard !== -1) {
       setTotalPrice(simCards[selectedSimCard].price * orderInput);
+    } else {
+      setTotalPrice(0);
     }
   }, [selectedSimCard, orderInput]);
 
@@ -76,7 +74,10 @@ export default function Products({
                 <h4 className="font-extrabold text-black">Sim Type</h4>
                 <div className="flex justify-between gap-5">
                   <button
-                    onClick={() => setActiveTab(0)}
+                    onClick={() => {
+                      setActiveTab(0);
+                      setSelectedSimCard(-1);
+                    }}
                     className={`w-full text-xl font-semibold h-11 ${
                       activeTab === 0
                         ? "bg-green text-black"
@@ -86,7 +87,10 @@ export default function Products({
                     M2M
                   </button>
                   <button
-                    onClick={() => setActiveTab(1)}
+                    onClick={() => {
+                      setActiveTab(1);
+                      setSelectedSimCard(-1);
+                    }}
                     className={`w-full text-xl font-semibold h-11 ${
                       activeTab === 1
                         ? "bg-green text-black"
@@ -102,7 +106,9 @@ export default function Products({
                     className="bg-[#231F20] relative flex justify-between items-center px-4 w-full basis-3/4 h-11  py-1 text-lg cursor-pointer"
                   >
                     <p className="text-white font-bold">
-                      {simCards[selectedSimCard].name}
+                      {selectedSimCard === -1
+                        ? "Select SimCard"
+                        : simCards[selectedSimCard].name}
                     </p>{" "}
                     <Image
                       className="-rotate-90"

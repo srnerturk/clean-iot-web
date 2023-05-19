@@ -424,7 +424,7 @@ export default function Home() {
                     step={5}
                     onChange={(e) => setQuantity(e.target.value)}
                   />
-                  <h3 className="text-white my-2">Storage</h3>
+                  <h3 className="text-white my-2">Data Plan</h3>
                   <input
                     type="range"
                     min={1}

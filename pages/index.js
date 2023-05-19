@@ -356,9 +356,11 @@ export default function Home() {
             </h1>
           </div>
           <div className="actions w-full flex flex-col gap-3 md:gap-0 md:flex-row items-end md:items-center justify-center absolute bottom-4 md:bottom-16 md:space-x-10">
-            <button className="w-60 md:text-xl bg-black py-2 text-green px-4 mr-5 md:mr-0">
-              Start your journey <strong>Now!</strong>
-            </button>
+            <Link href={"/contact"} legacyBehavior>
+              <a className="w-60 md:text-xl bg-black py-2 text-green px-4 mr-5 md:mr-0">
+                Start your journey <strong>Now!</strong>
+              </a>
+            </Link>
             <button className="w-60 md:text-xl bg-black py-2 text-green text-start px-4 mr-5 md:mr-0">
               Book a <strong>Demo!</strong>
             </button>

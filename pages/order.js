@@ -11,12 +11,48 @@ export default function Products({
   setIsOrder,
 }) {
   const [orderInput, setOrderInput] = useState(1);
-
   const [activeTab, setActiveTab] = useState(0);
-
-  console.log(simCards);
-
   const [openSelectBox, setOpenSelectBox] = useState(false);
+
+  const [selectedQuestion, setSelectedQuestion] = useState(0);
+  const [questions, setQuestions] = useState([
+    {
+      id: 0,
+      question: "Receiving your new IoT SIM Card",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+    },
+    {
+      id: 1,
+      question: "Activate your SIM card",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+    },
+    {
+      id: 2,
+      question: "Install your SIM card",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+    },
+    {
+      id: 3,
+      question: "Configure your SIM card",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+    },
+    {
+      id: 4,
+      question: "Test your connection",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+    },
+    {
+      id: 5,
+      question: "Login to web platform",
+      answer:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+    },
+  ]);
 
   const closeSelectBoxHandler = () => {
     setOpenSelectBox(false);
@@ -275,26 +311,30 @@ export default function Products({
               <Image src="/star2.png" width={50} height={50} alt="star" />
             </div>
             <div className="right flex-1 lg:ml-10 px-5">
-              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
-                <p className="text-sm font-bold">
-                  Receiving your new IoT SIM Card
-                </p>
-              </div>
-              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
-                <p className="text-sm font-bold">Activate your SIM card</p>
-              </div>
-              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
-                <p className="text-sm font-bold">Install your SIM card</p>
-              </div>
-              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
-                <p className="text-sm font-bold">Configure your SIM card</p>
-              </div>
-              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
-                <p className="text-sm font-bold">Test your connection</p>
-              </div>
-              <div className="question-item border-b border-b-gray flex h-[52px] items-center justify-between">
-                <p className="text-sm font-bold">Login to web platform</p>
-              </div>
+              {questions.map((question) => (
+                <div
+                  onClick={() => {
+                    if (question.id === selectedQuestion) {
+                      setSelectedQuestion(null);
+                    } else {
+                      setSelectedQuestion(question.id);
+                    }
+                  }}
+                  key={question.id}
+                  className="question-item border-b border-b-gray"
+                >
+                  <div className="flex h-[52px] items-center justify-between cursor-pointer">
+                    <p className="text-sm font-bold">{question.question}</p>
+                    <Image alt="arrow" src="/arrow.png" width={18} height={9} />
+                  </div>
+                  {selectedQuestion !== null &&
+                    selectedQuestion === question.id && (
+                      <p className="text-sm font-light mb-4">
+                        {question.answer}
+                      </p>
+                    )}
+                </div>
+              ))}
             </div>
           </div>
           <p className="max-w-4xl mx-auto text-base italic font-thin my-10 text-start px-5">

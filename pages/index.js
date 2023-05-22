@@ -329,10 +329,7 @@ export default function Home() {
   // console.log(String(size).trim().length);
   useEffect(() => {
     // calculate total price
-
     setTotalPrice(quantity * size);
-    console.log(totalPrice);
-    console.log("EOIWJREIOWJRIOEWJ");
   }, [quantity, size]);
 
   return (

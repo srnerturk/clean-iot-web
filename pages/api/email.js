@@ -14,13 +14,11 @@ export default async function handler(req, res) {
     simName,
   } = req.body;
 
-  const _message = `Full Name: ${name} \n Email: ${email} \n Phone Number: ${number} \n SIM Type: ${simType} \n Auto Selection: ${
-    autoSelection ? "selected" : "not selected"
-  } \n Get Knowledge: ${
-    getKnowledge ? "selected" : "not selected"
-  } \n Total Price: ${totalPrice ? totalPrice : "-"} \n Item Quantity: ${
-    itemQuantity ? itemQuantity : "-"
-  } \n SIM Name: ${simName ? simName : "-"} \n Message: ${message}`;
+  const _message = `Full Name: ${name} \n Email: ${email} \n Phone Number: ${number} \n SIM Type: ${simType} \n Auto Selection: ${autoSelection} \n Get Knowledge: ${getKnowledge} \n Total Price: ${
+    totalPrice ? `$${totalPrice}` : "-"
+  } \n Item Quantity: ${itemQuantity ? itemQuantity : "-"} \n SIM Name: ${
+    simName ? simName : "-"
+  } \n Message: ${message}`;
 
   const authInfo = {
     user: process.env.EMAIL_USER,

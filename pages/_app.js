@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
     },
   ]);
 
-  const [selectedSimCard, setSelectedSimCard] = useState(0);
+  const [selectedSimCard, setSelectedSimCard] = useState(-1);
 
   const [totalPrice, setTotalPrice] = useState(0);
 

@@ -24,6 +24,9 @@ export default function Orders({
     autoSelection: false,
     getKnowledge: false,
   });
+  useEffect(() => {
+    console.log(selectedSimCard);
+  }, [formData]);
   const [checkBox, setCheckbox] = useState(false);
 
   const handleChange = (e) => {
@@ -74,13 +77,13 @@ export default function Orders({
         totalPrice: totalPrice === "" ? "-" : totalPrice,
         itemQuantity:
           selectedSimCard !== -1 &&
-          totalPrice / simCards[selectedSimCard].price === ""
-            ? "-"
-            : totalPrice / simCards[selectedSimCard].price,
+          totalPrice / simCards[selectedSimCard].price !== ""
+            ? totalPrice / simCards[selectedSimCard].price
+            : "-",
         simName:
-          selectedSimCard !== -1 && simCards[selectedSimCard].name === ""
-            ? "-"
-            : simCards[selectedSimCard].name,
+          selectedSimCard !== -1 && simCards[selectedSimCard].name !== ""
+            ? simCards[selectedSimCard].name
+            : "-",
       })
       .then((res) => {
         setIsOrder(false);
@@ -288,15 +291,20 @@ export default function Orders({
                     value={formData.message}
                     onChange={handleChange}
                   />
-                  <input
-                    className="border-b-2 outline-none text-black border-b-black text-sm h-[52px]"
-                    type="text"
-                    placeholder="your phone number"
-                    name="number"
-                    pattern="[0-9]*"
-                    value={formData.number}
-                    onInput={handleChange}
-                  />
+                  <div className="border-b-2 text-black border-b-black text-sm h-[52px] flex justify-between items-center">
+                    <div className="h-full w-10 flex items-center justify-center text-2xl text-darkGray select-none">
+                      +
+                    </div>
+                    <input
+                      className="h-full flex-1 outline-none"
+                      type="text"
+                      placeholder="90 555 555 55 55"
+                      name="number"
+                      pattern="[0-9]*"
+                      value={formData.number}
+                      onInput={handleChange}
+                    />
+                  </div>
 
                   <div className="action mt-5 flex flex-col  sm:flex-row sm:items-end justify-between">
                     <div className="flex items-center space-x-2 mb-3 sm:mb-0">

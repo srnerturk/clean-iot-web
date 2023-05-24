@@ -5,7 +5,8 @@ import Link from "next/link";
 
 import HappyCustomersSlider from "../components/HappyCustomersSlider";
 
-export default function Home() {
+export default function Home({ prices }) {
+  // FOR FAQ
   const [selectedQuestion, setSelectedQuestion] = useState(0);
   const [questions, setQuestions] = useState([
     {
@@ -321,16 +322,46 @@ export default function Home() {
     },
   ]);
 
+  // FOR PRICING CARD
   const [quantity, setQuantity] = useState(10);
-  const [size, setSize] = useState(500);
+  const [whichDataPlan, setWhichDataPlan] = useState(1);
 
   const [totalPrice, setTotalPrice] = useState(0);
+
+  const [editableInput, setEditableInput] = useState(false);
 
   // console.log(String(size).trim().length);
   useEffect(() => {
     // calculate total price
-    setTotalPrice(quantity * size);
-  }, [quantity, size]);
+    if (prices[whichDataPlan].unit === "-IOT") {
+      setTotalPrice(parseFloat(quantity * 2.95).toFixed(2));
+    } else {
+      setTotalPrice(
+        (quantity * parseFloat(prices[whichDataPlan].price)).toFixed(2)
+      );
+    }
+  }, [quantity, whichDataPlan]);
+
+  useEffect(() => {
+    // console.log(typeof String(totalPrice).split(".")[1]);
+    if (totalPrice !== undefined) {
+      if (
+        String(totalPrice).split(".")[1] !== undefined &&
+        String(totalPrice).split(".")[1].length > 3
+      ) {
+        console.log("HELELOYA");
+        setTotalPrice(() => (totalPrice * 100).toFixed(0));
+      }
+    }
+  }, [quantity, whichDataPlan]);
+
+  useEffect(() => {
+    if (editableInput) {
+      setTimeout(() => {
+        setEditableInput(false);
+      }, 2000);
+    }
+  }, [quantity]);
 
   return (
     <div className="home relative">
@@ -416,7 +447,6 @@ export default function Home() {
                     max={100}
                     className="slider w-full mb-4 bg-white appearance-none h-2"
                     id="myRange"
-                    defaultValue={50}
                     value={quantity}
                     step={5}
                     onChange={(e) => setQuantity(e.target.value)}
@@ -424,22 +454,45 @@ export default function Home() {
                   <h3 className="text-white my-2">Data Plan</h3>
                   <input
                     type="range"
-                    min={1}
-                    max={10000}
+                    min={0}
+                    max={prices.length - 1}
                     className="slider w-full bg-white appearance-none h-2"
                     id="myRange"
-                    value={size}
-                    step={100}
-                    defaultValue={50}
-                    onChange={(e) => setSize(e.target.value)}
+                    value={whichDataPlan}
+                    step={1}
+                    onChange={(e) => setWhichDataPlan(e.target.value)}
                   />
                 </div>
                 <div className="values mt-10 w-full flex justify-between">
+                  {editableInput ? (
+                    <div>
+                      <input
+                        type="number"
+                        className="w-20 text-white text-xl bg-transparent border-b-2 border-white"
+                        value={quantity}
+                        onChange={(e) => {
+                          setQuantity(e.target.value);
+                          if (
+                            quantity !== "" &&
+                            String(totalPrice).split(".")[1].length > 3
+                          ) {
+                            setTotalPrice(() => (totalPrice * 100).toFixed(0));
+                          }
+                        }}
+                      />
+                      <strong>QTY</strong>
+                    </div>
+                  ) : (
+                    <p
+                      onClick={() => setEditableInput(true)}
+                      className="text-white text-xl"
+                    >
+                      {quantity} <strong>QTY</strong>
+                    </p>
+                  )}
                   <p className="text-white text-xl">
-                    {quantity} <strong>QTY</strong>
-                  </p>
-                  <p className="text-white text-xl">
-                    {size} <strong>MB</strong>
+                    {prices[whichDataPlan].value}{" "}
+                    <strong>{prices[whichDataPlan].unit}</strong>
                   </p>
                   <p className="text-white text-xl">
                     ${totalPrice} <strong>TOTAL</strong>

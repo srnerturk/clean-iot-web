@@ -209,7 +209,7 @@ export default function Products({
                         onClick={() => setIsOrder(true)}
                         className="w-full flex items-center justify-end bg-green shadow-slate-500 shadow-lg h-11 px-5 text-end text-black text-lg whitespace-nowrap"
                       >
-                        Order <strong> Now!</strong>
+                        Order <strong className="ml-1"> Now!</strong>
                       </a>
                     </Link>
                   </div>

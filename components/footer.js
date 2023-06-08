@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import NewsletterForm from "./NewsletterForm";
+
+const url = process.env.MAIL_URL;
+
 export default function Footer() {
   const links = [
     { id: 0, text: "Home", href: "/" },
@@ -9,6 +14,7 @@ export default function Footer() {
     { id: 4, text: "Portal", href: "/portal" },
     { id: 5, text: "Contact", href: "/contact" },
   ];
+
   return (
     <div className="w-full">
       <div className="footer-content container mx-auto flex justify-between bg-black p-10">
@@ -18,16 +24,30 @@ export default function Footer() {
             <p className="text-sm text-white">
               We’ll send you best deals and hottest news about IoT
             </p>
-            <div className="form-control flex flex-col sm:flex-row gap-3">
-              <input
-                className="h-[50px] outline-none basis-3/5 bg-transparent border-b border-b-white"
-                type="text"
-                placeholder="Enter Your email"
-              />
-              <button className="py-1 bg-green text-black px-2 basis-2/5 font-bold">
-                Subscribe!
-              </button>
-            </div>
+            <MailchimpSubscribe
+              url={url}
+              render={({ subscribe, status, message }) => (
+                <div>
+                  <NewsletterForm
+                    status={status}
+                    message={message}
+                    onValidated={(formData) => subscribe(formData)}
+                  />
+                  {status === "sending" && (
+                    <div style={{ color: "blue" }}>sending...</div>
+                  )}
+                  {status === "error" && (
+                    <div
+                      style={{ color: "red" }}
+                      dangerouslySetInnerHTML={{ __html: message }}
+                    />
+                  )}
+                  {status === "success" && (
+                    <div style={{ color: "green" }}>Subscribed !</div>
+                  )}
+                </div>
+              )}
+            />
           </div>
           <div className="logo">
             <Image

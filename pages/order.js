@@ -328,9 +328,13 @@ export default function Products({
                     )}
                 </div>
               ))}
-              <button className="w-full bg-black py-3 text-bold px-5">
-                Login to Web Platform
-              </button>
+              <div className="my-3">
+                <Link href="/login" legacyBehavior  >
+                  <a className="w-full text-black my-3 text-sm font-bold text-start">
+                    Login to Web Platform
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
           <p className="max-w-4xl mx-auto text-base italic font-thin my-10 text-start px-5">

@@ -19,6 +19,7 @@ export default function Navbar() {
     { id: 2, text: "Order", href: "/order" },
     { id: 3, text: "Pricing", href: "/pricing" },
     { id: 4, text: "Portal", href: "/portal" },
+    { id: 5, text: "Contact", href: "/contact" },
   ];
   const [show, setShow] = React.useState(false);
   const [activeRoute, setActiveRoute] = React.useState("/");
@@ -75,15 +76,15 @@ export default function Navbar() {
                   </a>
                 </Link>
               ))}
-              <Link href="/contact" legacyBehavior>
-                <a className="navbar-item font-bold text-sm px-5  text-black h-[50px] flex items-center">
-                  Contact
+              <Link href="/login" legacyBehavior>
+                <a className="navbar-item font-thin text-sm px-5  bg-black text-green h-[50px] flex items-center">
+                  Portal <span className="ml-1">Login</span>
                 </a>
               </Link>
             </div>
           ) : null}
         </div>
-        <div className="navbar bg-gray w-full p-2.5 hidden lg:flex  ">
+        <div className="navbar bg-gray w-full px-2.5 hidden lg:flex  ">
           <div className="navbar-content container ml-auto mr-auto flex justify-between">
             <div className="navbar-logo flex items-center justify-center">
               <Image
@@ -93,12 +94,12 @@ export default function Navbar() {
                 height={50}
               />
             </div>
-            <div className="navbar-menu w-1/3 flex justify-between">
+            <div className="navbar-menu w-1/3 flex justify-between my-2.5">
               {links.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="navbar-item hover:bg-darkGray px-5 font-bold text-black text-sm h-[50px] flex items-center"
+                  className="navbar-item hover:bg-darkGray px-5 font-bold text-black text-sm  h-[32px] flex items-center"
                 >
                   {item.text}
                 </Link>
@@ -106,10 +107,10 @@ export default function Navbar() {
             </div>
             <div className="mr-right">
               <Link
-                href="/contact"
-                className="navbar-item bg-darkGray font-bold text-sm px-10  text-black h-[50px] flex items-center"
+                href="/login"
+                className="navbar-item bg-black font-thin px-10 text-green h-full flex items-center"
               >
-                Contact
+                Portal <span className="font-bold ml-1">Login</span>
               </Link>
             </div>
           </div>

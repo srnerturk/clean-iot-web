@@ -6,27 +6,27 @@ function MyApp({ Component, pageProps }) {
   const [simCards, setSimCards] = useState([
     {
       id: 0,
-      type: 0,
-      name: "NB-IoT SIM Tri-Punch (2FF-3FF-4FF)",
-      price: 5,
+      type: 1,
+      name: "TRIONBIOTSIMNC (Tri-punch Narrow Band IoT)",
+      price: 1,
     },
     {
       id: 1,
-      type: 1,
-      name: "Mini SIM (2FF)",
-      price: 10,
+      type: 0,
+      name: "M2M 2FF Consumer",
+      price: 1,
     },
     {
       id: 2,
-      type: 1,
-      name: "Micro SIM (3FF)",
-      price: 13,
+      type: 0,
+      name: "M2M 2FF Industrial",
+      price: 3,
     },
     {
       id: 3,
-      type: 1,
-      name: "Nano SIM (4FF)",
-      price: 15,
+      type: 0,
+      name: "M2M 3FF Consumer",
+      price: 1,
     },
   ]);
 

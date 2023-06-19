@@ -17,40 +17,22 @@ export default function Products({
   const [selectedQuestion, setSelectedQuestion] = useState(0);
   const [questions, setQuestions] = useState([
     {
-      id: 0,
-      question: "Receiving your new IoT SIM Card",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
-    },
-    {
       id: 1,
       question: "Activate your SIM card",
       answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+        "When you receive a brand new Clean IoT SIM card, it is already paired with our system. All you need to do is activate it through our SIM management page in web portal with a simple click.",
     },
     {
       id: 2,
       question: "Install your SIM card",
       answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
-    },
-    {
-      id: 3,
-      question: "Configure your SIM card",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+        "Just Plug-in your sim card to your IoT device and it will work automatically after activation.",
     },
     {
       id: 4,
       question: "Test your connection",
       answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
-    },
-    {
-      id: 5,
-      question: "Login to web platform",
-      answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio delectus aspernatur vel nisi consequuntur eum similique ab deleniti rerum, laudantium ipsam explicabo id, facilis quam sit eveniet quod ullam.",
+        "To test the connection insert the SIM card correctly, power on the device, check the connection settings, monitor the device's management interface for connection status, and track data usage to confirm the SIM card is transmitting data accurately; if experiencing any connection issues, feel free to contact our technical support team for assistance.",
     },
   ]);
 
@@ -325,16 +307,34 @@ export default function Products({
                 >
                   <div className="flex h-[52px] items-center justify-between cursor-pointer">
                     <p className="text-sm font-bold">{question.question}</p>
-                    <Image alt="arrow" src="/arrow.png" width={18} height={9} />
+                    {question.answer === "" ? null : (
+                      <Image
+                        alt="arrow"
+                        src="/arrow.png"
+                        width={18}
+                        height={9}
+                      />
+                    )}
                   </div>
                   {selectedQuestion !== null &&
                     selectedQuestion === question.id && (
-                      <p className="text-sm font-light mb-4">
+                      <p
+                        className={`text-sm font-light ${
+                          question.answer === "" ? "" : "mb-4"
+                        } `}
+                      >
                         {question.answer}
                       </p>
                     )}
                 </div>
               ))}
+              <div className="my-3">
+                <Link href="/login" legacyBehavior  >
+                  <a className="w-full text-black my-3 text-sm font-bold text-start">
+                    Login to Web Platform
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
           <p className="max-w-4xl mx-auto text-base italic font-thin my-10 text-start px-5">

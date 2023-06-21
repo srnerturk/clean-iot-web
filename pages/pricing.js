@@ -43,11 +43,18 @@ export default function Customers({ prices }) {
     <div className="orders w-full">
       <section className="top w-full h-auto relative">
         <div className="container mx-auto bg-white">
+          <Image
+            className="absolute z-0"
+            src="/allStars.png"
+            width={970}
+            height={900}
+            alt="star"
+          />
           <h2 className="py-10 font-normal pl-5">
             <strong>Top</strong> choices by <br /> our{" "}
             <strong>customers</strong>
           </h2>
-          <div className=" lg:hidden relative">
+          <div className="z-40 lg:hidden relative">
             <div className=" hidden xs:block absolute bg-gradient-to-r from-transparent top-0 bottom-0 right-0 h-80 to-white w-28 z-50"></div>
             <div className="hidden xs:block absolute bg-gradient-to-l from-transparent top-0 bottom-0 left-0 h-80 to-white w-28 z-50"></div>
             <Swiper
@@ -126,7 +133,7 @@ export default function Customers({ prices }) {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="info-box max-w-[250px] h-80 mx-auto rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex  flex-col justify-start">
+                <div className="info-box max-w-[250px] h-80 mx-auto rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
                   <div className="title bg-[#231F20] p-5 mb-1">
                     <h3 className="font-normal text-3xl text-white">
                       <strong>5</strong> GB
@@ -195,7 +202,7 @@ export default function Customers({ prices }) {
             </Swiper>
           </div>
           <div className="hidden lg:grid lg:grid-cols-4 grid-cols-1 gap-5 max-w-5xl mx-auto">
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
+            <div className="info-box z-20 rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
               <div className="title p-5 mb-1">
                 <h3 className="font-normal text-3xl">
                   <strong>150</strong> MB
@@ -223,7 +230,7 @@ export default function Customers({ prices }) {
               </div>
             </div>
 
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#231F20] flex flex-col justify-start">
+            <div className="info-box z-20 rounded-md overflow-hidden pb-5 bg-[#231F20] flex flex-col justify-start">
               <div className="title p-5 mb-1">
                 <h3 className="text-white font-normal text-3xl">
                   <strong>250</strong> MB
@@ -255,7 +262,7 @@ export default function Customers({ prices }) {
               </div>
             </div>
 
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex  flex-col justify-start">
+            <div className="info-box z-20 rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex  flex-col justify-start">
               <div className="title bg-[#231F20] p-5 mb-1">
                 <h3 className="font-normal text-3xl text-white">
                   <strong>5</strong> GB
@@ -284,7 +291,7 @@ export default function Customers({ prices }) {
                 </Link>
               </div>
             </div>
-            <div className="info-box rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
+            <div className="info-box z-20 rounded-md overflow-hidden pb-5 bg-[#E2E4E5] flex flex-col justify-start">
               <div className="title p-5 mb-1 bg-[#231F20]">
                 <h3 className="font-normal text-white text-3xl">
                   NB-<strong>IoT</strong>
@@ -320,6 +327,13 @@ export default function Customers({ prices }) {
 
       <section className="top w-full h-auto relative">
         <div className="container ml-auto mr-auto py-10 bg-white">
+          <Image
+            className="absolute mt-3 z-0"
+            src="/allStars.png"
+            width={900}
+            height={900}
+            alt="star"
+          />
           <div className="bg-black lg:bg-white py-10">
             <div className="max-w-4xl mx-auto lg:flex">
               <h2 className="text-white lg:text-black font-normal text-center md:text-start px-5 lg:px-0 lg:w-64">
@@ -337,11 +351,11 @@ export default function Customers({ prices }) {
             {prices.map((item, index) => (
               <div
                 key={index}
-                className="flex rounded-md overflow-hidden w-full max-w-xs shadow-slate-500 shadow-lg"
+                className="z-30 flex rounded-md overflow-hidden w-full max-w-xs shadow-slate-500 shadow-lg"
               >
-                <div className="basis-5/12 flex flex-col justify-center pl-4 py-2">
+                <div className="basis-5/12 bg-white flex flex-col justify-center pl-4 py-2 z-20">
                   <div>
-                    <div className="text-3xl text-black">
+                    <div className="text-3xl  text-black">
                       <strong>{item.value} </strong>
                       {item.unit}
                     </div>

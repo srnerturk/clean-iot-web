@@ -396,6 +396,13 @@ export default function Home({ prices }) {
         </section>
         <HappyCustomersSlider />
         <section className="py-28 bg-white px-5">
+          <Image
+            className="absolute"
+            src="/allStars.png"
+            width={1080}
+            height={800}
+            alt="star"
+          />
           <div className="title max-w-5xl flex mx-auto lg:flex-row flex-col lg:space-x-20">
             <div className="flex-1 relative  flex items-center  justify-center space-x-2 ">
               <h3 className="text-black text-4xl lg:text-[42px] font-normal z-20">
@@ -419,6 +426,13 @@ export default function Home({ prices }) {
           </div>
         </section>
         <section className="card relative container ml-auto mr-auto lg:px-10 lg:pb-10 bg-white">
+          <Image
+            className="absolute right-0"
+            src="/allStars.png"
+            width={1080}
+            height={900}
+            alt="star"
+          />
           <div className="card-content relative z-20 lg:mb-5 bg-black lg:rounded-[60px] w-full flex flex-col lg:flex-row">
             <div className="flex-[0.6] lg:pl-20 lg:py-20 p-5 lg:mx-0 lg:w-full relative">
               <div className="title space-x-2 max-w-lg mx-auto flex-1 lg:mx-0 lg:min-w-full">
@@ -518,6 +532,13 @@ export default function Home({ prices }) {
         </section>
 
         <section className="boxes relative container ml-auto mr-auto lg:p-10 lg:py-36 bg-white">
+          <Image
+            className="absolute"
+            src="/allStars.png"
+            width={580}
+            height={300}
+            alt="star"
+          />
           <div className="absolute mt-28 sm:mt-20 z-0 lg:ml-72 lg:-top-[360px] ">
             <Image
               className="w-full h-auto lg:ml-16"
@@ -623,10 +644,17 @@ export default function Home({ prices }) {
             </p>
           </div>
           <div className="flex flex-col space-y-2">
+            <Image
+              className="absolute z-0"
+              src="/allStars.png"
+              width={970}
+              height={900}
+              alt="star"
+            />
             {questions.map((item, index) => (
               <div
                 key={index}
-                className="cursor-pointer border-b border-b-gray"
+                className="cursor-pointer border-b border-b-gray z-10"
               >
                 <div
                   onClick={() => {

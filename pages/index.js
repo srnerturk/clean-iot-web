@@ -637,24 +637,6 @@ export default function Home({ prices }) {
             </div>
           </div>
         </section>
-        {/* <section className="pl-[56.25%] relative">
-          <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/838959993"
-            width="640"
-            height="360"
-            frameborder="0"
-            allowfullscreen
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-            // style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          ></iframe>
-        </section> */}
         <section className="z-[99] bg-white w-full flex justify-center">
           <Vimeo
             style={{
@@ -703,16 +685,6 @@ export default function Home({ prices }) {
             controls={false}
           />
         </section>
-        {/* <div style="padding:56.25% 0 0 0;position:relative;">
-          <iframe
-            src="https://player.vimeo.com/video/838959993?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Comp 1"
-          ></iframe>
-        </div> */}
         <HappyCustomersSlider />
         <section className="questions container ml-auto mr-auto bg-white p-5 lg:px-10 lg:py-20">
           <div className="title flex items-start flex-col space-y-2 mb-10">

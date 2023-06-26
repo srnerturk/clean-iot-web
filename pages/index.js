@@ -364,7 +364,7 @@ export default function Home({ prices }) {
     }
   }, [quantity]);
 
-  const [windowWidth, setWindowWidth] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(1081);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

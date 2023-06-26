@@ -2,6 +2,7 @@
 import react, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Vimeo from "@u-wave/react-vimeo";
 
 import HappyCustomersSlider from "../components/HappyCustomersSlider";
 
@@ -363,6 +364,18 @@ export default function Home({ prices }) {
     }
   }, [quantity]);
 
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <div className="home relative">
       <div className="container mx-auto">
@@ -624,16 +637,82 @@ export default function Home({ prices }) {
             </div>
           </div>
         </section>
-        <section className="video">
-          <Image
-            className="w-full h-auto max-h-[610px] overflow-hidden object-cover"
-            src="/video.png"
-            width={0}
-            height={0}
-            alt="Vercel Logo"
-            sizes="100vw"
+        {/* <section className="pl-[56.25%] relative">
+          <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/838959993"
+            width="640"
+            height="360"
+            frameborder="0"
+            allowfullscreen
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            // style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          ></iframe>
+        </section> */}
+        <section className="z-[99] bg-white w-full flex justify-center">
+          <Vimeo
+            style={{
+              zIndex: 99,
+            }}
+            video="838959993"
+            autoplay
+            loop
+            width={
+              windowWidth > 1080
+                ? 1080
+                : windowWidth > 1020
+                ? 1020
+                : windowWidth > 768
+                ? 768
+                : windowWidth > 540
+                ? 540
+                : windowWidth > 480
+                ? 480
+                : windowWidth > 360
+                ? 360
+                : windowWidth > 320
+                ? 320
+                : 280
+            }
+            height={
+              windowWidth > 1080
+                ? 608
+                : windowWidth > 1020
+                ? 574
+                : windowWidth > 768
+                ? 432
+                : windowWidth > 540
+                ? 360
+                : windowWidth > 480
+                ? 320
+                : windowWidth > 360
+                ? 240
+                : windowWidth > 320
+                ? 200
+                : 180
+            }
+            muted={false}
+            showPortrait
+            background={true}
+            controls={false}
           />
         </section>
+        {/* <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe
+            src="https://player.vimeo.com/video/838959993?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="Comp 1"
+          ></iframe>
+        </div> */}
         <HappyCustomersSlider />
         <section className="questions container ml-auto mr-auto bg-white p-5 lg:px-10 lg:py-20">
           <div className="title flex items-start flex-col space-y-2 mb-10">

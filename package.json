@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@u-wave/react-vimeo": "^0.9.10",
     "axios": "^1.4.0",
     "dotenv": "^16.0.3",
     "emailjs": "^4.0.1",

@@ -364,7 +364,7 @@ export default function Home({ prices }) {
     }
   }, [quantity]);
 
-  const [windowWidth, setWindowWidth] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(1081);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -637,43 +637,25 @@ export default function Home({ prices }) {
             </div>
           </div>
         </section>
-        {/* <section className="pl-[56.25%] relative">
-          <iframe
-            title="vimeo-player"
-            src="https://player.vimeo.com/video/838959993"
-            width="640"
-            height="360"
-            frameborder="0"
-            allowfullscreen
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-            // style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          ></iframe>
-        </section> */}
         <section className="z-[99] bg-white w-full flex justify-center">
           <Vimeo
             style={{
               zIndex: 99,
             }}
-            video="838959993"
+            video="841545783"
             autoplay
             loop
             width={
               windowWidth > 1080
-                ? 1080
+                ? 1368
                 : windowWidth > 1020
                 ? 1020
                 : windowWidth > 768
-                ? 768
+                ? 800
                 : windowWidth > 540
-                ? 540
+                ? 640
                 : windowWidth > 480
-                ? 480
+                ? 580
                 : windowWidth > 360
                 ? 360
                 : windowWidth > 320
@@ -682,13 +664,13 @@ export default function Home({ prices }) {
             }
             height={
               windowWidth > 1080
-                ? 608
+                ? 720
                 : windowWidth > 1020
-                ? 574
+                ? 674
                 : windowWidth > 768
-                ? 432
+                ? 532
                 : windowWidth > 540
-                ? 360
+                ? 460
                 : windowWidth > 480
                 ? 320
                 : windowWidth > 360
@@ -703,16 +685,6 @@ export default function Home({ prices }) {
             controls={false}
           />
         </section>
-        {/* <div style="padding:56.25% 0 0 0;position:relative;">
-          <iframe
-            src="https://player.vimeo.com/video/838959993?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Comp 1"
-          ></iframe>
-        </div> */}
         <HappyCustomersSlider />
         <section className="questions container ml-auto mr-auto bg-white p-5 lg:px-10 lg:py-20">
           <div className="title flex items-start flex-col space-y-2 mb-10">

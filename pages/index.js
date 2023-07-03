@@ -642,20 +642,20 @@ export default function Home({ prices }) {
             style={{
               zIndex: 99,
             }}
-            video="838959993"
+            video="841545783"
             autoplay
             loop
             width={
               windowWidth > 1080
-                ? 1080
+                ? 1368
                 : windowWidth > 1020
                 ? 1020
                 : windowWidth > 768
-                ? 768
+                ? 800
                 : windowWidth > 540
-                ? 540
+                ? 640
                 : windowWidth > 480
-                ? 480
+                ? 580
                 : windowWidth > 360
                 ? 360
                 : windowWidth > 320
@@ -664,13 +664,13 @@ export default function Home({ prices }) {
             }
             height={
               windowWidth > 1080
-                ? 608
+                ? 720
                 : windowWidth > 1020
-                ? 574
+                ? 674
                 : windowWidth > 768
-                ? 432
+                ? 532
                 : windowWidth > 540
-                ? 360
+                ? 460
                 : windowWidth > 480
                 ? 320
                 : windowWidth > 360

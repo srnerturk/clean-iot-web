@@ -8,7 +8,7 @@
 
 ## Giriş
 
-Proje bir nextjs projesidir. Tailwind kullanılarak oluşturulmuştur.
+Proje bir nextjs projesidir. Tasarım tailwind kullanılarak oluşturulmuştur.
 
 ## Kurulum
 
